@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SpaceX designs, manufactures and launches advanced rockets and spacecraft.">
+    <title>SpaceX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <span class="logo-text">SPACEX</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#falcon9">FALCON 9</a></li>
+                <li><a href="#falcon-heavy">FALCON HEAVY</a></li>
+                <li><a href="#dragon">DRAGON</a></li>
+                <li><a href="#starship">STARSHIP</a></li>
+                <li><a href="#human-spaceflight">HUMAN SPACEFLIGHT</a></li>
+                <li><a href="#rideshare">RIDESHARE</a></li>
+                <li><a href="#starlink">STARLINK</a></li>
+                <li><a href="#starshield">STARSHIELD</a></li>
+                <li><a href="https://shop.spacex.com" target="_blank" rel="noopener">SHOP</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <header class="hero-section" id="hero">
+            <div class="hero-background">
+                <!-- Background image/video will be added via CSS -->
+            </div>
+            <div class="hero-content">
+                <h1 class="mission-name">RECENT MISSION</h1>
+                <p class="mission-description">Mission to low Earth orbit</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">REWATCH</a>
+                    <a href="#" class="btn btn-secondary">LEARN MORE</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="scroll-arrow"></span>
+            </div>
+        </header>
+
+        <!-- Mission Section 1: Starship -->
+        <section class="mission-section" id="starship-section">
+            <div class="section-background">
+                <!-- Background image will be added via CSS -->
+            </div>
+            <div class="section-content">
+                <h2 class="section-title">STARSHIP</h2>
+                <p class="section-description">The world's most powerful launch vehicle</p>
+                <div class="section-buttons">
+                    <a href="#" class="btn btn-primary">LEARN MORE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section 2: Falcon Heavy -->
+        <section class="mission-section" id="falcon-heavy-section">
+            <div class="section-background">
+                <!-- Background image will be added via CSS -->
+            </div>
+            <div class="section-content">
+                <h2 class="section-title">FALCON HEAVY</h2>
+                <p class="section-description">The world's most powerful operational rocket</p>
+                <div class="section-buttons">
+                    <a href="#" class="btn btn-primary">LEARN MORE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section 3: Dragon -->
+        <section class="mission-section" id="dragon-section">
+            <div class="section-background">
+                <!-- Background image will be added via CSS -->
+            </div>
+            <div class="section-content">
+                <h2 class="section-title">DRAGON</h2>
+                <p class="section-description">Sending humans and cargo into space</p>
+                <div class="section-buttons">
+                    <a href="#" class="btn btn-primary">LEARN MORE</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Dragon</a></li>
+                        <li><a href="#">Falcon</a></li>
+                        <li><a href="#">Human Spaceflight</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Updates</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Mission Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="https://twitter.com/spacex" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="social-icon twitter"></span>
+                </a>
+                <a href="https://instagram.com/spacex" target="_blank" rel="noopener" aria-label="Instagram">
+                    <span class="social-icon instagram"></span>
+                </a>
+                <a href="https://youtube.com/spacex" target="_blank" rel="noopener" aria-label="YouTube">
+                    <span class="social-icon youtube"></span>
+                </a>
+                <a href="https://linkedin.com/company/spacex" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <span class="social-icon linkedin"></span>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Space Exploration Technologies Corp.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Toggle Script -->
+    <script>
+        (function() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    menuToggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    
+                    // Prevent body scroll when menu is open
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                });
+                
+                // Close menu when clicking a link
+                navLinks.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        menuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+                
+                // Close menu on escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                        menuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
