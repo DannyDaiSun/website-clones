@@ -1,0 +1,758 @@
+/* ==========================================================================
+   Hacker News Clone — Stylesheet
+   Faithful recreation of news.ycombinator.com
+   ========================================================================== */
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hn-orange: #ff6600;
+    --hn-bg: #f6f6ef;
+    --hn-header-bg: #ff6600;
+    --hn-text: #000000;
+    --hn-link: #000000;
+    --hn-link-visited: #828282;
+    --hn-subtext: #828282;
+    --hn-border: #ff6600;
+    --hn-white: #ffffff;
+    --hn-logo-bg: #ff6600;
+    --hn-logo-border: #ffffff;
+    --hn-vote-color: #828282;
+    --hn-footer-border: #ff6600;
+    --hn-search-border: #000000;
+    --font-primary: Verdana, Geneva, sans-serif;
+    --font-size-base: 10pt;
+    --font-size-small: 8pt;
+    --font-size-title: 10pt;
+    --content-width: 85%;
+    --content-max-width: 1280px;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.4;
+    color: var(--hn-text);
+    background-color: var(--hn-bg);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--hn-link);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--hn-link-visited);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Header / Navigation ---------- */
+.header {
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    background: linear-gradient(180deg, #ff6600 0%, #ff6600 100%);
+    margin-top: 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 4px;
+    background: var(--hn-header-bg);
+    gap: 4px;
+    flex-wrap: nowrap;
+    min-height: 24px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.nav-right {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding-right: 4px;
+}
+
+.nav-right a {
+    color: var(--hn-text);
+    font-size: var(--font-size-base);
+}
+
+/* Logo Box — the iconic Y square */
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 19px;
+    height: 19px;
+    border: 1px solid var(--hn-logo-border);
+    background: linear-gradient(135deg, var(--hn-white) 0%, var(--hn-white) 100%);
+    color: var(--hn-orange);
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1;
+    text-align: center;
+    font-family: var(--font-primary);
+}
+
+.site-name {
+    color: var(--hn-text);
+    font-size: var(--font-size-base);
+    white-space: nowrap;
+    margin-right: 6px;
+}
+
+.site-name:visited {
+    color: var(--hn-text);
+}
+
+.nav-links {
+    font-size: var(--font-size-base);
+    color: var(--hn-text);
+}
+
+.nav-links a {
+    color: var(--hn-text);
+    padding: 0 1px;
+}
+
+.nav-links a:visited {
+    color: var(--hn-text);
+}
+
+/* ---------- Main Content ---------- */
+.main-content {
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    background-color: var(--hn-bg);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* ---------- Item List (Story Table) ---------- */
+.item-list {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.athing {
+    background-color: var(--hn-bg);
+}
+
+/* Rank number */
+.rank {
+    font-size: var(--font-size-base);
+    color: var(--hn-subtext);
+    padding: 0 5px 0 0;
+    text-align: right;
+    vertical-align: top;
+    width: 30px;
+    min-width: 25px;
+    white-space: nowrap;
+}
+
+/* Upvote arrow */
+.vote {
+    vertical-align: top;
+    text-align: center;
+    width: 14px;
+    padding: 3px 2px 0 0;
+}
+
+.votearrow {
+    color: var(--hn-vote-color);
+    font-size: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    /* CSS triangle as upvote arrow */
+    color: transparent;
+    position: relative;
+}
+
+.votearrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid var(--hn-vote-color);
+}
+
+.votearrow:hover::before {
+    border-bottom-color: var(--hn-orange);
+}
+
+/* Title cell */
+.title-cell {
+    padding: 2px 0;
+    vertical-align: top;
+    line-height: 1.3;
+}
+
+.titleline {
+    font-size: var(--font-size-title);
+}
+
+.titleline > a {
+    color: var(--hn-link);
+    text-decoration: none;
+}
+
+.titleline > a:visited {
+    color: var(--hn-link-visited);
+}
+
+.titleline > a:hover {
+    text-decoration: underline;
+}
+
+.sitebit {
+    font-size: var(--font-size-small);
+    color: var(--hn-subtext);
+}
+
+.sitebit a {
+    color: var(--hn-subtext);
+}
+
+.sitestr {
+    color: var(--hn-subtext);
+}
+
+/* Subtext row (points, user, time, comments) */
+.subtext-row td {
+    padding: 1px 0 0 0;
+}
+
+.subtext {
+    font-size: 7pt;
+    color: var(--hn-subtext);
+    line-height: 1.4;
+    padding-bottom: 4px;
+}
+
+.subtext a {
+    color: var(--hn-subtext);
+}
+
+.subtext a:hover {
+    text-decoration: underline;
+}
+
+.score {
+    color: var(--hn-subtext);
+}
+
+.hnuser {
+    color: var(--hn-subtext);
+}
+
+.age {
+    color: var(--hn-subtext);
+}
+
+/* Spacer between stories */
+.spacer {
+    height: 5px;
+}
+
+.spacer td {
+    height: 5px;
+}
+
+/* ---------- More Link ---------- */
+.more-link {
+    padding: 10px 0 10px 40px;
+    font-size: var(--font-size-base);
+}
+
+.more-link a {
+    color: var(--hn-link);
+}
+
+.more-link a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    width: var(--content-width);
+    max-width: var(--content-max-width);
+    padding: 0 0 20px 0;
+    margin-top: 10px;
+}
+
+.footer-line {
+    height: 2px;
+    background: linear-gradient(90deg, var(--hn-footer-border) 0%, var(--hn-footer-border) 100%);
+    margin-bottom: 10px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-nav {
+    font-size: 7pt;
+    color: var(--hn-subtext);
+    margin-bottom: 12px;
+    line-height: 2;
+}
+
+.footer-nav a {
+    color: var(--hn-subtext);
+    margin: 0 1px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Search form */
+.search-form {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--font-size-base);
+}
+
+.search-form label {
+    color: var(--hn-subtext);
+    font-size: var(--font-size-base);
+}
+
+.search-input {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    padding: 2px 4px;
+    border: 1px solid var(--hn-search-border);
+    outline: none;
+    width: 200px;
+    background: var(--hn-white);
+}
+
+.search-input:focus {
+    border-color: var(--hn-orange);
+    box-shadow: 0 0 0 1px var(--hn-orange);
+}
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+
+/* ---------- Tablet (max-width: 1024px) ---------- */
+@media screen and (max-width: 1024px) {
+    :root {
+        --content-width: 92%;
+    }
+
+    .nav {
+        padding: 4px 6px;
+    }
+
+    .nav-links {
+        font-size: 9pt;
+    }
+
+    .rank {
+        width: 26px;
+        min-width: 22px;
+        font-size: 9pt;
+    }
+
+    .titleline {
+        font-size: 10pt;
+    }
+
+    .search-input {
+        width: 170px;
+    }
+}
+
+/* ---------- Small Tablet (max-width: 768px) ---------- */
+@media screen and (max-width: 768px) {
+    :root {
+        --content-width: 96%;
+    }
+
+    .header {
+        margin-top: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .main-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 4px;
+    }
+
+    .footer {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 8px 20px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 2px;
+        padding: 4px 8px;
+    }
+
+    .nav-left {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 4px;
+    }
+
+    .nav-right {
+        width: 100%;
+        text-align: right;
+        padding: 2px 0 4px 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 2px;
+    }
+
+    .nav-links {
+        font-size: 8pt;
+        line-height: 1.8;
+    }
+
+    .site-name {
+        font-size: 9pt;
+    }
+
+    .rank {
+        width: 22px;
+        min-width: 20px;
+        padding-right: 3px;
+        font-size: 9pt;
+    }
+
+    .vote {
+        padding: 4px 3px 0 0;
+    }
+
+    .title-cell {
+        padding: 3px 4px 3px 0;
+    }
+
+    .titleline {
+        font-size: 10pt;
+        line-height: 1.4;
+    }
+
+    .subtext {
+        font-size: 7pt;
+        padding-bottom: 5px;
+    }
+
+    .more-link {
+        padding-left: 30px;
+    }
+
+    .search-input {
+        width: 140px;
+    }
+
+    .footer-nav {
+        font-size: 7pt;
+        line-height: 2.2;
+    }
+}
+
+/* ---------- Mobile (max-width: 480px) ---------- */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 9pt;
+    }
+
+    .nav {
+        padding: 6px 8px;
+    }
+
+    .nav-left {
+        gap: 3px;
+    }
+
+    .logo-box {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+    }
+
+    .site-name {
+        font-size: 9pt;
+    }
+
+    .nav-links {
+        font-size: 8pt;
+        line-height: 2;
+    }
+
+    .rank {
+        width: 20px;
+        min-width: 18px;
+        font-size: 8pt;
+        padding-right: 2px;
+    }
+
+    .vote {
+        width: 12px;
+        padding: 5px 3px 0 0;
+    }
+
+    .votearrow::before {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 8px solid var(--hn-vote-color);
+    }
+
+    .title-cell {
+        padding: 3px 6px 3px 0;
+    }
+
+    .titleline {
+        font-size: 9pt;
+        line-height: 1.5;
+        word-break: break-word;
+    }
+
+    .sitebit {
+        font-size: 7pt;
+        display: block;
+        margin-top: 2px;
+    }
+
+    .subtext {
+        font-size: 7pt;
+        line-height: 1.6;
+        padding-bottom: 6px;
+    }
+
+    .spacer {
+        height: 3px;
+    }
+
+    .spacer td {
+        height: 3px;
+    }
+
+    .more-link {
+        padding: 12px 0;
+        text-align: center;
+        font-size: 10pt;
+    }
+
+    .footer-line {
+        margin-bottom: 12px;
+    }
+
+    .footer-nav {
+        font-size: 7pt;
+        line-height: 2.4;
+        padding: 0 10px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .search-input {
+        width: 200px;
+    }
+}
+
+/* ---------- Small Mobile (max-width: 360px) ---------- */
+@media screen and (max-width: 360px) {
+    .nav-links {
+        font-size: 7pt;
+        line-height: 2.2;
+    }
+
+    .site-name {
+        font-size: 8pt;
+        margin-right: 3px;
+    }
+
+    .rank {
+        font-size: 7pt;
+        width: 18px;
+        min-width: 16px;
+    }
+
+    .titleline {
+        font-size: 9pt;
+    }
+
+    .sitebit {
+        font-size: 6pt;
+    }
+
+    .subtext {
+        font-size: 6pt;
+    }
+
+    .footer-nav {
+        font-size: 6pt;
+    }
+
+    .search-input {
+        width: 160px;
+        font-size: 9pt;
+    }
+}
+
+/* ==========================================================================
+   Additional Visual Polish
+   ========================================================================== */
+
+/* Alternating row backgrounds for readability */
+.athing:nth-child(6n+1) {
+    background-color: var(--hn-bg);
+}
+
+/* Subtle hover on story rows */
+.athing:hover {
+    background: linear-gradient(90deg, rgba(255, 102, 0, 0.03) 0%, transparent 100%);
+}
+
+.athing:hover .titleline > a {
+    color: var(--hn-orange);
+}
+
+/* Active vote state */
+.votearrow:active::before {
+    border-bottom-color: #ff4500;
+    transform: translateX(-50%) scale(1.2);
+}
+
+/* Header gradient polish */
+.header {
+    background: linear-gradient(
+        180deg,
+        #ff6600 0%,
+        #ff7020 50%,
+        #ff6600 100%
+    );
+    border-radius: 0;
+}
+
+/* Selection color matching theme */
+::selection {
+    background-color: rgba(255, 102, 0, 0.25);
+    color: var(--hn-text);
+}
+
+::-moz-selection {
+    background-color: rgba(255, 102, 0, 0.25);
+    color: var(--hn-text);
+}
+
+/* Smooth transitions */
+a {
+    transition: color 0.15s ease;
+}
+
+.votearrow::before {
+    transition: border-bottom-color 0.15s ease, transform 0.1s ease;
+}
+
+.search-input {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus visible for keyboard nav */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--hn-orange);
+    outline-offset: 2px;
+}
+
+/* Footer gradient accent */
+.footer-line {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--hn-orange) 15%,
+        var(--hn-orange) 85%,
+        transparent 100%
+    );
+    height: 2px;
+}
+
+/* Print styles */
+@media print {
+    .header {
+        background: none;
+        border-bottom: 2px solid #000;
+    }
+
+    .votearrow,
+    .vote,
+    .search-form,
+    .nav-right {
+        display: none;
+    }
+
+    .main-content,
+    .header,
+    .footer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .titleline > a {
+        color: #000 !important;
+    }
+
+    body {
+        background: #fff;
+    }
+}
