@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing – Notion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav-header">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-logo" aria-label="Notion home">
+          <svg class="logo-icon" viewBox="0 0 120 120" width="28" height="28">
+            <rect width="120" height="120" rx="24" fill="#000"/>
+            <path d="M30 95V30l55-5v70L30 95z" fill="#fff" opacity="0.9"/>
+            <path d="M45 42h25v4H45zm0 14h30v4H45zm0 14h20v4H45z" fill="#000" opacity="0.3"/>
+          </svg>
+          <span class="logo-text">Notion</span>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="templates.html" class="nav-link">Templates</a>
+          <a href="pricing.html" class="nav-link active">Pricing</a>
+          <a href="features.html" class="nav-link">Features</a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <div class="search-trigger" id="searchTrigger">
+          <span class="search-icon">🔍</span>
+          <span class="search-placeholder">Search...</span>
+        </div>
+        <a href="pricing.html" class="nav-btn nav-btn-primary">Get Notion free</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="features.html" class="mobile-nav-link">Features</a>
+      <a href="templates.html" class="mobile-nav-link">Templates</a>
+      <a href="pricing.html" class="mobile-nav-link active">Pricing</a>
+      <a href="pricing.html" class="nav-btn nav-btn-primary mobile-cta">Get Notion free →</a>
+    </div>
+  </div>
+
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-content">
+      <div class="search-modal-header">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-modal-input" id="searchModalInput" placeholder="Search Notion..." autocomplete="off">
+        <button class="search-modal-close" id="searchModalClose">Esc</button>
+      </div>
+      <div class="search-modal-results" id="searchModalResults">
+        <div class="search-section">
+          <p class="search-section-title">Quick Links</p>
+          <a href="features.html" class="search-result-item">📝 Features & Product Overview</a>
+          <a href="pricing.html" class="search-result-item">💰 Pricing Plans</a>
+          <a href="templates.html" class="search-result-item">📁 Template Gallery</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Pricing Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero-title">One tool for your whole team.<br>Free to get started.</h1>
+        <p class="page-hero-sub">Choose the plan that fits your needs. Upgrade or downgrade at any time.</p>
+        <div class="billing-toggle" id="billingToggle">
+          <span class="billing-option active" data-billing="monthly">Monthly</span>
+          <button class="billing-switch" id="billingSwitch" aria-label="Toggle billing period">
+            <span class="switch-knob"></span>
+          </button>
+          <span class="billing-option" data-billing="annual">Annual <span class="save-badge">Save 20%</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="pricing-section">
+      <div class="container">
+        <div class="pricing-grid">
+          <!-- Free -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="plan-name">Free</h3>
+              <p class="plan-desc">For organizing every corner of your work & life</p>
+              <div class="plan-price">
+                <span class="price-amount" data-monthly="$0" data-annual="$0">$0</span>
+                <span class="price-period">forever</span>
+              </div>
+            </div>
+            <a href="index.html" class="btn btn-outline btn-block">Get started</a>
+            <ul class="plan-features">
+              <li>✅ Unlimited pages & blocks</li>
+              <li>✅ Invite up to 10 guests</li>
+              <li>✅ Synced across devices</li>
+              <li>✅ 7-day page history</li>
+              <li>✅ File uploads up to 5MB</li>
+              <li>❌ No AI features</li>
+            </ul>
+          </div>
+
+          <!-- Plus -->
+          <div class="pricing-card featured">
+            <div class="popular-badge">Most Popular</div>
+            <div class="pricing-card-header">
+              <h3 class="plan-name">Plus</h3>
+              <p class="plan-desc">For small teams that want to plan & get organized</p>
+              <div class="plan-price">
+                <span class="price-amount" data-monthly="$10" data-annual="$8">$10</span>
+                <span class="price-period">per user/month</span>
+              </div>
+            </div>
+            <a href="index.html" class="btn btn-primary btn-block">Get started</a>
+            <ul class="plan-features">
+              <li>✅ Everything in Free</li>
+              <li>✅ Unlimited team members</li>
+              <li>✅ Unlimited file uploads</li>
+              <li>✅ 30-day page history</li>
+              <li>✅ Invite 100 guests</li>
+              <li>✅ Custom automations</li>
+            </ul>
+          </div>
+
+          <!-- Business -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="plan-name">Business</h3>
+              <p class="plan-desc">For companies using Notion to connect teams & tools</p>
+              <div class="plan-price">
+                <span class="price-amount" data-monthly="$18" data-annual="$15">$18</span>
+                <span class="price-period">per user/month</span>
+              </div>
+            </div>
+            <a href="index.html" class="btn btn-outline btn-block">Get started</a>
+            <ul class="plan-features">
+              <li>✅ Everything in Plus</li>
+              <li>✅ SAML SSO</li>
+              <li>✅ Advanced permissions</li>
+              <li>✅ 90-day page history</li>
+              <li>✅ 250 guest collaborators</li>
+              <li>✅ Advanced analytics</li>
+            </ul>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="plan-name">Enterprise</h3>
+              <p class="plan-desc">For organizations that need advanced security & controls</p>
+              <div class="plan-price">
+                <span class="price-amount" data-monthly="Custom" data-annual="Custom">Custom</span>
+                <span class="price-period">contact sales</span>
+              </div>
+            </div>
+            <a href="index.html" class="btn btn-outline btn-block">Contact sales</a>
+            <ul class="plan-features">
+              <li>✅ Everything in Business</li>
+              <li>✅ Unlimited page history</li>
+              <li>✅ SCIM provisioning</li>
+              <li>✅ Audit log</li>
+              <li>✅ Custom contract</li>
+              <li>✅ Dedicated CSM</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- AI Add-on -->
+        <div class="ai-addon">
+          <div class="ai-addon-content">
+            <div class="ai-addon-icon">✨</div>
+            <div class="ai-addon-text">
+              <h3>Add Notion AI to any plan</h3>
+              <p>Get AI-powered writing, summaries, and Q&A across your entire workspace.</p>
+            </div>
+            <div class="ai-addon-price">
+              <span class="price-amount" data-monthly="$10" data-annual="$8">$10</span>
+              <span class="price-period">per user/month</span>
+            </div>
+            <a href="features.html" class="btn btn-outline">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Frequently asked questions</h2>
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I use Notion for free?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Notion's Free plan includes unlimited pages and blocks for personal use. You can invite up to 10 guests and sync across all your devices. No credit card required.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What's the difference between Plus and Business?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Business adds advanced security features like SAML SSO, more granular permissions, longer page history (90 days vs 30), and more guest collaborators. It's designed for larger teams that need compliance and admin controls.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I switch plans at any time?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. You can upgrade, downgrade, or cancel your plan at any time. If you downgrade, you'll retain access to all your content — just some features may become limited.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is Notion AI included in all plans?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Notion AI is available as an add-on for any plan at $10/user/month (or $8/user/month billed annually). It's not included by default but can be added to Free, Plus, Business, or Enterprise plans.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you offer discounts for education or nonprofits?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Notion offers free Plus plans for students and educators with a valid .edu email. Nonprofits and startups can also get discounted or free access through our special programs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Start building with Notion today</h2>
+        <p class="cta-subtitle">Free to start. No credit card required.</p>
+        <div class="cta-actions">
+          <a href="index.html" class="btn btn-primary btn-lg">Get Notion free →</a>
+          <a href="templates.html" class="btn btn-ghost btn-lg">Browse templates</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <svg class="logo-icon" viewBox="0 0 120 120" width="28" height="28">
+              <rect width="120" height="120" rx="24" fill="#000"/>
+              <path d="M30 95V30l55-5v70L30 95z" fill="#fff" opacity="0.9"/>
+              <path d="M45 42h25v4H45zm0 14h30v4H45zm0 14h20v4H45z" fill="#000" opacity="0.3"/>
+            </svg>
+            <span class="logo-text">Notion</span>
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Wikis</a>
+          <a href="features.html">Projects</a>
+          <a href="features.html">Docs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="templates.html">Templates</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html">About</a>
+          <a href="index.html">Careers</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Notion Labs, Inc. (Clone)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

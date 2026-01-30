@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templates – Notion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav-header">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-logo" aria-label="Notion home">
+          <svg class="logo-icon" viewBox="0 0 120 120" width="28" height="28">
+            <rect width="120" height="120" rx="24" fill="#000"/>
+            <path d="M30 95V30l55-5v70L30 95z" fill="#fff" opacity="0.9"/>
+            <path d="M45 42h25v4H45zm0 14h30v4H45zm0 14h20v4H45z" fill="#000" opacity="0.3"/>
+          </svg>
+          <span class="logo-text">Notion</span>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="templates.html" class="nav-link active">Templates</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="features.html" class="nav-link">Features</a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <div class="search-trigger" id="searchTrigger">
+          <span class="search-icon">🔍</span>
+          <span class="search-placeholder">Search...</span>
+        </div>
+        <a href="pricing.html" class="nav-btn nav-btn-primary">Get Notion free</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="features.html" class="mobile-nav-link">Features</a>
+      <a href="templates.html" class="mobile-nav-link active">Templates</a>
+      <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+      <a href="pricing.html" class="nav-btn nav-btn-primary mobile-cta">Get Notion free →</a>
+    </div>
+  </div>
+
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-content">
+      <div class="search-modal-header">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-modal-input" id="searchModalInput" placeholder="Search templates..." autocomplete="off">
+        <button class="search-modal-close" id="searchModalClose">Esc</button>
+      </div>
+      <div class="search-modal-results" id="searchModalResults">
+        <div class="search-section">
+          <p class="search-section-title">Quick Links</p>
+          <a href="features.html" class="search-result-item">📝 Features & Product Overview</a>
+          <a href="pricing.html" class="search-result-item">💰 Pricing Plans</a>
+          <a href="templates.html" class="search-result-item">📁 Template Gallery</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero-title">Template Gallery</h1>
+        <p class="page-hero-sub">Get started quickly with thousands of free templates for every use case.</p>
+        <div class="template-search">
+          <input type="text" class="template-search-input" id="templateSearchInput" placeholder="Search templates...">
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="template-gallery">
+      <div class="container">
+        <div class="category-filters" id="categoryFilters">
+          <button class="cat-btn active" data-category="all">🏠 All</button>
+          <button class="cat-btn" data-category="engineering">💻 Engineering</button>
+          <button class="cat-btn" data-category="design">🎨 Design</button>
+          <button class="cat-btn" data-category="product">📋 Product</button>
+          <button class="cat-btn" data-category="marketing">📣 Marketing</button>
+          <button class="cat-btn" data-category="hr">👥 HR & People</button>
+          <button class="cat-btn" data-category="personal">🌱 Personal</button>
+        </div>
+
+        <!-- Template Grid -->
+        <div class="templates-grid" id="templatesGrid">
+          <!-- Engineering -->
+          <div class="tpl-card" data-category="engineering" data-title="engineering wiki">
+            <div class="tpl-preview eng-1">
+              <div class="tpl-preview-icon">📚</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Engineering Wiki</h3>
+              <p>Centralize docs, runbooks, and architecture decisions</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">💻 Engineering</span>
+                <span class="tpl-uses">12.4k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tpl-card" data-category="engineering" data-title="bug tracker">
+            <div class="tpl-preview eng-2">
+              <div class="tpl-preview-icon">🐛</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Bug Tracker</h3>
+              <p>Track, triage, and resolve bugs with a Kanban board</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">💻 Engineering</span>
+                <span class="tpl-uses">8.7k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tpl-card" data-category="engineering" data-title="sprint planner">
+            <div class="tpl-preview eng-3">
+              <div class="tpl-preview-icon">🏃</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Sprint Planner</h3>
+              <p>Plan sprints with backlog, active, and done columns</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">💻 Engineering</span>
+                <span class="tpl-uses">6.2k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design -->
+          <div class="tpl-card" data-category="design" data-title="design system">
+            <div class="tpl-preview des-1">
+              <div class="tpl-preview-icon">🎨</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Design System</h3>
+              <p>Document components, tokens, and design guidelines</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">🎨 Design</span>
+                <span class="tpl-uses">9.1k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tpl-card" data-category="design" data-title="mood board">
+            <div class="tpl-preview des-2">
+              <div class="tpl-preview-icon">✨</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Mood Board</h3>
+              <p>Collect visual inspiration for your projects</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">🎨 Design</span>
+                <span class="tpl-uses">5.4k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product -->
+          <div class="tpl-card" data-category="product" data-title="product roadmap">
+            <div class="tpl-preview prod-1">
+              <div class="tpl-preview-icon">🗺️</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Product Roadmap</h3>
+              <p>Plan and visualize your product development journey</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">📋 Product</span>
+                <span class="tpl-uses">15.8k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tpl-card" data-category="product" data-title="meeting notes">
+            <div class="tpl-preview prod-2">
+              <div class="tpl-preview-icon">📝</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Meeting Notes</h3>
+              <p>Keep track of decisions, action items, and follow-ups</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">📋 Product</span>
+                <span class="tpl-uses">22.1k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tpl-card" data-category="product" data-title="prd template">
+            <div class="tpl-preview prod-3">
+              <div class="tpl-preview-icon">📄</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>PRD Template</h3>
+              <p>Product requirements document with structured sections</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">📋 Product</span>
+                <span class="tpl-uses">11.3k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Marketing -->
+          <div class="tpl-card" data-category="marketing" data-title="content calendar">
+            <div class="tpl-preview mkt-1">
+              <div class="tpl-preview-icon">📅</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Content Calendar</h3>
+              <p>Plan and schedule content across all channels</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">📣 Marketing</span>
+                <span class="tpl-uses">18.5k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tpl-card" data-category="marketing" data-title="campaign tracker">
+            <div class="tpl-preview mkt-2">
+              <div class="tpl-preview-icon">🎯</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Campaign Tracker</h3>
+              <p>Track campaign performance, budgets, and ROI</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">📣 Marketing</span>
+                <span class="tpl-uses">7.9k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HR -->
+          <div class="tpl-card" data-category="hr" data-title="employee onboarding">
+            <div class="tpl-preview hr-1">
+              <div class="tpl-preview-icon">👋</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Employee Onboarding</h3>
+              <p>Welcome new hires with a structured onboarding process</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">👥 HR</span>
+                <span class="tpl-uses">14.2k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal -->
+          <div class="tpl-card" data-category="personal" data-title="habit tracker">
+            <div class="tpl-preview per-1">
+              <div class="tpl-preview-icon">🌱</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Habit Tracker</h3>
+              <p>Build and track daily habits with streak counts</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">🌱 Personal</span>
+                <span class="tpl-uses">31.4k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tpl-card" data-category="personal" data-title="reading list">
+            <div class="tpl-preview per-2">
+              <div class="tpl-preview-icon">📖</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Reading List</h3>
+              <p>Track books, articles, and podcasts to consume</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">🌱 Personal</span>
+                <span class="tpl-uses">25.7k uses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tpl-card" data-category="personal" data-title="journal">
+            <div class="tpl-preview per-3">
+              <div class="tpl-preview-icon">📓</div>
+              <div class="tpl-preview-lines"><span></span><span class="short"></span><span></span></div>
+            </div>
+            <div class="tpl-info">
+              <h3>Daily Journal</h3>
+              <p>Reflect on your day with guided prompts</p>
+              <div class="tpl-meta">
+                <span class="tpl-category">🌱 Personal</span>
+                <span class="tpl-uses">19.8k uses</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="no-results-msg" id="noResults" style="display:none;">
+          <p>No templates found. Try a different search or category.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Can't find what you need?</h2>
+        <p class="cta-subtitle">Start from scratch and build your own custom workspace.</p>
+        <div class="cta-actions">
+          <a href="pricing.html" class="btn btn-primary btn-lg">Get Notion free →</a>
+          <a href="features.html" class="btn btn-ghost btn-lg">Explore features</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <svg class="logo-icon" viewBox="0 0 120 120" width="28" height="28">
+              <rect width="120" height="120" rx="24" fill="#000"/>
+              <path d="M30 95V30l55-5v70L30 95z" fill="#fff" opacity="0.9"/>
+              <path d="M45 42h25v4H45zm0 14h30v4H45zm0 14h20v4H45z" fill="#000" opacity="0.3"/>
+            </svg>
+            <span class="logo-text">Notion</span>
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Wikis</a>
+          <a href="features.html">Projects</a>
+          <a href="features.html">Docs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="templates.html">Templates</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html">About</a>
+          <a href="index.html">Careers</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Notion Labs, Inc. (Clone)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

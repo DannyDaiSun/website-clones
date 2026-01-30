@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features – Notion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav-header">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-logo" aria-label="Notion home">
+          <svg class="logo-icon" viewBox="0 0 120 120" width="28" height="28">
+            <rect width="120" height="120" rx="24" fill="#000"/>
+            <path d="M30 95V30l55-5v70L30 95z" fill="#fff" opacity="0.9"/>
+            <path d="M45 42h25v4H45zm0 14h30v4H45zm0 14h20v4H45z" fill="#000" opacity="0.3"/>
+          </svg>
+          <span class="logo-text">Notion</span>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="templates.html" class="nav-link">Templates</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="features.html" class="nav-link active">Features</a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <div class="search-trigger" id="searchTrigger">
+          <span class="search-icon">🔍</span>
+          <span class="search-placeholder">Search...</span>
+        </div>
+        <a href="pricing.html" class="nav-btn nav-btn-primary">Get Notion free</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="features.html" class="mobile-nav-link active">Features</a>
+      <a href="templates.html" class="mobile-nav-link">Templates</a>
+      <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+      <a href="pricing.html" class="nav-btn nav-btn-primary mobile-cta">Get Notion free →</a>
+    </div>
+  </div>
+
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-content">
+      <div class="search-modal-header">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-modal-input" id="searchModalInput" placeholder="Search Notion..." autocomplete="off">
+        <button class="search-modal-close" id="searchModalClose">Esc</button>
+      </div>
+      <div class="search-modal-results" id="searchModalResults">
+        <div class="search-section">
+          <p class="search-section-title">Quick Links</p>
+          <a href="features.html" class="search-result-item">📝 Features & Product Overview</a>
+          <a href="pricing.html" class="search-result-item">💰 Pricing Plans</a>
+          <a href="templates.html" class="search-result-item">📁 Template Gallery</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-label">Product</p>
+        <h1 class="page-hero-title">Everything you need.<br>Nothing you don't.</h1>
+        <p class="page-hero-sub">Notion adapts to how you work. Build exactly what you need — no more, no less.</p>
+      </div>
+    </section>
+
+    <!-- Feature Blocks -->
+    <section class="features-detail">
+      <div class="container">
+        <!-- Wikis -->
+        <div class="feature-block" id="wikis">
+          <div class="feature-block-content">
+            <div class="feature-emoji">📝</div>
+            <h2>Wikis</h2>
+            <p class="feature-block-desc">Build a knowledge base that actually gets used. Notion wikis are beautiful, flexible, and always up to date because everyone can contribute.</p>
+            <div class="feature-checklist">
+              <div class="check-item">✅ Nested pages — organize infinitely deep</div>
+              <div class="check-item">✅ Backlinks — see what references each page</div>
+              <div class="check-item">✅ Verification — mark pages as verified</div>
+              <div class="check-item">✅ Permissions — control who sees what</div>
+              <div class="check-item">✅ Templates — standardize page creation</div>
+              <div class="check-item">✅ Search — find anything instantly</div>
+            </div>
+          </div>
+          <div class="feature-block-visual">
+            <div class="visual-card wiki-visual">
+              <div class="v-sidebar">
+                <div class="v-item active">📁 Engineering</div>
+                <div class="v-item indent">📝 Onboarding</div>
+                <div class="v-item indent">📋 Processes</div>
+                <div class="v-item">📁 Design</div>
+                <div class="v-item">📁 Marketing</div>
+              </div>
+              <div class="v-page">
+                <h4>Onboarding Guide</h4>
+                <p>Welcome to the team! Here's everything you need to get started...</p>
+                <div class="v-tag">✓ Verified</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="feature-block reverse" id="projects">
+          <div class="feature-block-content">
+            <div class="feature-emoji">📋</div>
+            <h2>Projects</h2>
+            <p class="feature-block-desc">Ship faster with flexible project management. Use boards, timelines, tables, or calendars — switch views without losing data.</p>
+            <div class="feature-checklist">
+              <div class="check-item">✅ Board view — Kanban-style tracking</div>
+              <div class="check-item">✅ Timeline — Gantt-chart visualization</div>
+              <div class="check-item">✅ Table — spreadsheet-like database</div>
+              <div class="check-item">✅ Calendar — date-based planning</div>
+              <div class="check-item">✅ Custom properties — tags, dates, people</div>
+              <div class="check-item">✅ Filters & sorts — slice data any way</div>
+            </div>
+          </div>
+          <div class="feature-block-visual">
+            <div class="visual-card project-visual">
+              <div class="view-tabs">
+                <span class="view-tab active">Board</span>
+                <span class="view-tab">Timeline</span>
+                <span class="view-tab">Table</span>
+              </div>
+              <div class="mini-kanban">
+                <div class="mk-col">
+                  <div class="mk-header">To Do</div>
+                  <div class="mk-card">🎨 Design mockups</div>
+                  <div class="mk-card">📝 Write specs</div>
+                </div>
+                <div class="mk-col">
+                  <div class="mk-header">Doing</div>
+                  <div class="mk-card active">🔧 Build API</div>
+                </div>
+                <div class="mk-col">
+                  <div class="mk-header">Done</div>
+                  <div class="mk-card done">✅ Research</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Docs -->
+        <div class="feature-block" id="docs">
+          <div class="feature-block-content">
+            <div class="feature-emoji">📄</div>
+            <h2>Docs</h2>
+            <p class="feature-block-desc">Create beautiful documents with Notion's block-based editor. Drag and drop to arrange content, add databases inline, and embed anything.</p>
+            <div class="feature-checklist">
+              <div class="check-item">✅ 50+ block types — text, images, code, etc.</div>
+              <div class="check-item">✅ Real-time collaboration</div>
+              <div class="check-item">✅ Comments & mentions</div>
+              <div class="check-item">✅ Cover images & icons</div>
+              <div class="check-item">✅ Toggle blocks — collapsible sections</div>
+              <div class="check-item">✅ Synced blocks — reuse content</div>
+            </div>
+          </div>
+          <div class="feature-block-visual">
+            <div class="visual-card doc-visual">
+              <div class="d-cover"></div>
+              <div class="d-icon">📄</div>
+              <h4>Product Requirements</h4>
+              <div class="d-blocks">
+                <div class="d-block h2">Overview</div>
+                <div class="d-block text">This document outlines the requirements for...</div>
+                <div class="d-block callout">💡 Key decision: Ship MVP by March 1</div>
+                <div class="d-block toggle">▸ Technical specifications</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notion AI -->
+        <div class="feature-block reverse" id="ai">
+          <div class="feature-block-content">
+            <div class="feature-emoji">🤖</div>
+            <h2>Notion AI</h2>
+            <p class="feature-block-desc">AI that understands your workspace. Ask questions about your docs, generate content, summarize meetings, and automate repetitive work.</p>
+            <div class="feature-checklist">
+              <div class="check-item">✅ Q&A — ask about your workspace</div>
+              <div class="check-item">✅ Drafts — generate content instantly</div>
+              <div class="check-item">✅ Summaries — condense long docs</div>
+              <div class="check-item">✅ Translation — 10+ languages</div>
+              <div class="check-item">✅ Fix grammar — improve your writing</div>
+              <div class="check-item">✅ Action items — extract from meeting notes</div>
+            </div>
+          </div>
+          <div class="feature-block-visual">
+            <div class="visual-card ai-visual">
+              <div class="ai-chat">
+                <div class="ai-user-msg">Summarize last week's standup notes</div>
+                <div class="ai-bot-msg">
+                  <div class="ai-bot-icon">✨</div>
+                  <div>
+                    <strong>Summary:</strong>
+                    <ul>
+                      <li>API launch on track for March</li>
+                      <li>Design system v2 approved</li>
+                      <li>3 new team members onboarded</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrations -->
+    <section class="integrations-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Works with your favorite tools</h2>
+          <p class="section-subtitle">Connect 100+ apps and automate your workflows.</p>
+        </div>
+        <div class="integrations-grid">
+          <div class="integration-card">🔗 Slack</div>
+          <div class="integration-card">📧 Gmail</div>
+          <div class="integration-card">📊 GitHub</div>
+          <div class="integration-card">🎨 Figma</div>
+          <div class="integration-card">📅 Google Cal</div>
+          <div class="integration-card">🗂️ Jira</div>
+          <div class="integration-card">💬 Zoom</div>
+          <div class="integration-card">📁 Dropbox</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Ready to try Notion?</h2>
+        <p class="cta-subtitle">Free for personal use. Start building your workspace today.</p>
+        <div class="cta-actions">
+          <a href="pricing.html" class="btn btn-primary btn-lg">Get Notion free →</a>
+          <a href="pricing.html" class="btn btn-ghost btn-lg">Compare plans</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <svg class="logo-icon" viewBox="0 0 120 120" width="28" height="28">
+              <rect width="120" height="120" rx="24" fill="#000"/>
+              <path d="M30 95V30l55-5v70L30 95z" fill="#fff" opacity="0.9"/>
+              <path d="M45 42h25v4H45zm0 14h30v4H45zm0 14h20v4H45z" fill="#000" opacity="0.3"/>
+            </svg>
+            <span class="logo-text">Notion</span>
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="features.html">Wikis</a>
+          <a href="features.html">Projects</a>
+          <a href="features.html">Docs</a>
+          <a href="features.html">Notion AI</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="templates.html">Templates</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html">About</a>
+          <a href="index.html">Careers</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Notion Labs, Inc. (Clone)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
