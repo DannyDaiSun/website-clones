@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Clones — Built by Meeseeks</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            border-bottom: 1px solid #333;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00d2ff, #7b2ff7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #999;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        header .badge {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 6px 16px;
+            background: rgba(123, 47, 247, 0.15);
+            border: 1px solid rgba(123, 47, 247, 0.3);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #b388ff;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
+        .card {
+            background: #141414;
+            border: 1px solid #222;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #7b2ff7;
+        }
+        .card-preview {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .card-body h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .card-body p {
+            font-size: 0.9rem;
+            color: #888;
+            line-height: 1.4;
+        }
+        .card-body .meta {
+            margin-top: 12px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+        /* Unique gradients per clone */
+        .spacex .card-preview { background: linear-gradient(135deg, #000 0%, #1a1a2e 100%); }
+        .wibe .card-preview { background: linear-gradient(135deg, #ff6b6b 0%, #ffa502 100%); }
+        .apple .card-preview { background: linear-gradient(135deg, #1d1d1f 0%, #333 100%); }
+        .airbnb .card-preview { background: linear-gradient(135deg, #ff385c 0%, #e31c5f 100%); }
+        .discord .card-preview { background: linear-gradient(135deg, #5865f2 0%, #7289da 100%); }
+        .razer .card-preview { background: linear-gradient(135deg, #111 0%, #00ff00 100%); }
+        .hackernews .card-preview { background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%); }
+        .devto .card-preview { background: linear-gradient(135deg, #0a0a0a 0%, #3b49df 100%); }
+        .notion .card-preview { background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%); }
+        .vercel .card-preview { background: linear-gradient(135deg, #000 0%, #333 100%); }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #555;
+            font-size: 0.85rem;
+            border-top: 1px solid #1a1a1a;
+        }
+        footer a { color: #7b2ff7; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; padding: 24px 16px 40px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Clones</h1>
+        <p>10 faithful recreations of iconic websites, built autonomously by Mr. Meeseeks — an AI-powered software delivery system.</p>
+        <span class="badge">🤖 Built with Claude Opus 4.5</span>
+    </header>
+
+    <div class="grid">
+        <a href="spacex/" class="card spacex">
+            <div class="card-preview">🚀</div>
+            <div class="card-body">
+                <h2>SpaceX</h2>
+                <p>Space exploration landing page with hero section, missions, and rocket showcase.</p>
+                <div class="meta">Clone #1 · 1,006 lines</div>
+            </div>
+        </a>
+
+        <a href="wibe/" class="card wibe">
+            <div class="card-preview">🎧</div>
+            <div class="card-body">
+                <h2>Wibe</h2>
+                <p>Modern product landing page with vibrant gradients and feature highlights.</p>
+                <div class="meta">Clone #2 · 1,294 lines</div>
+            </div>
+        </a>
+
+        <a href="apple/" class="card apple">
+            <div class="card-preview">🍎</div>
+            <div class="card-body">
+                <h2>Apple</h2>
+                <p>Clean, minimal product showcase with Apple's signature design language.</p>
+                <div class="meta">Clone #3 · 1,133 lines</div>
+            </div>
+        </a>
+
+        <a href="airbnb/" class="card airbnb">
+            <div class="card-preview">🏠</div>
+            <div class="card-body">
+                <h2>Airbnb</h2>
+                <p>Travel marketplace with search, listings grid, and category navigation.</p>
+                <div class="meta">Clone #4 · 1,311 lines</div>
+            </div>
+        </a>
+
+        <a href="discord/" class="card discord">
+            <div class="card-preview">💬</div>
+            <div class="card-body">
+                <h2>Discord</h2>
+                <p>Dark-themed landing page with feature sections and call-to-action buttons.</p>
+                <div class="meta">Clone #5 · 1,498 lines</div>
+            </div>
+        </a>
+
+        <a href="razer/" class="card razer">
+            <div class="card-preview">🐍</div>
+            <div class="card-body">
+                <h2>Razer</h2>
+                <p>Gaming aesthetic with neon accents, product showcase, and dark design.</p>
+                <div class="meta">Clone #6 · 1,827 lines</div>
+            </div>
+        </a>
+
+        <a href="hackernews/" class="card hackernews">
+            <div class="card-preview">📰</div>
+            <div class="card-body">
+                <h2>Hacker News</h2>
+                <p>Classic tech news aggregator with story listings and voting interface.</p>
+                <div class="meta">Clone #7 · 1,184 lines</div>
+            </div>
+        </a>
+
+        <a href="devto/" class="card devto">
+            <div class="card-preview">👩‍💻</div>
+            <div class="card-body">
+                <h2>Dev.to</h2>
+                <p>Developer community platform with article cards, tags, and discussion.</p>
+                <div class="meta">Clone #8 · 1,460 lines</div>
+            </div>
+        </a>
+
+        <a href="notion/" class="card notion">
+            <div class="card-preview">📝</div>
+            <div class="card-body">
+                <h2>Notion</h2>
+                <p>Productivity tool landing page with feature blocks and clean typography.</p>
+                <div class="meta">Clone #9 · 1,592 lines</div>
+            </div>
+        </a>
+
+        <a href="vercel/" class="card vercel">
+            <div class="card-preview">▲</div>
+            <div class="card-body">
+                <h2>Vercel</h2>
+                <p>Developer platform with deployment showcase, framework logos, and dark UI.</p>
+                <div class="meta">Clone #10 · 1,370 lines</div>
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        Built by <a href="https://github.com/DannyDaiSun/meeseeks">Mr. Meeseeks</a> · 
+        An autonomous AI delivery system · 
+        <a href="https://github.com/DannyDaiSun/website-clones">Source</a>
+    </footer>
+</body>
+</html>
