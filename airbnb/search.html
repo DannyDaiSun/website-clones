@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results — Airbnb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="search-page">
+    <header class="header header-compact" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo" aria-label="Airbnb Home">
+                <svg width="102" height="32" viewBox="0 0 102 32" fill="currentColor">
+                    <path d="M29 1.4C21.4 1.4 16 7.8 16 14.6c0 4.8 2.6 8.8 6.4 11L19 31.2c-.2.4.2.8.6.8h18.8c.4 0 .8-.4.6-.8l-3.4-5.6c3.8-2.2 6.4-6.2 6.4-11C42 7.8 36.6 1.4 29 1.4zm0 23.2c-5.2 0-9.4-4.2-9.4-9.4S23.8 5.8 29 5.8s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4z"/>
+                    <text x="46" y="24" font-family="Arial,sans-serif" font-weight="bold" font-size="22">airbnb</text>
+                </svg>
+            </a>
+            <div class="search-bar-compact">
+                <input type="text" class="search-input-compact" id="search-compact" placeholder="Search destinations...">
+                <button class="search-submit-compact" id="search-go" aria-label="Search">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+            </div>
+            <div class="nav-right">
+                <a href="host.html" class="nav-link hide-mobile">Airbnb your home</a>
+                <button class="nav-user-btn" id="user-menu-toggle">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                    <div class="user-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></div>
+                </button>
+                <div class="user-dropdown" id="user-dropdown">
+                    <a href="#" class="dropdown-item"><strong>Sign up</strong></a>
+                    <a href="#" class="dropdown-item">Log in</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="host.html" class="dropdown-item">Airbnb your home</a>
+                    <a href="experiences.html" class="dropdown-item">Host an experience</a>
+                    <a href="#" class="dropdown-item">Help Center</a>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <!-- Filters -->
+    <section class="search-filters">
+        <div class="container filters-row">
+            <button class="filter-pill active" data-filter="all">All</button>
+            <button class="filter-pill" data-filter="entire">Entire place</button>
+            <button class="filter-pill" data-filter="private">Private room</button>
+            <button class="filter-pill" data-filter="shared">Shared room</button>
+            <div class="filter-price">
+                <label>Max price: </label>
+                <select id="price-filter">
+                    <option value="9999">Any</option>
+                    <option value="200">Under $200</option>
+                    <option value="300">Under $300</option>
+                    <option value="500">Under $500</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Layout -->
+    <main class="search-layout">
+        <div class="search-results-grid" id="search-results">
+
+            <a href="listing.html?id=1" class="result-card" data-type="entire" data-price="284">
+                <div class="result-img"><div class="listing-photo lp-1"></div></div>
+                <div class="result-info">
+                    <div class="result-top"><span class="result-type">Entire villa</span><span class="result-rating">★ 4.92</span></div>
+                    <h3>Mountain Villa · Queenstown</h3>
+                    <p>4 guests · 2 bedrooms · 2 beds · 1 bath</p>
+                    <p class="result-amenities">Wifi · Kitchen · Free parking · Mountain view</p>
+                    <p class="result-price"><strong>$284</strong> / night · $1,420 total</p>
+                </div>
+            </a>
+
+            <a href="listing.html?id=2" class="result-card" data-type="entire" data-price="156">
+                <div class="result-img"><div class="listing-photo lp-2"></div></div>
+                <div class="result-info">
+                    <div class="result-top"><span class="result-type">Entire villa</span><span class="result-rating">★ 4.87</span></div>
+                    <h3>Tropical Retreat · Bali</h3>
+                    <p>2 guests · 1 bedroom · 1 bed · 1 bath</p>
+                    <p class="result-amenities">Pool · Wifi · Kitchen · Garden view</p>
+                    <p class="result-price"><strong>$156</strong> / night · $936 total</p>
+                </div>
+            </a>
+
+            <a href="listing.html?id=3" class="result-card" data-type="entire" data-price="320">
+                <div class="result-img"><div class="listing-photo lp-3"></div></div>
+                <div class="result-info">
+                    <div class="result-top"><span class="result-type">Entire cabin</span><span class="result-rating">★ 4.95</span></div>
+                    <h3>Lakeside Cabin · Lake Tahoe</h3>
+                    <p>6 guests · 3 bedrooms · 4 beds · 2 bath</p>
+                    <p class="result-amenities">Hot tub · Wifi · Fireplace · Lake access</p>
+                    <p class="result-price"><strong>$320</strong> / night · $1,600 total</p>
+                </div>
+            </a>
+
+            <a href="listing.html?id=4" class="result-card" data-type="entire" data-price="475">
+                <div class="result-img"><div class="listing-photo lp-4"></div></div>
+                <div class="result-info">
+                    <div class="result-top"><span class="result-type">Entire home</span><span class="result-rating">★ 4.98</span></div>
+                    <h3>Cliffside Home · Santorini</h3>
+                    <p>4 guests · 2 bedrooms · 2 beds · 1 bath</p>
+                    <p class="result-amenities">Pool · Sea view · Kitchen · Terrace</p>
+                    <p class="result-price"><strong>$475</strong> / night · $3,325 total</p>
+                </div>
+            </a>
+
+            <a href="listing.html?id=5" class="result-card" data-type="private" data-price="198">
+                <div class="result-img"><div class="listing-photo lp-5"></div></div>
+                <div class="result-info">
+                    <div class="result-top"><span class="result-type">Private room</span><span class="result-rating">★ 4.96</span></div>
+                    <h3>Jungle Treehouse · Costa Rica</h3>
+                    <p>2 guests · 1 bedroom · 1 bed · 1 bath</p>
+                    <p class="result-amenities">Wifi · Nature view · Breakfast · Eco-lodge</p>
+                    <p class="result-price"><strong>$198</strong> / night · $990 total</p>
+                </div>
+            </a>
+
+            <a href="listing.html?id=6" class="result-card" data-type="entire" data-price="890">
+                <div class="result-img"><div class="listing-photo lp-6"></div></div>
+                <div class="result-info">
+                    <div class="result-top"><span class="result-type">Entire villa</span><span class="result-rating">★ 4.99</span></div>
+                    <h3>Overwater Villa · Maldives</h3>
+                    <p>2 guests · 1 bedroom · 1 bed · 1 bath</p>
+                    <p class="result-amenities">Private pool · Ocean view · Butler · Spa</p>
+                    <p class="result-price"><strong>$890</strong> / night · $6,230 total</p>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="search-map" id="search-map">
+            <div class="map-placeholder">
+                <div class="map-bg"></div>
+                <div class="map-pin mp-1">$284</div>
+                <div class="map-pin mp-2">$156</div>
+                <div class="map-pin mp-3">$320</div>
+                <div class="map-pin mp-4">$475</div>
+                <div class="map-pin mp-5">$198</div>
+                <div class="map-pin mp-6">$890</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col"><h4>Support</h4><a href="#">Help Center</a><a href="#">AirCover</a><a href="#">Cancellation options</a></div>
+            <div class="footer-col"><h4>Hosting</h4><a href="host.html">Airbnb your home</a><a href="#">Community forum</a><a href="experiences.html">Host experiences</a></div>
+            <div class="footer-col"><h4>Airbnb</h4><a href="#">Newsroom</a><a href="#">Careers</a><a href="#">Investors</a></div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2026 Airbnb, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

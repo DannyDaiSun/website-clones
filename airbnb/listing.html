@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Villa · Queenstown — Airbnb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="listing-page">
+    <header class="header header-compact" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo" aria-label="Airbnb Home">
+                <svg width="102" height="32" viewBox="0 0 102 32" fill="currentColor">
+                    <path d="M29 1.4C21.4 1.4 16 7.8 16 14.6c0 4.8 2.6 8.8 6.4 11L19 31.2c-.2.4.2.8.6.8h18.8c.4 0 .8-.4.6-.8l-3.4-5.6c3.8-2.2 6.4-6.2 6.4-11C42 7.8 36.6 1.4 29 1.4zm0 23.2c-5.2 0-9.4-4.2-9.4-9.4S23.8 5.8 29 5.8s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4z"/>
+                    <text x="46" y="24" font-family="Arial,sans-serif" font-weight="bold" font-size="22">airbnb</text>
+                </svg>
+            </a>
+            <div class="nav-right">
+                <a href="host.html" class="nav-link hide-mobile">Airbnb your home</a>
+                <button class="nav-user-btn" id="user-menu-toggle">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                    <div class="user-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></div>
+                </button>
+                <div class="user-dropdown" id="user-dropdown">
+                    <a href="#" class="dropdown-item"><strong>Sign up</strong></a>
+                    <a href="#" class="dropdown-item">Log in</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="host.html" class="dropdown-item">Airbnb your home</a>
+                    <a href="experiences.html" class="dropdown-item">Host an experience</a>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <main class="listing-main container">
+        <!-- Title -->
+        <section class="listing-title-section">
+            <h1 id="listing-title">Mountain Villa with Panoramic Views</h1>
+            <div class="listing-title-meta">
+                <span>★ <strong id="listing-rating-val">4.92</strong> · <a href="#reviews">128 reviews</a></span>
+                <span>· <a href="#">Queenstown, New Zealand</a></span>
+                <div class="listing-title-actions">
+                    <button class="text-btn">↗ Share</button>
+                    <button class="text-btn listing-save-btn">♡ Save</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Grid -->
+        <section class="photo-grid">
+            <div class="photo-main"><div class="listing-photo lp-1"></div></div>
+            <div class="photo-sm"><div class="listing-photo lp-3"></div></div>
+            <div class="photo-sm"><div class="listing-photo lp-5"></div></div>
+            <div class="photo-sm"><div class="listing-photo lp-2"></div></div>
+            <div class="photo-sm"><div class="listing-photo lp-7"></div></div>
+        </section>
+
+        <!-- Content Layout -->
+        <div class="listing-layout">
+            <div class="listing-detail">
+                <!-- Host -->
+                <div class="detail-host">
+                    <div>
+                        <h2 id="listing-host-name">Entire villa hosted by Sarah</h2>
+                        <p class="host-specs" id="listing-specs">4 guests · 2 bedrooms · 2 beds · 1 bath</p>
+                    </div>
+                    <div class="host-avatar ha-1"></div>
+                </div>
+
+                <!-- Highlights -->
+                <div class="detail-highlights">
+                    <div class="highlight"><span class="hl-icon">🏆</span><div><strong>Superhost</strong><p>Sarah is experienced, highly rated, and committed to great stays.</p></div></div>
+                    <div class="highlight"><span class="hl-icon">📍</span><div><strong>Great location</strong><p>95% of recent guests gave the location a 5-star rating.</p></div></div>
+                    <div class="highlight"><span class="hl-icon">🗓️</span><div><strong>Free cancellation for 48 hours</strong><p>Get a full refund if you change your mind.</p></div></div>
+                </div>
+
+                <!-- AirCover -->
+                <div class="aircover-banner">
+                    <h3>air<span>cover</span></h3>
+                    <p>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <!-- Description -->
+                <div class="detail-description">
+                    <h3>About this place</h3>
+                    <p id="listing-desc">Perched on a hillside with breathtaking views of the Remarkables mountain range and Lake Wakatipu. This modern villa features floor-to-ceiling windows, an infinity-edge terrace, and luxurious interiors. Perfect for couples or families looking for a serene mountain retreat.</p>
+                    <p>The space features a fully equipped gourmet kitchen, open-plan living area, and a private garden with outdoor dining. You'll have direct access to hiking trails and are just 15 minutes from Queenstown's vibrant town center.</p>
+                </div>
+
+                <!-- Amenities -->
+                <div class="detail-amenities">
+                    <h3>What this place offers</h3>
+                    <div class="amenities-grid" id="amenities-grid">
+                        <div class="amenity">🏔️ Mountain view</div>
+                        <div class="amenity">🍳 Kitchen</div>
+                        <div class="amenity">📶 Wifi</div>
+                        <div class="amenity">🚗 Free parking</div>
+                        <div class="amenity">🧺 Washer</div>
+                        <div class="amenity">❄️ Air conditioning</div>
+                        <div class="amenity">🔥 Fireplace</div>
+                        <div class="amenity">📺 TV</div>
+                        <div class="amenity">🛁 Bathtub</div>
+                        <div class="amenity">☕ Coffee maker</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Card -->
+            <aside class="booking-card" id="booking-card">
+                <div class="booking-header">
+                    <div class="booking-price"><strong id="booking-price-val">$284</strong> night</div>
+                    <div class="booking-rating">★ <span id="booking-rating">4.92</span> · <a href="#reviews">128 reviews</a></div>
+                </div>
+                <div class="booking-fields">
+                    <div class="booking-row">
+                        <div class="booking-field"><label>CHECK-IN</label><input type="date" value="2026-03-15"></div>
+                        <div class="booking-field"><label>CHECKOUT</label><input type="date" value="2026-03-20"></div>
+                    </div>
+                    <div class="booking-field full"><label>GUESTS</label>
+                        <select><option>1 guest</option><option>2 guests</option><option selected>3 guests</option><option>4 guests</option></select>
+                    </div>
+                </div>
+                <button class="btn btn-airbnb" id="reserve-btn">Reserve</button>
+                <p class="booking-note">You won't be charged yet</p>
+                <div class="booking-breakdown">
+                    <div class="breakdown-row"><span>$284 × 5 nights</span><span>$1,420</span></div>
+                    <div class="breakdown-row"><span>Cleaning fee</span><span>$85</span></div>
+                    <div class="breakdown-row"><span>Service fee</span><span>$213</span></div>
+                    <div class="breakdown-total"><span>Total before taxes</span><span><strong>$1,718</strong></span></div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Reviews -->
+        <section class="reviews-section" id="reviews">
+            <h3>★ 4.92 · 128 reviews</h3>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-author"><div class="review-avatar ra-1"></div><div><strong>Olivia</strong><span>December 2025</span></div></div>
+                    <p>Absolutely stunning property! The views from the terrace are unreal. Sarah was a wonderful host — very responsive and left us great local recommendations.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-author"><div class="review-avatar ra-2"></div><div><strong>Marcus</strong><span>November 2025</span></div></div>
+                    <p>We stayed for a week and didn't want to leave. The house is immaculate, the kitchen is well-stocked, and the location is perfect for hiking. Highly recommend!</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-author"><div class="review-avatar ra-3"></div><div><strong>Yuki</strong><span>October 2025</span></div></div>
+                    <p>Perfect getaway. The fireplace and mountain views made every evening magical. Would definitely come back in winter for skiing.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-author"><div class="review-avatar ra-4"></div><div><strong>Amira</strong><span>September 2025</span></div></div>
+                    <p>Beautiful home with everything you need. Great communication from Sarah and early check-in was really appreciated. Five stars!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section class="listing-map-section">
+            <h3>Where you'll be</h3>
+            <div class="listing-map">
+                <div class="map-bg"></div>
+                <div class="map-pin-single">📍</div>
+            </div>
+            <p><strong>Queenstown, Otago, New Zealand</strong></p>
+            <p class="map-desc">Located on a quiet hillside 15 minutes from central Queenstown. Close to ski fields, hiking trails, and the lakefront.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col"><h4>Support</h4><a href="#">Help Center</a><a href="#">AirCover</a><a href="#">Cancellation options</a></div>
+            <div class="footer-col"><h4>Hosting</h4><a href="host.html">Airbnb your home</a><a href="#">Community forum</a><a href="experiences.html">Host experiences</a></div>
+            <div class="footer-col"><h4>Airbnb</h4><a href="#">Newsroom</a><a href="#">Careers</a><a href="#">Investors</a></div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2026 Airbnb, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

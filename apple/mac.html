@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mac - Apple</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-mac">
+  <!-- Shared Nav — injected by components.js -->
+  <nav class="global-nav" id="globalNav" data-active="Mac"></nav>
+
+  <!-- Sub-nav (page-specific) -->
+  <nav class="sub-nav">
+    <div class="sub-nav-wrapper">
+      <h2 class="sub-nav-title">Mac</h2>
+      <ul class="sub-nav-links">
+        <li><a href="#macbook-air" class="active">MacBook Air</a></li>
+        <li><a href="#macbook-pro">MacBook Pro</a></li>
+        <li><a href="#imac">iMac</a></li>
+        <li><a href="#mac-studio">Mac Studio</a></li>
+        <li><a href="#mac-pro">Mac Pro</a></li>
+        <li><a href="#compare-mac">Compare</a></li>
+        <li><a href="./store.html">Buy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- MacBook Air Hero -->
+    <section class="product-hero mac-hero" id="macbook-air">
+      <h2 class="hero-eyebrow">MacBook Air</h2>
+      <h1 class="product-hero-headline">Strikingly thin.<br>Impressively big.</h1>
+      <p class="product-hero-price">From $1,099 or $91.58/mo. for 12 mo.*</p>
+      <div class="hero-cta">
+        <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        <a href="#air-specs" class="btn-link btn-blue">Learn more ›</a>
+      </div>
+      <div class="mac-hero-visual">
+        <div class="macbook-device">
+          <div class="macbook-lid">
+            <div class="macbook-screen">
+              <div class="macbook-bezel-top">
+                <div class="macbook-camera"></div>
+              </div>
+              <div class="macbook-display">
+                <div class="macbook-wallpaper"></div>
+              </div>
+            </div>
+          </div>
+          <div class="macbook-base">
+            <div class="macbook-keyboard"></div>
+            <div class="macbook-trackpad"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Color Options -->
+      <div class="mac-color-picker" id="macColorPicker">
+        <button class="mac-color-dot active" data-color="Midnight" style="background:#1d1f2b" aria-label="Midnight"></button>
+        <button class="mac-color-dot" data-color="Starlight" style="background:#e8d9c4" aria-label="Starlight"></button>
+        <button class="mac-color-dot" data-color="Silver" style="background:#c0c0c0" aria-label="Silver"></button>
+        <button class="mac-color-dot" data-color="Space Gray" style="background:#6e6e73" aria-label="Space Gray"></button>
+      </div>
+      <p class="color-label" id="macColorLabel">Midnight</p>
+    </section>
+
+    <!-- Specs Tabs -->
+    <section class="specs-section" id="air-specs">
+      <h2 class="section-title">MacBook Air specs at a glance.</h2>
+      <div class="specs-tabs">
+        <button class="spec-tab active" data-tab="performance">Performance</button>
+        <button class="spec-tab" data-tab="display">Display</button>
+        <button class="spec-tab" data-tab="battery">Battery</button>
+        <button class="spec-tab" data-tab="connectivity">Connectivity</button>
+      </div>
+      <div class="specs-panels">
+        <div class="spec-panel active" id="tab-performance">
+          <div class="spec-panel-inner">
+            <div class="spec-highlight">
+              <span class="spec-big">M3</span>
+              <span class="spec-label">chip</span>
+            </div>
+            <div class="spec-details">
+              <div class="spec-item">
+                <span class="spec-value">8-core</span>
+                <span class="spec-desc">CPU</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-value">10-core</span>
+                <span class="spec-desc">GPU</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-value">16-core</span>
+                <span class="spec-desc">Neural Engine</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-value">Up to 24GB</span>
+                <span class="spec-desc">Unified Memory</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spec-panel" id="tab-display">
+          <div class="spec-panel-inner">
+            <div class="spec-highlight">
+              <span class="spec-big">15.3″</span>
+              <span class="spec-label">Liquid Retina display</span>
+            </div>
+            <div class="spec-details">
+              <div class="spec-item">
+                <span class="spec-value">2880×1864</span>
+                <span class="spec-desc">Resolution</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-value">500 nits</span>
+                <span class="spec-desc">Brightness</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-value">P3 Wide</span>
+                <span class="spec-desc">Color Gamut</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-value">True Tone</span>
+                <span class="spec-desc">Technology</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spec-panel" id="tab-battery">
+          <div class="spec-panel-inner">
+            <div class="spec-highlight">
+              <span class="spec-big">18 hrs</span>
+              <span class="spec-label">battery life</span>
+            </div>
+            <div class="spec-details">
+              <div class="spec-item">
+                <span class="spec-value">Up to 18 hours</span>
+                <span class="spec-desc">Apple TV app playback</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-value">Up to 15 hours</span>
+                <span class="spec-desc">Wireless web</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-value">Fast charge</span>
+                <span class="spec-desc">50% in 30 min with 70W adapter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spec-panel" id="tab-connectivity">
+          <div class="spec-panel-inner">
+            <div class="spec-highlight">
+              <span class="spec-big">Wi-Fi 6E</span>
+              <span class="spec-label">+ Bluetooth 5.3</span>
+            </div>
+            <div class="spec-details">
+              <div class="spec-item">
+                <span class="spec-value">2× USB-C</span>
+                <span class="spec-desc">Thunderbolt / USB 4</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-value">MagSafe 3</span>
+                <span class="spec-desc">Charging</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-value">3.5mm</span>
+                <span class="spec-desc">Headphone jack</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MacBook Pro -->
+    <section class="product-section product-section-dark" id="macbook-pro">
+      <h2 class="hero-eyebrow">MacBook Pro</h2>
+      <h1 class="section-headline section-headline-light">Mind-blowing.<br>Head-turning.</h1>
+      <p class="product-hero-price" style="color:#aaa">From $1,599 or $133.25/mo. for 12 mo.*</p>
+      <div class="hero-cta">
+        <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        <a href="#" class="btn-link btn-text-light">Learn more ›</a>
+      </div>
+      <div class="mac-feature-badges">
+        <span class="badge">M3 Pro / M3 Max</span>
+        <span class="badge">Up to 22 hours battery</span>
+        <span class="badge">Liquid Retina XDR</span>
+      </div>
+    </section>
+
+    <!-- iMac -->
+    <section class="product-section product-section-light" id="imac">
+      <h2 class="hero-eyebrow">iMac</h2>
+      <h1 class="section-headline">Say hello.</h1>
+      <p class="product-hero-price">From $1,299 or $108.25/mo. for 12 mo.*</p>
+      <div class="hero-cta">
+        <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        <a href="#" class="btn-link btn-blue">Learn more ›</a>
+      </div>
+      <div class="imac-colors">
+        <span class="imac-swatch" style="--ic:#5d9ee0" title="Blue"></span>
+        <span class="imac-swatch" style="--ic:#4ab86f" title="Green"></span>
+        <span class="imac-swatch" style="--ic:#f5c04d" title="Yellow"></span>
+        <span class="imac-swatch" style="--ic:#f39c52" title="Orange"></span>
+        <span class="imac-swatch" style="--ic:#e65c6e" title="Pink"></span>
+        <span class="imac-swatch" style="--ic:#a576d1" title="Purple"></span>
+        <span class="imac-swatch" style="--ic:#c0c0c0" title="Silver"></span>
+      </div>
+    </section>
+
+    <!-- Mac Studio -->
+    <section class="product-section product-section-dark" id="mac-studio">
+      <h2 class="hero-eyebrow">Mac Studio</h2>
+      <h1 class="section-headline section-headline-light">Outrageously powerful.</h1>
+      <p class="product-hero-price" style="color:#aaa">From $1,999</p>
+      <div class="hero-cta">
+        <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        <a href="#" class="btn-link btn-text-light">Learn more ›</a>
+      </div>
+    </section>
+
+    <!-- Mac Pro -->
+    <section class="product-section product-section-light" id="mac-pro">
+      <h2 class="hero-eyebrow">Mac Pro</h2>
+      <h1 class="section-headline">Built for pros.</h1>
+      <p class="product-hero-price">From $6,999</p>
+      <div class="hero-cta">
+        <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        <a href="#" class="btn-link btn-blue">Learn more ›</a>
+      </div>
+    </section>
+
+    <!-- Compare Macs -->
+    <section class="compare-section" id="compare-mac">
+      <h2 class="section-title">Which Mac is right for you?</h2>
+      <div class="compare-grid mac-compare">
+        <div class="compare-card">
+          <div class="compare-visual cv-air">💻</div>
+          <h3>MacBook Air</h3>
+          <p class="compare-tagline">Impressively thin and fast.</p>
+          <p class="compare-price">From $1,099</p>
+          <ul class="compare-specs">
+            <li>M3 chip</li>
+            <li>13.6″ or 15.3″ display</li>
+            <li>Up to 18 hrs battery</li>
+            <li>Up to 24GB memory</li>
+          </ul>
+          <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        </div>
+        <div class="compare-card">
+          <div class="compare-visual cv-mbp">💻</div>
+          <h3>MacBook Pro</h3>
+          <p class="compare-tagline">The most advanced Mac laptops.</p>
+          <p class="compare-price">From $1,599</p>
+          <ul class="compare-specs">
+            <li>M3 / M3 Pro / M3 Max</li>
+            <li>14.2″ or 16.2″ display</li>
+            <li>Up to 22 hrs battery</li>
+            <li>Up to 128GB memory</li>
+          </ul>
+          <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        </div>
+        <div class="compare-card">
+          <div class="compare-visual cv-imac">🖥️</div>
+          <h3>iMac</h3>
+          <p class="compare-tagline">All-in-one, all in color.</p>
+          <p class="compare-price">From $1,299</p>
+          <ul class="compare-specs">
+            <li>M3 chip</li>
+            <li>24″ 4.5K Retina display</li>
+            <li>Matching accessories</li>
+            <li>Up to 24GB memory</li>
+          </ul>
+          <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer — injected by components.js -->
+  <footer class="site-footer" data-legal="* Monthly pricing requires Apple Card Monthly Installments. &lt;a href=&quot;#&quot;&gt;See terms&lt;/a&gt;"></footer>
+
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

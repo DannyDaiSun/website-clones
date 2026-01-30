@@ -1,506 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Airbnb Clone | Holiday rentals, cabins, beach houses &amp; more</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb: Vacation Rentals, Cabins, Beach Houses & More</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo" aria-label="Airbnb Home">
+                <svg width="102" height="32" viewBox="0 0 102 32" fill="currentColor">
+                    <path d="M29 1.4C21.4 1.4 16 7.8 16 14.6c0 4.8 2.6 8.8 6.4 11L19 31.2c-.2.4.2.8.6.8h18.8c.4 0 .8-.4.6-.8l-3.4-5.6c3.8-2.2 6.4-6.2 6.4-11C42 7.8 36.6 1.4 29 1.4zm0 23.2c-5.2 0-9.4-4.2-9.4-9.4S23.8 5.8 29 5.8s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4z"/>
+                    <text x="46" y="24" font-family="Arial,sans-serif" font-weight="bold" font-size="22" fill="currentColor">airbnb</text>
+                </svg>
+            </a>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="header-inner">
-      <a href="#" class="logo">
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FF385C">
-          <path d="M16 1c2.008 0 3.463.963 4.751 3.269l.533 1.025c1.954 3.83 6.114 12.54 7.1 14.836l.145.353c.667 1.591.91 2.472.96 3.396l.01.415c0 4.082-2.834 6.706-6.792 6.706-2.332 0-4.532-1.058-6.707-3.233-2.175 2.175-4.375 3.233-6.707 3.233C5.334 31 2.5 28.376 2.5 24.294c0-1.094.264-2.1.799-3.248l.331-.726c1.028-2.216 5.212-11.082 7.149-14.885L11.249 4.27C12.537 1.963 13.992 1 16 1z"/>
-        </svg>
-        <span class="logo-text">airbnb</span>
-      </a>
+            <!-- Search Bar -->
+            <div class="search-bar" id="search-bar">
+                <button class="search-btn" data-field="location">
+                    <span class="search-btn-label">Where</span>
+                    <span class="search-btn-value" id="search-where">Search destinations</span>
+                </button>
+                <span class="search-divider"></span>
+                <button class="search-btn" data-field="checkin">
+                    <span class="search-btn-label">Check in</span>
+                    <span class="search-btn-value">Add dates</span>
+                </button>
+                <span class="search-divider"></span>
+                <button class="search-btn" data-field="checkout">
+                    <span class="search-btn-label">Check out</span>
+                    <span class="search-btn-value">Add dates</span>
+                </button>
+                <span class="search-divider"></span>
+                <button class="search-btn" data-field="guests">
+                    <span class="search-btn-label">Who</span>
+                    <span class="search-btn-value">Add guests</span>
+                </button>
+                <a href="search.html" class="search-submit" id="search-submit" aria-label="Search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </a>
+            </div>
 
-      <!-- Search Bar -->
-      <div class="search-bar">
-        <button class="search-field search-field--where">
-          <span class="search-label">Where</span>
-          <span class="search-value">Search destinations</span>
-        </button>
-        <span class="search-divider"></span>
-        <button class="search-field search-field--checkin">
-          <span class="search-label">Check in</span>
-          <span class="search-value">Add dates</span>
-        </button>
-        <span class="search-divider"></span>
-        <button class="search-field search-field--checkout">
-          <span class="search-label">Check out</span>
-          <span class="search-value">Add dates</span>
-        </button>
-        <span class="search-divider"></span>
-        <button class="search-field search-field--who">
-          <span class="search-label">Who</span>
-          <span class="search-value">Add guests</span>
-        </button>
-        <button class="search-btn" aria-label="Search">
-          <svg viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentColor" stroke-width="4">
-            <circle cx="13" cy="13" r="10"></circle>
-            <line x1="21" y1="21" x2="28" y2="28"></line>
-          </svg>
-        </button>
-      </div>
+            <div class="nav-right">
+                <a href="host.html" class="nav-link">Airbnb your home</a>
+                <button class="nav-globe" aria-label="Language">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                </button>
+                <button class="nav-user-btn" id="user-menu-toggle">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                    <div class="user-avatar">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                    </div>
+                </button>
+                <!-- User Dropdown -->
+                <div class="user-dropdown" id="user-dropdown">
+                    <a href="#" class="dropdown-item"><strong>Sign up</strong></a>
+                    <a href="#" class="dropdown-item">Log in</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="host.html" class="dropdown-item">Airbnb your home</a>
+                    <a href="experiences.html" class="dropdown-item">Host an experience</a>
+                    <a href="#" class="dropdown-item">Help Center</a>
+                </div>
+            </div>
 
-      <!-- User Menu -->
-      <div class="user-menu">
-        <a href="#" class="host-link">Airbnb your home</a>
-        <button class="globe-btn" aria-label="Language">
-          <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-            <path d="M8 .25a7.77 7.77 0 0 1 7.75 7.78 7.75 7.75 0 0 1-7.52 7.72h-.25A7.75 7.75 0 0 1 .25 8.24v-.25A7.75 7.75 0 0 1 8 .25zm1.36 8.8c-.13.18-.3.3-.48.4a4.4 4.4 0 0 0-.71.48c-.12.13-.2.3-.2.48v1.57c0 .4.09.78.14 1.17.05.26.02.53-.09.78a1.5 1.5 0 0 1-.63.55 2.1 2.1 0 0 1-1.1.2h-.02a6.2 6.2 0 0 1-4.88-4.32A6.23 6.23 0 0 1 6.1 2.1l.12-.07c.2-.12.4-.15.62-.13.2.03.4.12.56.27l.3.3a1.7 1.7 0 0 0 .56.38c.2.08.42.13.65.16.37.05.72.18 1.02.4.16.12.3.28.38.47.1.2.14.4.12.6a1.8 1.8 0 0 1-.32.87l-.1.15c-.1.13-.2.26-.24.4a1.4 1.4 0 0 0 0 .59c.05.13.14.24.25.34l.43.42c.13.14.2.33.17.52a.7.7 0 0 1-.16.4zm4.12-.05a6.22 6.22 0 0 0-2.22-5.5 6.3 6.3 0 0 0-1.7-.9c.3.56.47 1.19.47 1.84a3.7 3.7 0 0 1-.2 1.15 2.2 2.2 0 0 1-.45.75l-.12.15a.6.6 0 0 0-.1.28c0 .05.02.1.05.14l.43.42a2.2 2.2 0 0 1 .65 1.09c.07.35.05.71-.07 1.05-.13.36-.33.68-.6.94-.27.24-.58.42-.93.53a3.1 3.1 0 0 0-.7.35 1.7 1.7 0 0 0-.49.48l-.1.13c-.1.16-.17.34-.2.53a2.3 2.3 0 0 0 .06.91l.05.2c.05.14.07.3.05.44-.05.27-.18.5-.37.68-.2.18-.46.3-.73.32A6.27 6.27 0 0 0 13.48 9z"/>
-          </svg>
-        </button>
-        <button class="profile-btn">
-          <svg viewBox="0 0 32 32" width="16" height="16" fill="currentColor" class="hamburger-icon">
-            <path d="M2 8h28M2 16h28M2 24h28" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-          </svg>
-          <div class="avatar-circle">
-            <svg viewBox="0 0 32 32" width="20" height="20" fill="#717171">
-              <path d="M16 .7C7.56.7.7 7.56.7 16S7.56 31.3 16 31.3 31.3 24.44 31.3 16 24.44.7 16 .7zm0 28c-4.02 0-7.6-1.88-9.93-4.81a12.43 12.43 0 0 1 6.45-4.4A6.5 6.5 0 0 1 9.5 14a6.5 6.5 0 1 1 13 0 6.51 6.51 0 0 1-3.02 5.5 12.42 12.42 0 0 1 6.45 4.4A12.67 12.67 0 0 1 16 28.7z"/>
-            </svg>
-          </div>
-        </button>
-      </div>
-    </div>
-  </header>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
 
-  <!-- Category Icons -->
-  <nav class="categories">
-    <div class="categories-inner">
-      <div class="category-scroll">
-        <button class="category active">
-          <div class="category-icon">🏠</div>
-          <span>Icons</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🏖️</div>
-          <span>Beachfront</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🏔️</div>
-          <span>Amazing views</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🏕️</div>
-          <span>Camping</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🌊</div>
-          <span>Amazing pools</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🛖</div>
-          <span>Cabins</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🌄</div>
-          <span>Countryside</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🏰</div>
-          <span>Castles</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🏝️</div>
-          <span>Islands</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🌲</div>
-          <span>Treehouses</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🎿</div>
-          <span>Skiing</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🏜️</div>
-          <span>Desert</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🏡</div>
-          <span>Tiny homes</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🏗️</div>
-          <span>Design</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🔥</div>
-          <span>Trending</span>
-        </button>
-        <button class="category">
-          <div class="category-icon">🛁</div>
-          <span>Luxe</span>
-        </button>
-      </div>
-      <button class="filters-btn">
-        <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-          <path d="M5 8a3 3 0 0 1 2.83 2H14v2H7.83A3 3 0 0 1 2 9a3 3 0 0 1 3-3zm6-5a3 3 0 0 1 .17 6H2V7h9.17A3 3 0 0 1 11 3z"/>
-        </svg>
-        Filters
-      </button>
-    </div>
-  </nav>
+        <!-- Category Tabs -->
+        <div class="categories" id="categories">
+            <div class="categories-scroll container">
+                <button class="category-tab active" data-category="all">
+                    <span class="cat-icon">🏠</span><span>All</span>
+                </button>
+                <button class="category-tab" data-category="amazing-views">
+                    <span class="cat-icon">🏔️</span><span>Amazing views</span>
+                </button>
+                <button class="category-tab" data-category="beachfront">
+                    <span class="cat-icon">🏖️</span><span>Beachfront</span>
+                </button>
+                <button class="category-tab" data-category="cabins">
+                    <span class="cat-icon">🏡</span><span>Cabins</span>
+                </button>
+                <button class="category-tab" data-category="countryside">
+                    <span class="cat-icon">🌾</span><span>Countryside</span>
+                </button>
+                <button class="category-tab" data-category="islands">
+                    <span class="cat-icon">🏝️</span><span>Islands</span>
+                </button>
+                <button class="category-tab" data-category="lakefront">
+                    <span class="cat-icon">🌊</span><span>Lakefront</span>
+                </button>
+                <button class="category-tab" data-category="trending">
+                    <span class="cat-icon">🔥</span><span>Trending</span>
+                </button>
+                <button class="category-tab" data-category="mansions">
+                    <span class="cat-icon">🏰</span><span>Mansions</span>
+                </button>
+                <button class="category-tab" data-category="tiny-homes">
+                    <span class="cat-icon">🏘️</span><span>Tiny homes</span>
+                </button>
+                <button class="category-tab" data-category="treehouses">
+                    <span class="cat-icon">🌳</span><span>Treehouses</span>
+                </button>
+                <button class="category-tab" data-category="luxe">
+                    <span class="cat-icon">💎</span><span>Luxe</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <!-- Property Grid -->
-  <main class="listings">
-    <div class="listings-grid">
+    <!-- Listings Grid -->
+    <main class="main">
+        <section class="listings container" id="listings">
+            <div class="listings-grid" id="listings-grid">
 
-      <!-- Card 1 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-            <span class="placeholder-text">Bali, Indonesia</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
-          <span class="guest-favorite">Guest favourite</span>
-        </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Bali, Indonesia</h3>
-            <div class="rating">★ 4.92</div>
-          </div>
-          <p class="card-host">Hosted by Made</p>
-          <p class="card-dates">1–6 Feb</p>
-          <p class="card-price"><strong>$85</strong> night</p>
-        </div>
-      </article>
+                <a href="listing.html?id=1" class="listing-card" data-category="amazing-views trending">
+                    <div class="listing-img">
+                        <div class="listing-photo lp-1"></div>
+                        <button class="listing-fav" aria-label="Save">♡</button>
+                    </div>
+                    <div class="listing-info">
+                        <div class="listing-header">
+                            <h3>Queenstown, New Zealand</h3>
+                            <span class="listing-rating">★ 4.92</span>
+                        </div>
+                        <p class="listing-host">Hosted by Sarah</p>
+                        <p class="listing-dates">Jan 15 – 20</p>
+                        <p class="listing-price"><strong>$284</strong> night</p>
+                    </div>
+                </a>
 
-      <!-- Card 2 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-            <span class="placeholder-text">Santorini, Greece</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
-        </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Santorini, Greece</h3>
-            <div class="rating">★ 4.88</div>
-          </div>
-          <p class="card-host">Hosted by Elena</p>
-          <p class="card-dates">5–10 Feb</p>
-          <p class="card-price"><strong>$210</strong> night</p>
-        </div>
-      </article>
+                <a href="listing.html?id=2" class="listing-card" data-category="beachfront islands">
+                    <div class="listing-img">
+                        <div class="listing-photo lp-2"></div>
+                        <button class="listing-fav" aria-label="Save">♡</button>
+                    </div>
+                    <div class="listing-info">
+                        <div class="listing-header">
+                            <h3>Bali, Indonesia</h3>
+                            <span class="listing-rating">★ 4.87</span>
+                        </div>
+                        <p class="listing-host">Hosted by Made</p>
+                        <p class="listing-dates">Feb 1 – 7</p>
+                        <p class="listing-price"><strong>$156</strong> night</p>
+                    </div>
+                </a>
 
-      <!-- Card 3 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-            <span class="placeholder-text">Kyoto, Japan</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
-          <span class="guest-favorite">Guest favourite</span>
-        </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Kyoto, Japan</h3>
-            <div class="rating">★ 4.96</div>
-          </div>
-          <p class="card-host">Hosted by Yuki</p>
-          <p class="card-dates">12–17 Feb</p>
-          <p class="card-price"><strong>$120</strong> night</p>
-        </div>
-      </article>
+                <a href="listing.html?id=3" class="listing-card" data-category="cabins countryside">
+                    <div class="listing-img">
+                        <div class="listing-photo lp-3"></div>
+                        <button class="listing-fav" aria-label="Save">♡</button>
+                    </div>
+                    <div class="listing-info">
+                        <div class="listing-header">
+                            <h3>Lake Tahoe, California</h3>
+                            <span class="listing-rating">★ 4.95</span>
+                        </div>
+                        <p class="listing-host">Hosted by Mike</p>
+                        <p class="listing-dates">Mar 10 – 15</p>
+                        <p class="listing-price"><strong>$320</strong> night</p>
+                    </div>
+                </a>
 
-      <!-- Card 4 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-            <span class="placeholder-text">Tulum, Mexico</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
-        </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Tulum, Mexico</h3>
-            <div class="rating">★ 4.85</div>
-          </div>
-          <p class="card-host">Hosted by Carlos</p>
-          <p class="card-dates">8–13 Feb</p>
-          <p class="card-price"><strong>$145</strong> night</p>
-        </div>
-      </article>
+                <a href="listing.html?id=4" class="listing-card" data-category="mansions luxe">
+                    <div class="listing-img">
+                        <div class="listing-photo lp-4"></div>
+                        <button class="listing-fav" aria-label="Save">♡</button>
+                    </div>
+                    <div class="listing-info">
+                        <div class="listing-header">
+                            <h3>Santorini, Greece</h3>
+                            <span class="listing-rating">★ 4.98</span>
+                        </div>
+                        <p class="listing-host">Hosted by Elena</p>
+                        <p class="listing-dates">Apr 5 – 12</p>
+                        <p class="listing-price"><strong>$475</strong> night</p>
+                    </div>
+                </a>
 
-      <!-- Card 5 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-            <span class="placeholder-text">Maldives</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
-          <span class="guest-favorite">Guest favourite</span>
-        </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Maldives</h3>
-            <div class="rating">★ 4.97</div>
-          </div>
-          <p class="card-host">Hosted by Ahmed</p>
-          <p class="card-dates">15–20 Feb</p>
-          <p class="card-price"><strong>$350</strong> night</p>
-        </div>
-      </article>
+                <a href="listing.html?id=5" class="listing-card" data-category="treehouses trending">
+                    <div class="listing-img">
+                        <div class="listing-photo lp-5"></div>
+                        <button class="listing-fav" aria-label="Save">♡</button>
+                    </div>
+                    <div class="listing-info">
+                        <div class="listing-header">
+                            <h3>Costa Rica Treehouse</h3>
+                            <span class="listing-rating">★ 4.96</span>
+                        </div>
+                        <p class="listing-host">Hosted by Carlos</p>
+                        <p class="listing-dates">Feb 20 – 25</p>
+                        <p class="listing-price"><strong>$198</strong> night</p>
+                    </div>
+                </a>
 
-      <!-- Card 6 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
-            <span class="placeholder-text">Provence, France</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
-        </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Provence, France</h3>
-            <div class="rating">★ 4.91</div>
-          </div>
-          <p class="card-host">Hosted by Sophie</p>
-          <p class="card-dates">20–25 Feb</p>
-          <p class="card-price"><strong>$175</strong> night</p>
-        </div>
-      </article>
+                <a href="listing.html?id=6" class="listing-card" data-category="beachfront trending">
+                    <div class="listing-img">
+                        <div class="listing-photo lp-6"></div>
+                        <button class="listing-fav" aria-label="Save">♡</button>
+                    </div>
+                    <div class="listing-info">
+                        <div class="listing-header">
+                            <h3>Maldives Overwater Villa</h3>
+                            <span class="listing-rating">★ 4.99</span>
+                        </div>
+                        <p class="listing-host">Hosted by Aisha</p>
+                        <p class="listing-dates">May 1 – 8</p>
+                        <p class="listing-price"><strong>$890</strong> night</p>
+                    </div>
+                </a>
 
-      <!-- Card 7 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
-            <span class="placeholder-text">Amalfi Coast, Italy</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
-        </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Amalfi Coast, Italy</h3>
-            <div class="rating">★ 4.89</div>
-          </div>
-          <p class="card-host">Hosted by Marco</p>
-          <p class="card-dates">3–8 Mar</p>
-          <p class="card-price"><strong>$195</strong> night</p>
-        </div>
-      </article>
+                <a href="listing.html?id=7" class="listing-card" data-category="tiny-homes countryside">
+                    <div class="listing-img">
+                        <div class="listing-photo lp-7"></div>
+                        <button class="listing-fav" aria-label="Save">♡</button>
+                    </div>
+                    <div class="listing-info">
+                        <div class="listing-header">
+                            <h3>Cotswolds, England</h3>
+                            <span class="listing-rating">★ 4.88</span>
+                        </div>
+                        <p class="listing-host">Hosted by James</p>
+                        <p class="listing-dates">Jun 12 – 17</p>
+                        <p class="listing-price"><strong>$175</strong> night</p>
+                    </div>
+                </a>
 
-      <!-- Card 8 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);">
-            <span class="placeholder-text">Queenstown, NZ</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
-          <span class="guest-favorite">Guest favourite</span>
-        </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Queenstown, New Zealand</h3>
-            <div class="rating">★ 4.94</div>
-          </div>
-          <p class="card-host">Hosted by Liam</p>
-          <p class="card-dates">10–15 Mar</p>
-          <p class="card-price"><strong>$160</strong> night</p>
-        </div>
-      </article>
+                <a href="listing.html?id=8" class="listing-card" data-category="lakefront cabins">
+                    <div class="listing-img">
+                        <div class="listing-photo lp-8"></div>
+                        <button class="listing-fav" aria-label="Save">♡</button>
+                    </div>
+                    <div class="listing-info">
+                        <div class="listing-header">
+                            <h3>Lake Como, Italy</h3>
+                            <span class="listing-rating">★ 4.94</span>
+                        </div>
+                        <p class="listing-host">Hosted by Marco</p>
+                        <p class="listing-dates">Jul 8 – 14</p>
+                        <p class="listing-price"><strong>$410</strong> night</p>
+                    </div>
+                </a>
 
-      <!-- Card 9 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
-            <span class="placeholder-text">Marrakech, Morocco</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
-        </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Marrakech, Morocco</h3>
-            <div class="rating">★ 4.82</div>
-          </div>
-          <p class="card-host">Hosted by Fatima</p>
-          <p class="card-dates">22–27 Feb</p>
-          <p class="card-price"><strong>$95</strong> night</p>
-        </div>
-      </article>
+            </div>
+        </section>
+    </main>
 
-      <!-- Card 10 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%);">
-            <span class="placeholder-text">Swiss Alps</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
+    <!-- Explore Section -->
+    <section class="explore">
+        <div class="container">
+            <h2>Explore nearby</h2>
+            <div class="explore-grid">
+                <a href="search.html?q=london" class="explore-card"><div class="explore-icon ei-1"></div><div><h3>London</h3><p>45 minute drive</p></div></a>
+                <a href="search.html?q=paris" class="explore-card"><div class="explore-icon ei-2"></div><div><h3>Paris</h3><p>1 hour flight</p></div></a>
+                <a href="search.html?q=barcelona" class="explore-card"><div class="explore-icon ei-3"></div><div><h3>Barcelona</h3><p>2 hour flight</p></div></a>
+                <a href="search.html?q=rome" class="explore-card"><div class="explore-icon ei-4"></div><div><h3>Rome</h3><p>2.5 hour flight</p></div></a>
+                <a href="search.html?q=amsterdam" class="explore-card"><div class="explore-icon ei-5"></div><div><h3>Amsterdam</h3><p>1 hour flight</p></div></a>
+                <a href="search.html?q=lisbon" class="explore-card"><div class="explore-icon ei-6"></div><div><h3>Lisbon</h3><p>3 hour flight</p></div></a>
+                <a href="search.html?q=berlin" class="explore-card"><div class="explore-icon ei-7"></div><div><h3>Berlin</h3><p>2 hour flight</p></div></a>
+                <a href="search.html?q=zurich" class="explore-card"><div class="explore-icon ei-8"></div><div><h3>Zurich</h3><p>1.5 hour flight</p></div></a>
+            </div>
         </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Swiss Alps, Switzerland</h3>
-            <div class="rating">★ 4.93</div>
-          </div>
-          <p class="card-host">Hosted by Hans</p>
-          <p class="card-dates">1–6 Mar</p>
-          <p class="card-price"><strong>$280</strong> night</p>
-        </div>
-      </article>
+    </section>
 
-      <!-- Card 11 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);">
-            <span class="placeholder-text">Cape Town, SA</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
-          <span class="guest-favorite">Guest favourite</span>
+    <!-- Live Anywhere -->
+    <section class="live-anywhere">
+        <div class="container">
+            <h2>Live anywhere</h2>
+            <div class="live-grid">
+                <a href="search.html?type=entire" class="live-card"><div class="live-img li-1"></div><h3>Entire homes</h3></a>
+                <a href="search.html?type=unique" class="live-card"><div class="live-img li-2"></div><h3>Unique stays</h3></a>
+                <a href="search.html?type=farm" class="live-card"><div class="live-img li-3"></div><h3>Farms & nature</h3></a>
+                <a href="search.html?type=pet" class="live-card"><div class="live-img li-4"></div><h3>Pets welcome</h3></a>
+            </div>
         </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Cape Town, South Africa</h3>
-            <div class="rating">★ 4.90</div>
-          </div>
-          <p class="card-host">Hosted by Thabo</p>
-          <p class="card-dates">15–20 Mar</p>
-          <p class="card-price"><strong>$110</strong> night</p>
+    </section>
+
+    <!-- Host CTA -->
+    <section class="host-cta">
+        <div class="container host-cta-content">
+            <h2>Try hosting</h2>
+            <p>Earn extra income and unlock new opportunities by sharing your space.</p>
+            <a href="host.html" class="btn btn-white">Learn more</a>
         </div>
-      </article>
+    </section>
 
-      <!-- Card 12 -->
-      <article class="listing-card">
-        <div class="card-image">
-          <div class="image-placeholder" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
-            <span class="placeholder-text">Reykjavik, Iceland</span>
-          </div>
-          <button class="wishlist-btn" aria-label="Add to wishlist">
-            <svg viewBox="0 0 32 32" width="24" height="24" fill="rgba(0,0,0,0.5)" stroke="white" stroke-width="2">
-              <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-11.9 4.94c0 7 7 12.27 14 17z"/>
-            </svg>
-          </button>
+    <!-- Experiences -->
+    <section class="experiences">
+        <div class="container">
+            <h2>Discover Experiences</h2>
+            <p class="experiences-desc">Unique activities with local experts — in person or online.</p>
+            <div class="exp-grid">
+                <a href="experiences.html" class="exp-card">
+                    <div class="exp-img exp-1"></div>
+                    <div class="exp-info"><h3>Experiences</h3><p>Local activities led by experts</p></div>
+                </a>
+                <a href="experiences.html#online" class="exp-card">
+                    <div class="exp-img exp-2"></div>
+                    <div class="exp-info"><h3>Online Experiences</h3><p>Join from anywhere</p></div>
+                </a>
+            </div>
         </div>
-        <div class="card-info">
-          <div class="card-header">
-            <h3>Reykjavik, Iceland</h3>
-            <div class="rating">★ 4.87</div>
-          </div>
-          <p class="card-host">Hosted by Björk</p>
-          <p class="card-dates">5–10 Mar</p>
-          <p class="card-price"><strong>$190</strong> night</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">AirCover</a>
+                <a href="#">Anti-discrimination</a>
+                <a href="#">Disability support</a>
+                <a href="#">Cancellation options</a>
+                <a href="#">Report concern</a>
+            </div>
+            <div class="footer-col">
+                <h4>Hosting</h4>
+                <a href="host.html">Airbnb your home</a>
+                <a href="#">AirCover for Hosts</a>
+                <a href="#">Hosting resources</a>
+                <a href="#">Community forum</a>
+                <a href="host.html">Hosting responsibly</a>
+                <a href="experiences.html">Airbnb-friendly apartments</a>
+            </div>
+            <div class="footer-col">
+                <h4>Airbnb</h4>
+                <a href="#">Newsroom</a>
+                <a href="#">New features</a>
+                <a href="#">Careers</a>
+                <a href="#">Investors</a>
+                <a href="#">Gift cards</a>
+                <a href="experiences.html">Airbnb.org emergency stays</a>
+            </div>
         </div>
-      </article>
-
-    </div>
-  </main>
-
-  <!-- Show Map Button -->
-  <div class="map-toggle">
-    <button class="map-btn">
-      Show map
-      <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-        <path d="M10.5 2.5L14 1v12l-3.5 1.5L6 13 2 14.5V2.5L6 1l4.5 1.5zM6 11.5l4 1.35V4.5L6 3.15v8.35z"/>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-section">
-        <h4>Support</h4>
-        <a href="#">Help Centre</a>
-        <a href="#">AirCover</a>
-        <a href="#">Anti-discrimination</a>
-        <a href="#">Disability support</a>
-        <a href="#">Cancellation options</a>
-        <a href="#">Report neighbourhood concern</a>
-      </div>
-      <div class="footer-section">
-        <h4>Hosting</h4>
-        <a href="#">Airbnb your home</a>
-        <a href="#">AirCover for Hosts</a>
-        <a href="#">Hosting resources</a>
-        <a href="#">Community forum</a>
-        <a href="#">Hosting responsibly</a>
-        <a href="#">Airbnb-friendly apartments</a>
-      </div>
-      <div class="footer-section">
-        <h4>Airbnb</h4>
-        <a href="#">Newsroom</a>
-        <a href="#">New features</a>
-        <a href="#">Careers</a>
-        <a href="#">Investors</a>
-        <a href="#">Gift cards</a>
-        <a href="#">Airbnb.org emergency stays</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-legal">
-        <span>© 2026 Airbnb Clone</span>
-        <span>·</span>
-        <a href="#">Terms</a>
-        <span>·</span>
-        <a href="#">Sitemap</a>
-        <span>·</span>
-        <a href="#">Privacy</a>
-        <span>·</span>
-        <a href="#">Your Privacy Choices</a>
-      </div>
-      <div class="footer-locale">
-        <button class="footer-btn">🌐 English (US)</button>
-        <button class="footer-btn">$ USD</button>
-        <div class="social-links">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Twitter">𝕏</a>
-          <a href="#" aria-label="Instagram">📷</a>
+        <div class="footer-bottom container">
+            <p>© 2026 Airbnb, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a></p>
+            <div class="footer-social">
+                <a href="#">🌐 English (US)</a>
+                <a href="#">$ USD</a>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

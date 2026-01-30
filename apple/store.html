@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-store">
+  <!-- Shared Nav — injected by components.js -->
+  <nav class="global-nav" id="globalNav" data-active="Store"></nav>
+
+  <main class="store-main">
+    <!-- Store Hero -->
+    <section class="store-hero">
+      <h1 class="store-title">Store. <span class="store-title-sub">The best way to buy the products you love.</span></h1>
+    </section>
+
+    <!-- Category Scrollbar -->
+    <section class="store-categories">
+      <h2 class="sr-only">Shop by Category</h2>
+      <div class="category-scroll" id="categoryScroll">
+        <button class="category-card active" data-category="all">
+          <span class="cat-icon">🍎</span>
+          <span class="cat-label">All</span>
+        </button>
+        <button class="category-card" data-category="mac">
+          <span class="cat-icon">💻</span>
+          <span class="cat-label">Mac</span>
+        </button>
+        <button class="category-card" data-category="iphone">
+          <span class="cat-icon">📱</span>
+          <span class="cat-label">iPhone</span>
+        </button>
+        <button class="category-card" data-category="ipad">
+          <span class="cat-icon">📋</span>
+          <span class="cat-label">iPad</span>
+        </button>
+        <button class="category-card" data-category="watch">
+          <span class="cat-icon">⌚</span>
+          <span class="cat-label">Apple Watch</span>
+        </button>
+        <button class="category-card" data-category="airpods">
+          <span class="cat-icon">🎧</span>
+          <span class="cat-label">AirPods</span>
+        </button>
+        <button class="category-card" data-category="accessories">
+          <span class="cat-icon">🔌</span>
+          <span class="cat-label">Accessories</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Featured Products Row -->
+    <section class="store-section">
+      <h2 class="store-section-title">The latest. <span class="section-title-sub">Take a look at what's new, right now.</span></h2>
+      <div class="product-scroll">
+        <div class="store-product-card" data-category="iphone">
+          <div class="spc-gradient spc-g1"></div>
+          <span class="spc-new">New</span>
+          <h3>iPhone 15 Pro</h3>
+          <p class="spc-tagline">Titanium. So strong. So light.</p>
+          <p class="spc-price">From $999</p>
+          <a href="./iphone.html" class="btn-pill btn-blue-fill">Learn more</a>
+        </div>
+        <div class="store-product-card" data-category="mac">
+          <div class="spc-gradient spc-g2"></div>
+          <span class="spc-new">New</span>
+          <h3>MacBook Air 15″</h3>
+          <p class="spc-tagline">Impressively big. Impossibly thin.</p>
+          <p class="spc-price">From $1,299</p>
+          <a href="./mac.html" class="btn-pill btn-blue-fill">Learn more</a>
+        </div>
+        <div class="store-product-card" data-category="ipad">
+          <div class="spc-gradient spc-g3"></div>
+          <h3>iPad Pro</h3>
+          <p class="spc-tagline">Supercharged by M2.</p>
+          <p class="spc-price">From $799</p>
+          <a href="#" class="btn-pill btn-blue-fill">Learn more</a>
+        </div>
+        <div class="store-product-card" data-category="watch">
+          <div class="spc-gradient spc-g4"></div>
+          <span class="spc-new">New</span>
+          <h3>Apple Watch Series 9</h3>
+          <p class="spc-tagline">Smarter. Brighter. Mightier.</p>
+          <p class="spc-price">From $399</p>
+          <a href="#" class="btn-pill btn-blue-fill">Learn more</a>
+        </div>
+        <div class="store-product-card" data-category="airpods">
+          <div class="spc-gradient spc-g5"></div>
+          <h3>AirPods Pro</h3>
+          <p class="spc-tagline">Adaptive Audio. Now playing.</p>
+          <p class="spc-price">From $249</p>
+          <a href="#" class="btn-pill btn-blue-fill">Learn more</a>
+        </div>
+        <div class="store-product-card" data-category="mac">
+          <div class="spc-gradient spc-g6"></div>
+          <h3>iMac</h3>
+          <p class="spc-tagline">Say hello. M3 chip inside.</p>
+          <p class="spc-price">From $1,299</p>
+          <a href="./mac.html#imac" class="btn-pill btn-blue-fill">Learn more</a>
+        </div>
+        <div class="store-product-card" data-category="iphone">
+          <div class="spc-gradient spc-g7"></div>
+          <h3>iPhone 15</h3>
+          <p class="spc-tagline">New camera. New design.</p>
+          <p class="spc-price">From $799</p>
+          <a href="./iphone.html#iphone15" class="btn-pill btn-blue-fill">Learn more</a>
+        </div>
+        <div class="store-product-card" data-category="accessories">
+          <div class="spc-gradient spc-g8"></div>
+          <h3>Apple Pencil</h3>
+          <p class="spc-tagline">Pixel-perfect precision.</p>
+          <p class="spc-price">From $79</p>
+          <a href="#" class="btn-pill btn-blue-fill">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="store-section store-help">
+      <h2 class="store-section-title">Help is here. <span class="section-title-sub">Whenever and however you need it.</span></h2>
+      <div class="help-grid">
+        <div class="help-card">
+          <div class="help-icon">💬</div>
+          <h3>Apple Specialist</h3>
+          <p>Chat with a real person who can help with your decision.</p>
+          <a href="#" class="btn-link btn-blue">Chat now ›</a>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">🏪</div>
+          <h3>Visit an Apple Store</h3>
+          <p>Find one near you. Get hands-on with products.</p>
+          <a href="#" class="btn-link btn-blue">Find a store ›</a>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">📦</div>
+          <h3>Free delivery</h3>
+          <p>Get free delivery on all orders, straight to your door.</p>
+          <a href="#" class="btn-link btn-blue">Learn more ›</a>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">♻️</div>
+          <h3>Trade In</h3>
+          <p>Get credit toward a new product when you trade in an eligible device.</p>
+          <a href="#" class="btn-link btn-blue">See what your device is worth ›</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section class="store-section">
+      <h2 class="store-section-title">Accessories. <span class="section-title-sub">Find the perfect pairing.</span></h2>
+      <div class="accessories-grid" id="accessoriesGrid">
+        <div class="accessory-card" data-category="accessories">
+          <div class="acc-visual acc-v1"></div>
+          <h3>MagSafe Charger</h3>
+          <p class="acc-price">$39.00</p>
+          <button class="btn-pill btn-outline" data-product="MagSafe Charger" data-price="39">Add to Bag</button>
+        </div>
+        <div class="accessory-card" data-category="accessories">
+          <div class="acc-visual acc-v2"></div>
+          <h3>AirTag</h3>
+          <p class="acc-price">$29.00</p>
+          <button class="btn-pill btn-outline" data-product="AirTag" data-price="29">Add to Bag</button>
+        </div>
+        <div class="accessory-card" data-category="accessories">
+          <div class="acc-visual acc-v3"></div>
+          <h3>Apple Watch Band</h3>
+          <p class="acc-price">$49.00</p>
+          <button class="btn-pill btn-outline" data-product="Apple Watch Band" data-price="49">Add to Bag</button>
+        </div>
+        <div class="accessory-card" data-category="accessories">
+          <div class="acc-visual acc-v4"></div>
+          <h3>iPhone Case</h3>
+          <p class="acc-price">$59.00</p>
+          <button class="btn-pill btn-outline" data-product="iPhone Case" data-price="59">Add to Bag</button>
+        </div>
+        <div class="accessory-card" data-category="accessories">
+          <div class="acc-visual acc-v5"></div>
+          <h3>Magic Keyboard</h3>
+          <p class="acc-price">$99.00</p>
+          <button class="btn-pill btn-outline" data-product="Magic Keyboard" data-price="99">Add to Bag</button>
+        </div>
+        <div class="accessory-card" data-category="accessories">
+          <div class="acc-visual acc-v6"></div>
+          <h3>USB-C Cable</h3>
+          <p class="acc-price">$19.00</p>
+          <button class="btn-pill btn-outline" data-product="USB-C Cable" data-price="19">Add to Bag</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopping Bag Modal -->
+    <div class="bag-modal" id="bagModal">
+      <div class="bag-modal-inner">
+        <div class="bag-header">
+          <h2>Your Bag</h2>
+          <button class="bag-close" id="bagClose" aria-label="Close">&times;</button>
+        </div>
+        <div class="bag-items" id="bagItems">
+          <p class="bag-empty">Your bag is empty.</p>
+        </div>
+        <div class="bag-footer">
+          <div class="bag-total">
+            <span>Total</span>
+            <span id="bagTotal">$0.00</span>
+          </div>
+          <button class="btn-pill btn-blue-fill bag-checkout">Check Out</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shared Footer — injected by components.js -->
+  <footer class="site-footer" data-legal="* Pricing varies. &lt;a href=&quot;#&quot;&gt;See details&lt;/a&gt;"></footer>
+
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

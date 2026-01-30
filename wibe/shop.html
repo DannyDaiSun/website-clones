@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop — WIBE Audio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">WIBE</a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close">&times;</div>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-search-btn" id="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="shop.html" class="nav-cart" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search products...">
+                <button class="search-close" id="search-close">&times;</button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb"><a href="index.html">Home</a> / <span>Shop</span></nav>
+            <h1 class="page-title">Shop All</h1>
+            <p class="page-desc">Browse our entire collection. Free shipping on orders over $100.</p>
+        </div>
+    </section>
+
+    <!-- Shop Filters & Grid -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="shop-toolbar">
+                <div class="shop-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="headphones">Headphones</button>
+                    <button class="filter-btn" data-filter="earbuds">Earbuds</button>
+                    <button class="filter-btn" data-filter="speakers">Speakers</button>
+                    <button class="filter-btn" data-filter="accessories">Accessories</button>
+                </div>
+                <div class="shop-sort">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="shop-grid" id="shop-grid">
+                <div class="shop-card" data-category="headphones" data-price="349" data-name="WIBE Pro Max">
+                    <div class="shop-card-img"><div class="product-visual pv-1"></div></div>
+                    <div class="shop-card-body">
+                        <h3>WIBE Pro Max</h3>
+                        <p>Over-Ear · ANC</p>
+                        <div class="shop-card-footer">
+                            <span class="shop-price">$349</span>
+                            <button class="btn btn-sm add-to-cart" data-name="WIBE Pro Max" data-price="349">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card" data-category="headphones" data-price="279" data-name="WIBE Studio">
+                    <div class="shop-card-img"><div class="product-visual pv-2"></div></div>
+                    <div class="shop-card-body">
+                        <h3>WIBE Studio</h3>
+                        <p>Over-Ear · Monitor</p>
+                        <div class="shop-card-footer">
+                            <span class="shop-price">$279</span>
+                            <button class="btn btn-sm add-to-cart" data-name="WIBE Studio" data-price="279">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card" data-category="headphones" data-price="199" data-name="WIBE Sport">
+                    <div class="shop-card-img"><div class="product-visual pv-3"></div></div>
+                    <div class="shop-card-body">
+                        <h3>WIBE Sport</h3>
+                        <p>On-Ear · Sweat-Proof</p>
+                        <div class="shop-card-footer">
+                            <span class="shop-price">$199</span>
+                            <button class="btn btn-sm add-to-cart" data-name="WIBE Sport" data-price="199">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card" data-category="earbuds" data-price="249" data-name="WIBE Buds Pro">
+                    <div class="shop-card-img"><div class="product-visual pv-4"></div></div>
+                    <div class="shop-card-body">
+                        <h3>WIBE Buds Pro</h3>
+                        <p>True Wireless · ANC</p>
+                        <div class="shop-card-footer">
+                            <span class="shop-price">$249</span>
+                            <button class="btn btn-sm add-to-cart" data-name="WIBE Buds Pro" data-price="249">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card" data-category="earbuds" data-price="129" data-name="WIBE Buds Lite">
+                    <div class="shop-card-img"><div class="product-visual pv-5"></div></div>
+                    <div class="shop-card-body">
+                        <h3>WIBE Buds Lite</h3>
+                        <p>True Wireless · Everyday</p>
+                        <div class="shop-card-footer">
+                            <span class="shop-price">$129</span>
+                            <button class="btn btn-sm add-to-cart" data-name="WIBE Buds Lite" data-price="129">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card" data-category="speakers" data-price="199" data-name="WIBE Boom 360">
+                    <div class="shop-card-img"><div class="product-visual pv-6"></div></div>
+                    <div class="shop-card-body">
+                        <h3>WIBE Boom 360</h3>
+                        <p>Portable · 360° Sound</p>
+                        <div class="shop-card-footer">
+                            <span class="shop-price">$199</span>
+                            <button class="btn btn-sm add-to-cart" data-name="WIBE Boom 360" data-price="199">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card" data-category="speakers" data-price="299" data-name="WIBE Home">
+                    <div class="shop-card-img"><div class="product-visual pv-7"></div></div>
+                    <div class="shop-card-body">
+                        <h3>WIBE Home</h3>
+                        <p>Multi-Room · Smart</p>
+                        <div class="shop-card-footer">
+                            <span class="shop-price">$299</span>
+                            <button class="btn btn-sm add-to-cart" data-name="WIBE Home" data-price="299">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card" data-category="accessories" data-price="49" data-name="Premium Carry Case">
+                    <div class="shop-card-img"><div class="accessory-visual av-case"></div></div>
+                    <div class="shop-card-body">
+                        <h3>Premium Carry Case</h3>
+                        <p>Hardshell Protection</p>
+                        <div class="shop-card-footer">
+                            <span class="shop-price">$49</span>
+                            <button class="btn btn-sm add-to-cart" data-name="Premium Carry Case" data-price="49">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-card" data-category="accessories" data-price="29" data-name="Braided Audio Cable">
+                    <div class="shop-card-img"><div class="accessory-visual av-cable"></div></div>
+                    <div class="shop-card-body">
+                        <h3>Braided Audio Cable</h3>
+                        <p>1.5m · Gold-Plated</p>
+                        <div class="shop-card-footer">
+                            <span class="shop-price">$29</span>
+                            <button class="btn btn-sm add-to-cart" data-name="Braided Audio Cable" data-price="29">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-panel" id="cart-panel">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="cart-close" id="cart-close">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <p class="cart-empty">Your cart is empty</p>
+            </div>
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary cart-checkout" id="cart-checkout">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">WIBE</a>
+                <p>Premium audio for those who hear the difference.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+                    <a href="#" aria-label="TikTok">♪</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Products</h4>
+                <a href="products.html#headphones">Headphones</a>
+                <a href="products.html#earbuds">Earbuds</a>
+                <a href="products.html#speakers">Speakers</a>
+                <a href="products.html#accessories">Accessories</a>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="shop.html">All Products</a>
+                <a href="shop.html#deals">Deals</a>
+                <a href="shop.html#new">New Arrivals</a>
+                <a href="shop.html#bundles">Bundles</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="about.html#story">Our Story</a>
+                <a href="about.html#careers">Careers</a>
+                <a href="about.html#press">Press</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="about.html#faq">FAQ</a>
+                <a href="about.html#contact">Contact</a>
+                <a href="about.html#warranty">Warranty</a>
+                <a href="about.html#shipping">Shipping</a>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 WIBE Audio. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

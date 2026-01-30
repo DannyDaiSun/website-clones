@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starship — SpaceX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-body">
+    <header class="header header-solid" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo" aria-label="SpaceX Home">
+                <svg class="logo-svg" viewBox="0 0 400 50" width="180" height="24" fill="currentColor">
+                    <text x="0" y="40" font-family="Arial,sans-serif" font-weight="bold" font-size="46" letter-spacing="8">SPACE</text>
+                    <text x="258" y="40" font-family="Arial,sans-serif" font-weight="bold" font-size="46" letter-spacing="2" font-style="italic">X</text>
+                </svg>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="missions.html" class="nav-link">Missions</a></li>
+                    <li><a href="starship.html" class="nav-link active">Starship</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="index.html#launches" class="nav-link">Launches</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close">&times;</div>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-search-btn" id="search-toggle" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="about.html#careers" class="btn btn-outline btn-sm nav-cta">Join Us</a>
+                <div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div>
+            </div>
+        </nav>
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search SpaceX...">
+                <button class="search-close" id="search-close">&times;</button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <!-- Starship Hero -->
+        <section class="starship-hero">
+            <div class="starship-hero-bg"></div>
+            <div class="container starship-hero-content">
+                <h1 class="starship-title">STARSHIP</h1>
+                <p class="starship-subtitle">THE WORLD'S MOST POWERFUL LAUNCH VEHICLE</p>
+                <p class="starship-desc">Starship is designed to carry both crew and cargo to Earth orbit, the Moon, Mars, and beyond. It is the largest and most powerful rocket ever flown.</p>
+                <div class="starship-hero-actions">
+                    <a href="#specs" class="btn btn-white">Vehicle Specs</a>
+                    <a href="missions.html#starship-7" class="btn btn-outline">Latest Flight</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="starship-overview">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-visual">
+                        <div class="rocket-diagram">
+                            <div class="rocket-ship">
+                                <div class="rocket-nosecone"></div>
+                                <div class="rocket-body">
+                                    <div class="rocket-window"></div>
+                                    <span class="rocket-label-ship">Starship</span>
+                                </div>
+                                <div class="rocket-flaps"></div>
+                            </div>
+                            <div class="rocket-booster">
+                                <div class="rocket-booster-body">
+                                    <span class="rocket-label-booster">Super Heavy</span>
+                                </div>
+                                <div class="rocket-grid-fins"></div>
+                                <div class="rocket-engines">
+                                    <div class="engine-row">
+                                        <div class="engine-dot"></div>
+                                        <div class="engine-dot"></div>
+                                        <div class="engine-dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-text">
+                        <h2>Two-Stage System</h2>
+                        <p>Starship is a fully reusable transportation system consisting of two stages: the Starship spacecraft (upper stage) and the Super Heavy booster (first stage).</p>
+                        <div class="overview-highlights">
+                            <div class="ov-highlight">
+                                <strong>121 meters</strong>
+                                <span>Total height</span>
+                            </div>
+                            <div class="ov-highlight">
+                                <strong>9 meters</strong>
+                                <span>Diameter</span>
+                            </div>
+                            <div class="ov-highlight">
+                                <strong>5,000 tons</strong>
+                                <span>Liftoff mass</span>
+                            </div>
+                        </div>
+                        <p>Both stages are designed to be fully and rapidly reusable — a breakthrough that dramatically reduces the cost of access to space.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specs -->
+        <section class="starship-specs section-dark" id="specs">
+            <div class="container">
+                <h2 class="section-title">Vehicle Specifications</h2>
+                <div class="specs-tabs">
+                    <button class="spec-tab active" data-spec="ship">Starship</button>
+                    <button class="spec-tab" data-spec="booster">Super Heavy</button>
+                </div>
+                <div class="specs-content">
+                    <div class="spec-panel active" id="spec-ship">
+                        <div class="spec-grid">
+                            <div class="spec-item"><span class="spec-label">Height</span><span class="spec-value">50 m / 164 ft</span></div>
+                            <div class="spec-item"><span class="spec-label">Diameter</span><span class="spec-value">9 m / 30 ft</span></div>
+                            <div class="spec-item"><span class="spec-label">Propellant</span><span class="spec-value">1,200 t</span></div>
+                            <div class="spec-item"><span class="spec-label">Engines</span><span class="spec-value">6 Raptor (3 sea-level + 3 vacuum)</span></div>
+                            <div class="spec-item"><span class="spec-label">Payload to LEO</span><span class="spec-value">150+ t (expendable)</span></div>
+                            <div class="spec-item"><span class="spec-label">Payload to GTO</span><span class="spec-value">21+ t</span></div>
+                            <div class="spec-item"><span class="spec-label">Payload to Mars</span><span class="spec-value">100+ t</span></div>
+                            <div class="spec-item"><span class="spec-label">Material</span><span class="spec-value">Stainless Steel (304L)</span></div>
+                        </div>
+                    </div>
+                    <div class="spec-panel" id="spec-booster">
+                        <div class="spec-grid">
+                            <div class="spec-item"><span class="spec-label">Height</span><span class="spec-value">71 m / 233 ft</span></div>
+                            <div class="spec-item"><span class="spec-label">Diameter</span><span class="spec-value">9 m / 30 ft</span></div>
+                            <div class="spec-item"><span class="spec-label">Propellant</span><span class="spec-value">3,400 t</span></div>
+                            <div class="spec-item"><span class="spec-label">Engines</span><span class="spec-value">33 Raptor (sea-level)</span></div>
+                            <div class="spec-item"><span class="spec-label">Thrust (liftoff)</span><span class="spec-value">7,590 tf / 74.4 MN</span></div>
+                            <div class="spec-item"><span class="spec-label">Material</span><span class="spec-value">Stainless Steel (304L)</span></div>
+                            <div class="spec-item"><span class="spec-label">Recovery</span><span class="spec-value">Mechazilla tower catch</span></div>
+                            <div class="spec-item"><span class="spec-label">Grid Fins</span><span class="spec-value">4 (stainless steel)</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Missions -->
+        <section class="starship-missions">
+            <div class="container">
+                <h2 class="section-title">Designed For</h2>
+                <div class="mission-cards-grid">
+                    <div class="mission-card">
+                        <div class="mission-card-icon">🌍</div>
+                        <h3>Earth Orbit</h3>
+                        <p>Point-to-point transport anywhere on Earth in under an hour. Satellite deployment at unprecedented scale.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-card-icon">🌙</div>
+                        <h3>Lunar Missions</h3>
+                        <p>Selected by NASA as the Human Landing System for Artemis. Starship will return humans to the Moon.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-card-icon">🔴</div>
+                        <h3>Mars & Beyond</h3>
+                        <p>The ultimate goal — establishing a permanent human presence on Mars. Starship is the vehicle to get us there.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flight History -->
+        <section class="starship-flights section-dark">
+            <div class="container">
+                <h2 class="section-title">Flight Test History</h2>
+                <div class="flights-table">
+                    <div class="flight-row flight-header">
+                        <span>Flight</span><span>Date</span><span>Outcome</span><span>Notes</span>
+                    </div>
+                    <div class="flight-row">
+                        <span>IFT-7</span><span>Jan 2026</span><span class="status-success">✓ Success</span><span>Full orbital profile, booster caught</span>
+                    </div>
+                    <div class="flight-row">
+                        <span>IFT-6</span><span>Nov 2025</span><span class="status-success">✓ Success</span><span>Payload deploy test, controlled re-entry</span>
+                    </div>
+                    <div class="flight-row">
+                        <span>IFT-5</span><span>Oct 2025</span><span class="status-success">✓ Success</span><span>First booster catch by Mechazilla</span>
+                    </div>
+                    <div class="flight-row">
+                        <span>IFT-4</span><span>Jun 2025</span><span class="status-success">✓ Success</span><span>Controlled splashdown both stages</span>
+                    </div>
+                    <div class="flight-row">
+                        <span>IFT-3</span><span>Mar 2024</span><span class="status-partial">◐ Partial</span><span>Reached space, lost during re-entry</span>
+                    </div>
+                    <div class="flight-row">
+                        <span>IFT-2</span><span>Nov 2023</span><span class="status-partial">◐ Partial</span><span>Stage sep achieved, FTS activated</span>
+                    </div>
+                    <div class="flight-row">
+                        <span>IFT-1</span><span>Apr 2023</span><span class="status-fail">✗ Failure</span><span>Rapid unscheduled disassembly at T+4 min</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">SPACE<em>X</em></a>
+                <p class="footer-tagline">Making life multiplanetary.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Vehicles</h4>
+                <a href="starship.html">Starship</a>
+                <a href="missions.html#falcon9">Falcon 9</a>
+                <a href="missions.html#dragon">Dragon</a>
+                <a href="missions.html#falcon-heavy">Falcon Heavy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Missions</h4>
+                <a href="missions.html">All Missions</a>
+                <a href="missions.html#upcoming">Upcoming</a>
+                <a href="missions.html#recent">Recent</a>
+                <a href="about.html#starlink">Starlink</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About</a>
+                <a href="about.html#careers">Careers</a>
+                <a href="about.html#updates">Updates</a>
+                <a href="about.html#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Space Exploration Technologies Corp.</p>
+            <div class="footer-legal"><a href="#">Privacy</a><a href="#">Suppliers</a></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

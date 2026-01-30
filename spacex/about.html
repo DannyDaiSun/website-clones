@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — SpaceX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-body">
+    <header class="header header-solid" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo" aria-label="SpaceX Home">
+                <svg class="logo-svg" viewBox="0 0 400 50" width="180" height="24" fill="currentColor">
+                    <text x="0" y="40" font-family="Arial,sans-serif" font-weight="bold" font-size="46" letter-spacing="8">SPACE</text>
+                    <text x="258" y="40" font-family="Arial,sans-serif" font-weight="bold" font-size="46" letter-spacing="2" font-style="italic">X</text>
+                </svg>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="missions.html" class="nav-link">Missions</a></li>
+                    <li><a href="starship.html" class="nav-link">Starship</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="index.html#launches" class="nav-link">Launches</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close">&times;</div>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-search-btn" id="search-toggle" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="#careers" class="btn btn-outline btn-sm nav-cta">Join Us</a>
+                <div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div>
+            </div>
+        </nav>
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search SpaceX...">
+                <button class="search-close" id="search-close">&times;</button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero about-hero">
+            <div class="container">
+                <h1 class="page-title">About SpaceX</h1>
+                <p class="page-desc">SpaceX designs, manufactures, and launches advanced rockets and spacecraft.</p>
+            </div>
+        </section>
+
+        <!-- Mission Statement -->
+        <section class="about-section" id="mission">
+            <div class="container about-statement">
+                <div class="statement-content">
+                    <h2>Our Mission</h2>
+                    <p class="statement-text">SpaceX was founded in 2002 by Elon Musk with the goal of reducing space transportation costs and enabling the colonization of Mars.</p>
+                    <p>The company has developed the Falcon 1, Falcon 9, Falcon Heavy, and Starship launch vehicles, as well as the Dragon spacecraft. SpaceX is the first private company to send a spacecraft to the International Space Station, and the first to achieve orbital rocket reusability.</p>
+                </div>
+                <div class="statement-stats">
+                    <div class="about-stat">
+                        <span class="about-stat-num">2002</span>
+                        <span class="about-stat-label">Founded</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-num">13,000+</span>
+                        <span class="about-stat-label">Employees</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-num">4</span>
+                        <span class="about-stat-label">Launch Sites</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="about-section section-dark" id="updates">
+            <div class="container">
+                <h2 class="section-title">Key Milestones</h2>
+                <div class="milestones">
+                    <div class="milestone">
+                        <span class="ms-year">2002</span>
+                        <div class="ms-line"></div>
+                        <div class="ms-content"><h4>SpaceX Founded</h4><p>Company established in Hawthorne, California</p></div>
+                    </div>
+                    <div class="milestone">
+                        <span class="ms-year">2008</span>
+                        <div class="ms-line"></div>
+                        <div class="ms-content"><h4>Falcon 1 Reaches Orbit</h4><p>First privately funded liquid-propellant rocket to orbit</p></div>
+                    </div>
+                    <div class="milestone">
+                        <span class="ms-year">2010</span>
+                        <div class="ms-line"></div>
+                        <div class="ms-content"><h4>Dragon Orbits Earth</h4><p>First private spacecraft to return from orbit</p></div>
+                    </div>
+                    <div class="milestone">
+                        <span class="ms-year">2012</span>
+                        <div class="ms-line"></div>
+                        <div class="ms-content"><h4>Dragon Docks with ISS</h4><p>First private spacecraft to visit the ISS</p></div>
+                    </div>
+                    <div class="milestone">
+                        <span class="ms-year">2015</span>
+                        <div class="ms-line"></div>
+                        <div class="ms-content"><h4>First Booster Landing</h4><p>Falcon 9 first stage lands vertically after orbital mission</p></div>
+                    </div>
+                    <div class="milestone">
+                        <span class="ms-year">2017</span>
+                        <div class="ms-line"></div>
+                        <div class="ms-content"><h4>First Reflight</h4><p>First reuse of an orbital class rocket booster</p></div>
+                    </div>
+                    <div class="milestone">
+                        <span class="ms-year">2020</span>
+                        <div class="ms-line"></div>
+                        <div class="ms-content"><h4>Crew Dragon Demo-2</h4><p>First private company to send humans to orbit</p></div>
+                    </div>
+                    <div class="milestone">
+                        <span class="ms-year">2025</span>
+                        <div class="ms-line"></div>
+                        <div class="ms-content"><h4>Starship Booster Catch</h4><p>Super Heavy booster caught by Mechazilla tower</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Starlink -->
+        <section class="about-section" id="starlink">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <h2>Starlink</h2>
+                    <p>Starlink is the world's largest satellite constellation, delivering high-speed, low-latency broadband internet to locations where connectivity has been unreliable or completely unavailable.</p>
+                    <p>With over 6,000 satellites in orbit, Starlink provides coverage in 70+ countries and serves over 4 million subscribers globally.</p>
+                    <div class="starlink-stats">
+                        <div class="sl-stat"><strong>6,000+</strong><span>Satellites</span></div>
+                        <div class="sl-stat"><strong>70+</strong><span>Countries</span></div>
+                        <div class="sl-stat"><strong>4M+</strong><span>Subscribers</span></div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="starlink-visual">
+                        <div class="orbit-ring ring-1"></div>
+                        <div class="orbit-ring ring-2"></div>
+                        <div class="orbit-ring ring-3"></div>
+                        <div class="sat-dot sd-1"></div>
+                        <div class="sat-dot sd-2"></div>
+                        <div class="sat-dot sd-3"></div>
+                        <div class="sat-dot sd-4"></div>
+                        <div class="sat-dot sd-5"></div>
+                        <div class="earth-core"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Careers -->
+        <section class="about-section section-dark" id="careers">
+            <div class="container">
+                <div class="section-header-center">
+                    <h2 class="section-title">Join the Team</h2>
+                    <p class="section-desc">Build the future of space transportation.</p>
+                </div>
+                <div class="careers-grid">
+                    <div class="career-card">
+                        <h4>Propulsion Engineer</h4>
+                        <p>Raptor engine development · Hawthorne, CA</p>
+                        <a href="#" class="career-link">Apply →</a>
+                    </div>
+                    <div class="career-card">
+                        <h4>Avionics Software Engineer</h4>
+                        <p>Flight software team · Hawthorne, CA</p>
+                        <a href="#" class="career-link">Apply →</a>
+                    </div>
+                    <div class="career-card">
+                        <h4>Structures Technician</h4>
+                        <p>Starship production · Starbase, TX</p>
+                        <a href="#" class="career-link">Apply →</a>
+                    </div>
+                    <div class="career-card">
+                        <h4>Launch Engineer</h4>
+                        <p>Launch operations · Cape Canaveral, FL</p>
+                        <a href="#" class="career-link">Apply →</a>
+                    </div>
+                    <div class="career-card">
+                        <h4>Mission Operations Analyst</h4>
+                        <p>Mission control · Hawthorne, CA</p>
+                        <a href="#" class="career-link">Apply →</a>
+                    </div>
+                    <div class="career-card">
+                        <h4>Starlink Network Engineer</h4>
+                        <p>Satellite operations · Redmond, WA</p>
+                        <a href="#" class="career-link">Apply →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="about-section" id="contact">
+            <div class="container">
+                <div class="section-header-center">
+                    <h2 class="section-title">Contact</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h4>🏢 Headquarters</h4>
+                        <p>1 Rocket Road<br>Hawthorne, California 90250</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>🚀 Starbase</h4>
+                        <p>Starbase Production Facility<br>Boca Chica, Texas 78520</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>🛰️ Launch Site</h4>
+                        <p>Launch Complex 39A<br>Kennedy Space Center, Florida</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>📧 General Inquiries</h4>
+                        <p>media@spacex.com<br>+1 (310) 363-6000</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">SPACE<em>X</em></a>
+                <p class="footer-tagline">Making life multiplanetary.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Vehicles</h4>
+                <a href="starship.html">Starship</a>
+                <a href="missions.html#falcon9">Falcon 9</a>
+                <a href="missions.html#dragon">Dragon</a>
+                <a href="missions.html#falcon-heavy">Falcon Heavy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Missions</h4>
+                <a href="missions.html">All Missions</a>
+                <a href="missions.html#upcoming">Upcoming</a>
+                <a href="missions.html#recent">Recent</a>
+                <a href="about.html#starlink">Starlink</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About</a>
+                <a href="about.html#careers">Careers</a>
+                <a href="about.html#updates">Updates</a>
+                <a href="about.html#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Space Exploration Technologies Corp.</p>
+            <div class="footer-legal"><a href="#">Privacy</a><a href="#">Suppliers</a></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

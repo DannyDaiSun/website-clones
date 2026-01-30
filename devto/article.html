@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article - DEV Community</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="./index.html" class="logo" aria-label="DEV Home">
+        <svg viewBox="0 0 50 40" width="50" height="40" fill="currentColor">
+          <path d="M0 8.4C0 3.76 3.76 0 8.4 0h33.2C46.24 0 50 3.76 50 8.4v23.2c0 4.64-3.76 8.4-8.4 8.4H8.4C3.76 40 0 36.24 0 31.6V8.4zm13.2 3.6c-.66-.48-1.35-.72-2.08-.72H7.2v17.44h3.94c.73 0 1.42-.24 2.08-.72.65-.48.98-1.18.98-2.1V14.1c0-.92-.33-1.62-.98-2.1zm-2.24 13.04c0 .3-.1.54-.3.72-.2.18-.44.28-.74.28h-.94V13.96h.94c.3 0 .54.1.74.28.2.18.3.42.3.72v10.08zM24.3 28.72h-5.6V11.28h5.6v3.36h-2.48v3.36h2.48v3.36h-2.48v4.0h2.48v3.36zm12.5-14.08l-2.3 14.08h-3.76l-2.3-14.08V11.28h3.14v3.36l1.04 8.2 1.04-8.2v-3.36h3.14v3.36z"/>
+        </svg>
+      </a>
+      <div class="search-bar" id="searchBar">
+        <svg class="search-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+      </div>
+      <div class="top-bar-actions">
+        <a href="./new-post.html" class="btn btn-primary">Create Post</a>
+        <button class="icon-btn notif-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+        </button>
+        <button class="avatar-btn" id="avatarBtn" aria-label="Profile">
+          <div class="avatar avatar-sm">🧑‍💻</div>
+        </button>
+      </div>
+    </div>
+    <div class="search-dropdown" id="searchDropdown">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+    <div class="profile-dropdown" id="profileDropdown">
+      <div class="profile-header">
+        <div class="avatar">🧑‍💻</div>
+        <div><strong>dev_user</strong><p>@dev_user</p></div>
+      </div>
+      <ul>
+        <li><a href="./index.html">Dashboard</a></li>
+        <li><a href="./new-post.html">Create Post</a></li>
+        <li><a href="./tags.html">Tags</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-inner">
+      <a href="./index.html" class="mobile-nav-link">🏠 Home</a>
+      <a href="./tags.html" class="mobile-nav-link">🏷️ Tags</a>
+      <a href="./article.html" class="mobile-nav-link active">📖 Reading List</a>
+      <a href="./new-post.html" class="mobile-nav-link">✍️ Create Post</a>
+    </div>
+  </nav>
+
+  <div class="article-layout">
+    <!-- Reaction Sidebar -->
+    <aside class="reaction-bar" id="reactionBar">
+      <div class="reaction-bar-inner">
+        <button class="reaction-btn" data-reaction="heart" aria-label="Like">
+          <span class="reaction-icon">❤️</span>
+          <span class="reaction-count" id="heartCount">342</span>
+        </button>
+        <button class="reaction-btn" data-reaction="unicorn" aria-label="Unicorn">
+          <span class="reaction-icon">🦄</span>
+          <span class="reaction-count" id="unicornCount">56</span>
+        </button>
+        <button class="reaction-btn" data-reaction="fire" aria-label="Fire">
+          <span class="reaction-icon">🔥</span>
+          <span class="reaction-count" id="fireCount">23</span>
+        </button>
+        <button class="reaction-btn" data-reaction="bookmark" aria-label="Save">
+          <span class="reaction-icon">🔖</span>
+          <span class="reaction-count">Save</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Article Content -->
+    <article class="article-main">
+      <header class="article-header">
+        <div class="article-cover-gradient acg-1"></div>
+        <div class="article-header-inner">
+          <div class="article-author-info">
+            <div class="avatar avatar-md" id="articleAvatar">👩‍💻</div>
+            <div>
+              <strong class="article-author-name" id="articleAuthorName">Sarah Chen</strong>
+              <p class="article-date">Posted on <time id="articleDate">Jan 15</time> · <span id="articleReadTime">8 min read</span></p>
+            </div>
+          </div>
+          <h1 class="article-title" id="articleTitle">10 JavaScript Tips That Will Make You a Better Developer in 2024</h1>
+          <div class="article-tags" id="articleTags">
+            <a href="./tags.html#javascript" class="tag">#javascript</a>
+            <a href="./tags.html#webdev" class="tag">#webdev</a>
+            <a href="./tags.html#beginners" class="tag">#beginners</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="article-body" id="articleBody">
+        <p>JavaScript keeps evolving, and staying on top of the latest patterns and tricks can make you significantly more productive. Here are 10 tips I've picked up this year that changed how I write code.</p>
+
+        <h2 id="tip-1">1. Optional Chaining is Your Best Friend</h2>
+        <p>Stop writing nested if-checks. Optional chaining (<code>?.</code>) lets you safely access deeply nested properties without worrying about null or undefined.</p>
+        <pre><code>// Instead of this
+if (user && user.address && user.address.city) {
+  console.log(user.address.city);
+}
+
+// Do this
+console.log(user?.address?.city);</code></pre>
+
+        <h2 id="tip-2">2. Nullish Coalescing Over OR</h2>
+        <p>The <code>??</code> operator only falls through on <code>null</code> or <code>undefined</code>, unlike <code>||</code> which also catches falsy values like <code>0</code> and <code>""</code>.</p>
+        <pre><code>const port = config.port ?? 3000;
+// If port is 0, it stays 0 (not 3000)</code></pre>
+
+        <h2 id="tip-3">3. Structured Clone for Deep Copies</h2>
+        <p>Forget <code>JSON.parse(JSON.stringify(...))</code>. Use the built-in <code>structuredClone()</code>:</p>
+        <pre><code>const original = { name: 'dev', nested: { deep: true } };
+const copy = structuredClone(original);</code></pre>
+
+        <h2 id="tip-4">4. Array.at() for Negative Indexing</h2>
+        <p>Access the last element of an array without <code>arr[arr.length - 1]</code>:</p>
+        <pre><code>const colors = ['red', 'green', 'blue'];
+console.log(colors.at(-1)); // 'blue'</code></pre>
+
+        <h2 id="tip-5">5. Top-Level Await in Modules</h2>
+        <p>In ES modules, you can now use <code>await</code> at the top level without wrapping in an async function.</p>
+
+        <h2 id="tip-6">6. Object.groupBy()</h2>
+        <p>New in 2024 — group array items by a criteria:</p>
+        <pre><code>const people = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 25 },
+];
+const grouped = Object.groupBy(people, p => p.age);
+// { 25: [Alice, Charlie], 30: [Bob] }</code></pre>
+
+        <h2 id="tip-7">7. Promise.withResolvers()</h2>
+        <p>Create a promise and get its resolve/reject functions externally. No more wrapping in <code>new Promise()</code>.</p>
+
+        <h2 id="tip-8">8. The using Keyword for Resource Management</h2>
+        <p>TC39 stage 3: auto-cleanup resources when they go out of scope (like Python's <code>with</code> statement).</p>
+
+        <h2 id="tip-9">9. Temporal API for Dates</h2>
+        <p>Say goodbye to <code>Date</code> headaches. The Temporal API is coming and it handles time zones correctly.</p>
+
+        <h2 id="tip-10">10. Pattern Matching (Stage 2)</h2>
+        <p>Coming soon: <code>match</code> expressions that work like switch but return values and support destructuring.</p>
+
+        <hr>
+        <p>Which tip was new to you? Drop a comment below! And don't forget to follow me for more JavaScript content.</p>
+      </div>
+
+      <!-- Comments -->
+      <section class="comments-section" id="comments">
+        <h2 class="comments-heading">Discussion (<span id="commentCount">48</span>)</h2>
+
+        <!-- Comment Form -->
+        <div class="comment-form">
+          <div class="avatar avatar-sm">🧑‍💻</div>
+          <div class="comment-input-wrap">
+            <textarea id="commentInput" placeholder="Add to the discussion..." rows="3"></textarea>
+            <div class="comment-form-actions">
+              <button class="btn btn-primary" id="submitComment">Submit</button>
+              <button class="btn btn-ghost">Preview</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Existing Comments -->
+        <div class="comments-list" id="commentsList">
+          <div class="comment">
+            <div class="avatar avatar-sm">👨‍🔬</div>
+            <div class="comment-body">
+              <div class="comment-header">
+                <strong>Alex Rivera</strong>
+                <time>Jan 15</time>
+              </div>
+              <p>Great list! Optional chaining was a game-changer for me. I'd also add that using <code>Array.from()</code> with a map function is super underrated.</p>
+              <div class="comment-actions">
+                <button class="comment-react">❤️ <span>12</span></button>
+                <button class="comment-reply-btn">Reply</button>
+              </div>
+              <!-- Nested Reply -->
+              <div class="comment nested">
+                <div class="avatar avatar-sm">👩‍💻</div>
+                <div class="comment-body">
+                  <div class="comment-header">
+                    <strong>Sarah Chen</strong>
+                    <time>Jan 15</time>
+                  </div>
+                  <p>Good call! <code>Array.from({length: 5}, (_, i) => i)</code> is one of my favorites.</p>
+                  <div class="comment-actions">
+                    <button class="comment-react">❤️ <span>5</span></button>
+                    <button class="comment-reply-btn">Reply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="avatar avatar-sm">🧑‍🎨</div>
+            <div class="comment-body">
+              <div class="comment-header">
+                <strong>Jordan Lee</strong>
+                <time>Jan 15</time>
+              </div>
+              <p>structuredClone() blew my mind! I've been using JSON.parse(JSON.stringify()) for years like a caveman 😂</p>
+              <div class="comment-actions">
+                <button class="comment-react">❤️ <span>28</span></button>
+                <button class="comment-reply-btn">Reply</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="avatar avatar-sm">👩‍🔧</div>
+            <div class="comment-body">
+              <div class="comment-header">
+                <strong>Maya Patel</strong>
+                <time>Jan 15</time>
+              </div>
+              <p>The Temporal API can't come fast enough. Working with dates in JS has always been painful. Moment.js helped but it's huge.</p>
+              <div class="comment-actions">
+                <button class="comment-react">❤️ <span>15</span></button>
+                <button class="comment-reply-btn">Reply</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="avatar avatar-sm">👨‍💼</div>
+            <div class="comment-body">
+              <div class="comment-header">
+                <strong>Chris Wu</strong>
+                <time>Jan 16</time>
+              </div>
+              <p>Pattern matching is going to be incredible. Coming from Rust/Elixir, having this in JS will be amazing.</p>
+              <div class="comment-actions">
+                <button class="comment-react">❤️ <span>9</span></button>
+                <button class="comment-reply-btn">Reply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Articles -->
+      <section class="related-articles">
+        <h2>Read Next</h2>
+        <div class="related-grid">
+          <a href="./article.html?id=2" class="related-card">
+            <h3>Building a Full-Stack App with React 19 and TypeScript</h3>
+            <p>Alex Rivera · 12 min read</p>
+          </a>
+          <a href="./article.html?id=3" class="related-card">
+            <h3>How I Built an AI-Powered Code Review Tool with Python</h3>
+            <p>Maya Patel · 15 min read</p>
+          </a>
+          <a href="./article.html?id=5" class="related-card">
+            <h3>Node.js Performance: 7 Tricks I Wish I Knew Earlier</h3>
+            <p>Chris Wu · 10 min read</p>
+          </a>
+        </div>
+      </section>
+    </article>
+
+    <!-- Right Sidebar (article view) -->
+    <aside class="article-sidebar">
+      <div class="author-card">
+        <div class="author-card-cover"></div>
+        <div class="author-card-body">
+          <div class="avatar avatar-lg" id="sidebarAvatar">👩‍💻</div>
+          <h3 id="sidebarAuthorName">Sarah Chen</h3>
+          <p class="author-bio">Full-stack developer. JS enthusiast. Writing about web dev, productivity, and tech career growth.</p>
+          <button class="btn btn-primary btn-block">Follow</button>
+          <div class="author-stats">
+            <div><strong>256</strong><span>Posts</span></div>
+            <div><strong>12.4K</strong><span>Followers</span></div>
+          </div>
+          <ul class="author-details">
+            <li>📍 San Francisco, CA</li>
+            <li>🎓 Joined Dec 2019</li>
+            <li>🔗 sarahchen.dev</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>More from <span id="sidebarAuthorMore">Sarah Chen</span></h3>
+        <ul class="more-articles">
+          <li><a href="./article.html?id=1">Async/Await Patterns You Should Know</a></li>
+          <li><a href="./article.html?id=2">My VS Code Setup for 2024</a></li>
+          <li><a href="./article.html?id=3">Understanding the Event Loop</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>DEV Community</strong> — A constructive and inclusive social network for software developers.</p>
+      <nav class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./tags.html">Tags</a>
+        <a href="./new-post.html">Create Post</a>
+        <a href="#">FAQ</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2024 DEV Community. Clone for educational purposes.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

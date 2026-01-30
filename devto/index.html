@@ -1,462 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEV Community</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEV Community</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Top Navigation -->
-    <header class="top-header">
-        <div class="header-container">
-            <div class="header-left">
-                <button class="hamburger" aria-label="Navigation menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <a href="#" class="logo" aria-label="DEV Community Home">
-                    <span class="logo-text">DEV</span>
-                </a>
-            </div>
-            <div class="header-center">
-                <div class="search-bar">
-                    <input type="text" class="search-input" placeholder="Search...">
-                    <button class="search-btn" aria-label="Search">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    </button>
-                </div>
-            </div>
-            <div class="header-right">
-                <a href="#" class="btn btn-outline">Log in</a>
-                <a href="#" class="btn btn-primary">Create account</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Layout -->
-    <div class="layout">
-        <!-- Left Sidebar -->
-        <aside class="sidebar-left">
-            <nav class="sidebar-nav">
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">🏠</span> Home
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">🎙️</span> Podcasts
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">🎥</span> Videos
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">🏷️</span> Tags
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">💡</span> FAQ
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">🛍️</span> Forem Shop
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">❤️</span> Sponsors
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">📜</span> About
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">📞</span> Contact
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">📖</span> Guides
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">🤝</span> Software comparisons
-                </a>
-            </nav>
-
-            <div class="sidebar-section">
-                <h3 class="sidebar-heading">Other</h3>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">👍</span> Code of Conduct
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">🔒</span> Privacy Policy
-                </a>
-                <a href="#" class="sidebar-link">
-                    <span class="sidebar-icon">📃</span> Terms of use
-                </a>
-            </div>
-
-            <div class="sidebar-section">
-                <h3 class="sidebar-heading">Social</h3>
-                <div class="social-icons">
-                    <a href="#" class="social-link" aria-label="Twitter">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.38 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.32 3.91A12.16 12.16 0 013.16 4.86a4.28 4.28 0 001.32 5.71 4.24 4.24 0 01-1.94-.54v.05a4.28 4.28 0 003.43 4.19 4.3 4.3 0 01-1.93.07 4.29 4.29 0 004 2.98A8.6 8.6 0 012 18.58a12.13 12.13 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.72 8.72 0 0024 5.5a8.49 8.49 0 01-2.54.7z"/></svg>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Facebook">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07c0 6.02 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.33l-.53 3.49h-2.8v8.44C19.61 23.09 24 18.09 24 12.07z"/></svg>
-                    </a>
-                    <a href="#" class="social-link" aria-label="GitHub">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Instagram">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.25 2.43.41.61.24 1.05.52 1.51.98.46.46.74.9.98 1.51.17.46.36 1.26.41 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.97-.41 2.43a4.07 4.07 0 01-.98 1.51c-.46.46-.9.74-1.51.98-.46.17-1.26.36-2.43.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.25-2.43-.41a4.07 4.07 0 01-1.51-.98 4.07 4.07 0 01-.98-1.51c-.17-.46-.36-1.26-.41-2.43C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.97.41-2.43.24-.61.52-1.05.98-1.51.46-.46.9-.74 1.51-.98.46-.17 1.26-.36 2.43-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.78.3-1.44.71-2.1 1.37A5.89 5.89 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.78.71 1.44 1.37 2.1a5.89 5.89 0 002.14 1.37c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.89 5.89 0 002.1-1.37 5.89 5.89 0 001.37-2.1c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.89 5.89 0 00-1.37-2.1A5.89 5.89 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Mastodon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.27 8.01c-.35-2.39-2.6-4.33-5.08-4.78C17.64 3.13 14.42 2.8 12 2.8s-5.64.33-6.19.43C3.33 3.68 1.08 5.62.73 8.01.55 9.2.53 10.5.58 11.69c.07 1.76.08 3.51.26 5.26.12 1.1.33 2.18.64 3.24.57 1.93 2.86 3.53 4.76 4.18 2.02.69 4.18.81 6.27.48.28-.04.55-.1.82-.17l-.02-1.79s-1.9.6-4.03.53c-2.11-.07-4.34-.23-4.68-2.83a5.44 5.44 0 01-.05-.76s2.38.58 5.39.72c1.84.08 3.56-.11 5.31-.32 3.36-.41 6.28-2.53 6.65-4.47.58-3.05.53-7.45.53-7.45zM19.5 15.42h-2.7v-6.5c0-1.37-.58-2.07-1.73-2.07-1.28 0-1.92.83-1.92 2.46v3.55h-2.68V9.31c0-1.64-.64-2.46-1.92-2.46-1.15 0-1.73.7-1.73 2.07v6.5H4.12V8.76c0-1.37.35-2.46 1.05-3.27.72-.81 1.67-1.23 2.84-1.23 1.36 0 2.39.52 3.06 1.57L12 7.35l.93-1.52c.67-1.05 1.7-1.57 3.06-1.57 1.17 0 2.12.42 2.84 1.23.7.81 1.05 1.9 1.05 3.27v6.66z"/></svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="sidebar-tags">
-                <h3 class="sidebar-heading">Popular Tags</h3>
-                <a href="#" class="tag-link">#javascript</a>
-                <a href="#" class="tag-link">#webdev</a>
-                <a href="#" class="tag-link">#beginners</a>
-                <a href="#" class="tag-link">#programming</a>
-                <a href="#" class="tag-link">#tutorial</a>
-                <a href="#" class="tag-link">#react</a>
-                <a href="#" class="tag-link">#python</a>
-                <a href="#" class="tag-link">#devops</a>
-                <a href="#" class="tag-link">#css</a>
-                <a href="#" class="tag-link">#opensource</a>
-                <a href="#" class="tag-link">#node</a>
-                <a href="#" class="tag-link">#typescript</a>
-                <a href="#" class="tag-link">#rust</a>
-                <a href="#" class="tag-link">#aws</a>
-                <a href="#" class="tag-link">#ai</a>
-            </div>
-        </aside>
-
-        <!-- Feed / Main Column -->
-        <main class="feed">
-            <!-- Hero / CTA Banner -->
-            <section class="hero-banner">
-                <h1 class="hero-title">DEV Community</h1>
-                <p class="hero-subtitle">A constructive and inclusive social network for software developers. With you every step of your journey.</p>
-                <div class="hero-actions">
-                    <a href="#" class="btn btn-primary btn-lg">Create account</a>
-                    <a href="#" class="btn btn-outline btn-lg">Log in</a>
-                </div>
-            </section>
-
-            <!-- Feed Tabs -->
-            <nav class="feed-tabs">
-                <a href="#" class="feed-tab active"><strong>Relevant</strong></a>
-                <a href="#" class="feed-tab">Latest</a>
-                <a href="#" class="feed-tab">Top</a>
-            </nav>
-
-            <!-- Article Cards -->
-            <article class="card">
-                <div class="card-header">
-                    <div class="card-avatar card-avatar-1"></div>
-                    <div class="card-meta">
-                        <a href="#" class="card-author">Sarah Chen</a>
-                        <time class="card-date">Jan 28</time>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title"><a href="#">Understanding Rust's Ownership Model: A Visual Guide for JavaScript Developers</a></h2>
-                    <div class="card-tags">
-                        <a href="#" class="tag">#rust</a>
-                        <a href="#" class="tag">#javascript</a>
-                        <a href="#" class="tag">#beginners</a>
-                        <a href="#" class="tag">#programming</a>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-reactions">
-                            <a href="#" class="reaction-btn">
-                                <span class="reaction-icons">❤️ 🦄 🔥</span>
-                                <span class="reaction-count">248 reactions</span>
-                            </a>
-                            <a href="#" class="comment-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                                <span>67 comments</span>
-                            </a>
-                        </div>
-                        <div class="card-save">
-                            <small class="read-time">12 min read</small>
-                            <button class="save-btn" aria-label="Save post">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <div class="card-avatar card-avatar-2"></div>
-                    <div class="card-meta">
-                        <a href="#" class="card-author">Alex Rivera</a>
-                        <time class="card-date">Jan 27</time>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title"><a href="#">I Built a Full-Stack App with Zero JavaScript — Here's How</a></h2>
-                    <div class="card-tags">
-                        <a href="#" class="tag">#webdev</a>
-                        <a href="#" class="tag">#htmx</a>
-                        <a href="#" class="tag">#go</a>
-                        <a href="#" class="tag">#tutorial</a>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-reactions">
-                            <a href="#" class="reaction-btn">
-                                <span class="reaction-icons">❤️ 🦄 😲</span>
-                                <span class="reaction-count">189 reactions</span>
-                            </a>
-                            <a href="#" class="comment-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                                <span>93 comments</span>
-                            </a>
-                        </div>
-                        <div class="card-save">
-                            <small class="read-time">8 min read</small>
-                            <button class="save-btn" aria-label="Save post">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <div class="card-avatar card-avatar-3"></div>
-                    <div class="card-meta">
-                        <a href="#" class="card-author">Priya Patel</a>
-                        <time class="card-date">Jan 27</time>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title"><a href="#">Stop Using console.log — Here Are 10 Better Debugging Tools</a></h2>
-                    <div class="card-tags">
-                        <a href="#" class="tag">#javascript</a>
-                        <a href="#" class="tag">#debugging</a>
-                        <a href="#" class="tag">#productivity</a>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-reactions">
-                            <a href="#" class="reaction-btn">
-                                <span class="reaction-icons">❤️ 🔥 🙌</span>
-                                <span class="reaction-count">412 reactions</span>
-                            </a>
-                            <a href="#" class="comment-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                                <span>128 comments</span>
-                            </a>
-                        </div>
-                        <div class="card-save">
-                            <small class="read-time">6 min read</small>
-                            <button class="save-btn" aria-label="Save post">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <div class="card-avatar card-avatar-4"></div>
-                    <div class="card-meta">
-                        <a href="#" class="card-author">Marcus Johnson</a>
-                        <time class="card-date">Jan 26</time>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title"><a href="#">The Complete Guide to Docker in 2026: Everything You Need to Know</a></h2>
-                    <div class="card-tags">
-                        <a href="#" class="tag">#docker</a>
-                        <a href="#" class="tag">#devops</a>
-                        <a href="#" class="tag">#beginners</a>
-                        <a href="#" class="tag">#tutorial</a>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-reactions">
-                            <a href="#" class="reaction-btn">
-                                <span class="reaction-icons">❤️ 🦄 📚</span>
-                                <span class="reaction-count">305 reactions</span>
-                            </a>
-                            <a href="#" class="comment-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                                <span>54 comments</span>
-                            </a>
-                        </div>
-                        <div class="card-save">
-                            <small class="read-time">15 min read</small>
-                            <button class="save-btn" aria-label="Save post">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <div class="card-avatar card-avatar-5"></div>
-                    <div class="card-meta">
-                        <a href="#" class="card-author">Yuki Tanaka</a>
-                        <time class="card-date">Jan 26</time>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title"><a href="#">Why I Switched from VS Code to Neovim (And Why You Might Too)</a></h2>
-                    <div class="card-tags">
-                        <a href="#" class="tag">#productivity</a>
-                        <a href="#" class="tag">#vim</a>
-                        <a href="#" class="tag">#tooling</a>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-reactions">
-                            <a href="#" class="reaction-btn">
-                                <span class="reaction-icons">❤️ 🦄 🔥</span>
-                                <span class="reaction-count">176 reactions</span>
-                            </a>
-                            <a href="#" class="comment-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                                <span>201 comments</span>
-                            </a>
-                        </div>
-                        <div class="card-save">
-                            <small class="read-time">10 min read</small>
-                            <button class="save-btn" aria-label="Save post">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <div class="card-avatar card-avatar-6"></div>
-                    <div class="card-meta">
-                        <a href="#" class="card-author">Emma Larsson</a>
-                        <time class="card-date">Jan 25</time>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title"><a href="#">Accessibility Isn't Optional: A Practical CSS-Only Approach</a></h2>
-                    <div class="card-tags">
-                        <a href="#" class="tag">#a11y</a>
-                        <a href="#" class="tag">#css</a>
-                        <a href="#" class="tag">#webdev</a>
-                        <a href="#" class="tag">#beginners</a>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-reactions">
-                            <a href="#" class="reaction-btn">
-                                <span class="reaction-icons">❤️ 🙌 💯</span>
-                                <span class="reaction-count">523 reactions</span>
-                            </a>
-                            <a href="#" class="comment-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                                <span>87 comments</span>
-                            </a>
-                        </div>
-                        <div class="card-save">
-                            <small class="read-time">9 min read</small>
-                            <button class="save-btn" aria-label="Save post">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </main>
-
-        <!-- Right Sidebar -->
-        <aside class="sidebar-right">
-            <div class="sidebar-widget">
-                <header class="widget-header">
-                    <h3>Active discussions</h3>
-                </header>
-                <div class="widget-body">
-                    <a href="#" class="discussion-link">What was your win this week?</a>
-                    <span class="discussion-count">34 comments</span>
-                    <a href="#" class="discussion-link">Share your side project!</a>
-                    <span class="discussion-count">28 comments</span>
-                    <a href="#" class="discussion-link">Best resources for learning Rust in 2026?</a>
-                    <span class="discussion-count">45 comments</span>
-                    <a href="#" class="discussion-link">How do you stay motivated as a solo dev?</a>
-                    <span class="discussion-count">67 comments</span>
-                    <a href="#" class="discussion-link">Unpopular opinion: TDD is overrated</a>
-                    <span class="discussion-count">112 comments</span>
-                </div>
-            </div>
-
-            <div class="sidebar-widget">
-                <header class="widget-header">
-                    <h3>#news</h3>
-                </header>
-                <div class="widget-body">
-                    <a href="#" class="discussion-link">GitHub introduces native AI code review</a>
-                    <a href="#" class="discussion-link">Deno 5.0 released with major performance gains</a>
-                    <a href="#" class="discussion-link">Firefox marketshare rises for first time in a decade</a>
-                    <a href="#" class="discussion-link">W3C finalizes CSS Anchor Positioning spec</a>
-                </div>
-            </div>
-
-            <div class="sidebar-widget">
-                <header class="widget-header">
-                    <h3>#help</h3>
-                </header>
-                <div class="widget-body">
-                    <a href="#" class="discussion-link">Why does my React component re-render infinitely?</a>
-                    <span class="discussion-count">8 comments</span>
-                    <a href="#" class="discussion-link">Best CI/CD pipeline for a small team?</a>
-                    <span class="discussion-count">14 comments</span>
-                    <a href="#" class="discussion-link">How to structure a monorepo with Turborepo?</a>
-                    <span class="discussion-count">6 comments</span>
-                </div>
-            </div>
-        </aside>
+  <!-- Top Nav -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="./index.html" class="logo" aria-label="DEV Home">
+        <svg viewBox="0 0 50 40" width="50" height="40" fill="currentColor">
+          <path d="M0 8.4C0 3.76 3.76 0 8.4 0h33.2C46.24 0 50 3.76 50 8.4v23.2c0 4.64-3.76 8.4-8.4 8.4H8.4C3.76 40 0 36.24 0 31.6V8.4zm13.2 3.6c-.66-.48-1.35-.72-2.08-.72H7.2v17.44h3.94c.73 0 1.42-.24 2.08-.72.65-.48.98-1.18.98-2.1V14.1c0-.92-.33-1.62-.98-2.1zm-2.24 13.04c0 .3-.1.54-.3.72-.2.18-.44.28-.74.28h-.94V13.96h.94c.3 0 .54.1.74.28.2.18.3.42.3.72v10.08zM24.3 28.72h-5.6V11.28h5.6v3.36h-2.48v3.36h2.48v3.36h-2.48v4.0h2.48v3.36zm12.5-14.08l-2.3 14.08h-3.76l-2.3-14.08V11.28h3.14v3.36l1.04 8.2 1.04-8.2v-3.36h3.14v3.36z"/>
+        </svg>
+      </a>
+      <div class="search-bar" id="searchBar">
+        <svg class="search-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+      </div>
+      <div class="top-bar-actions">
+        <a href="./new-post.html" class="btn btn-primary">Create Post</a>
+        <button class="icon-btn notif-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+        </button>
+        <button class="avatar-btn" id="avatarBtn" aria-label="Profile">
+          <div class="avatar avatar-sm">🧑‍💻</div>
+        </button>
+      </div>
     </div>
+    <!-- Search Results Dropdown -->
+    <div class="search-dropdown" id="searchDropdown">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+    <!-- Profile Dropdown -->
+    <div class="profile-dropdown" id="profileDropdown">
+      <div class="profile-header">
+        <div class="avatar">🧑‍💻</div>
+        <div>
+          <strong>dev_user</strong>
+          <p>@dev_user</p>
+        </div>
+      </div>
+      <ul>
+        <li><a href="./index.html">Dashboard</a></li>
+        <li><a href="./new-post.html">Create Post</a></li>
+        <li><a href="./tags.html">Tags</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <a href="#" class="footer-logo">
-                    <span class="logo-text">DEV</span> Community
-                </a>
-                <p class="footer-tagline">A constructive and inclusive social network for software developers.</p>
+  <!-- Mobile Nav Drawer -->
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-inner">
+      <a href="./index.html" class="mobile-nav-link active">🏠 Home</a>
+      <a href="./tags.html" class="mobile-nav-link">🏷️ Tags</a>
+      <a href="./article.html" class="mobile-nav-link">📖 Reading List</a>
+      <a href="./new-post.html" class="mobile-nav-link">✍️ Create Post</a>
+      <hr>
+      <h3>Popular Tags</h3>
+      <a href="./tags.html#javascript" class="tag-link">#javascript</a>
+      <a href="./tags.html#webdev" class="tag-link">#webdev</a>
+      <a href="./tags.html#react" class="tag-link">#react</a>
+      <a href="./tags.html#python" class="tag-link">#python</a>
+      <a href="./tags.html#css" class="tag-link">#css</a>
+      <a href="./tags.html#node" class="tag-link">#node</a>
+      <hr>
+      <h3>Other</h3>
+      <a href="#" class="mobile-nav-link">📜 Code of Conduct</a>
+      <a href="#" class="mobile-nav-link">🔒 Privacy Policy</a>
+      <a href="#" class="mobile-nav-link">📄 Terms of Use</a>
+    </div>
+  </nav>
+
+  <div class="layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar sidebar-left">
+      <nav class="sidebar-nav">
+        <a href="./index.html" class="sidebar-link active">
+          <span class="sidebar-icon">🏠</span> Home
+        </a>
+        <a href="./tags.html" class="sidebar-link">
+          <span class="sidebar-icon">🏷️</span> Tags
+        </a>
+        <a href="./article.html" class="sidebar-link">
+          <span class="sidebar-icon">📖</span> Reading List
+        </a>
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">🎙️</span> Podcasts
+        </a>
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">🎥</span> Videos
+        </a>
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">🏪</span> Listings
+        </a>
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">❓</span> FAQ
+        </a>
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">🛍️</span> DEV Shop
+        </a>
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">❤️</span> Sponsors
+        </a>
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">ℹ️</span> About
+        </a>
+        <a href="#" class="sidebar-link">
+          <span class="sidebar-icon">📞</span> Contact
+        </a>
+      </nav>
+
+      <div class="sidebar-section">
+        <h3>Popular Tags</h3>
+        <a href="./tags.html#javascript" class="tag-link">#javascript</a>
+        <a href="./tags.html#webdev" class="tag-link">#webdev</a>
+        <a href="./tags.html#react" class="tag-link">#react</a>
+        <a href="./tags.html#python" class="tag-link">#python</a>
+        <a href="./tags.html#beginners" class="tag-link">#beginners</a>
+        <a href="./tags.html#css" class="tag-link">#css</a>
+        <a href="./tags.html#node" class="tag-link">#node</a>
+        <a href="./tags.html#typescript" class="tag-link">#typescript</a>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>DEV Community</h3>
+        <p class="sidebar-text">DEV Community is a community of amazing developers. We're a place where coders share, stay up-to-date and grow their careers.</p>
+        <a href="./new-post.html" class="btn btn-outline btn-block">Create Account</a>
+      </div>
+    </aside>
+
+    <!-- Main Feed -->
+    <main class="feed">
+      <!-- Feed Tabs -->
+      <div class="feed-tabs" id="feedTabs">
+        <button class="feed-tab active" data-feed="relevant">Relevant</button>
+        <button class="feed-tab" data-feed="latest">Latest</button>
+        <button class="feed-tab" data-feed="top">Top</button>
+      </div>
+
+      <!-- Article Cards -->
+      <article class="card" data-tags="javascript,webdev" data-feed="relevant,top" data-id="1">
+        <div class="card-header">
+          <div class="card-gradient cg-1"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <div class="avatar avatar-xs">👩‍💻</div>
+            <div>
+              <a href="#" class="card-author">Sarah Chen</a>
+              <time>Jan 15 (8 min read)</time>
             </div>
-            <nav class="footer-nav">
-                <div class="footer-col">
-                    <h4>DEV Community</h4>
-                    <a href="#">Home</a>
-                    <a href="#">Listings</a>
-                    <a href="#">Podcasts</a>
-                    <a href="#">Videos</a>
-                    <a href="#">Tags</a>
-                    <a href="#">FAQ</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Guides</h4>
-                    <a href="#">Code of Conduct</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                    <a href="#">API Docs</a>
-                    <a href="#">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Other</h4>
-                    <a href="#">Forem Shop</a>
-                    <a href="#">Sponsors</a>
-                    <a href="#">About</a>
-                    <a href="#">Software comparisons</a>
-                </div>
-            </nav>
+          </div>
+          <h2 class="card-title">
+            <a href="./article.html?id=1">10 JavaScript Tips That Will Make You a Better Developer in 2024</a>
+          </h2>
+          <div class="card-tags">
+            <a href="./tags.html#javascript" class="tag">#javascript</a>
+            <a href="./tags.html#webdev" class="tag">#webdev</a>
+            <a href="./tags.html#beginners" class="tag">#beginners</a>
+          </div>
+          <div class="card-footer">
+            <a href="./article.html?id=1" class="card-reactions">
+              <span>❤️🦄🔥</span> 342 reactions
+            </a>
+            <a href="./article.html?id=1#comments" class="card-comments">
+              💬 48 comments
+            </a>
+            <span class="card-save">
+              <button class="save-btn" aria-label="Save">🔖</button>
+              5 min read
+            </span>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>DEV Community — A constructive and inclusive social network for software developers.</p>
-            <p>Built on <a href="#">Forem</a> — the open source software that powers DEV and other inclusive communities.</p>
-            <p>Made with love and <a href="#">Ruby on Rails</a>. DEV Community © 2016 - 2026.</p>
+      </article>
+
+      <article class="card" data-tags="react,typescript" data-feed="relevant,latest" data-id="2">
+        <div class="card-body">
+          <div class="card-meta">
+            <div class="avatar avatar-xs">👨‍🔬</div>
+            <div>
+              <a href="#" class="card-author">Alex Rivera</a>
+              <time>Jan 14 (12 min read)</time>
+            </div>
+          </div>
+          <h2 class="card-title">
+            <a href="./article.html?id=2">Building a Full-Stack App with React 19 and TypeScript</a>
+          </h2>
+          <div class="card-tags">
+            <a href="./tags.html#react" class="tag">#react</a>
+            <a href="./tags.html#typescript" class="tag">#typescript</a>
+            <a href="./tags.html#webdev" class="tag">#webdev</a>
+          </div>
+          <div class="card-footer">
+            <a href="./article.html?id=2" class="card-reactions">
+              <span>❤️🦄</span> 218 reactions
+            </a>
+            <a href="./article.html?id=2#comments" class="card-comments">
+              💬 32 comments
+            </a>
+            <span class="card-save">
+              <button class="save-btn" aria-label="Save">🔖</button>
+              12 min read
+            </span>
+          </div>
         </div>
-    </footer>
+      </article>
+
+      <article class="card" data-tags="python,ai" data-feed="relevant,latest,top" data-id="3">
+        <div class="card-body">
+          <div class="card-meta">
+            <div class="avatar avatar-xs">👩‍🔧</div>
+            <div>
+              <a href="#" class="card-author">Maya Patel</a>
+              <time>Jan 14 (15 min read)</time>
+            </div>
+          </div>
+          <h2 class="card-title">
+            <a href="./article.html?id=3">How I Built an AI-Powered Code Review Tool with Python</a>
+          </h2>
+          <div class="card-tags">
+            <a href="./tags.html#python" class="tag">#python</a>
+            <a href="./tags.html#ai" class="tag">#ai</a>
+            <a href="./tags.html#webdev" class="tag">#webdev</a>
+          </div>
+          <div class="card-footer">
+            <a href="./article.html?id=3" class="card-reactions">
+              <span>❤️🔥🤯</span> 567 reactions
+            </a>
+            <a href="./article.html?id=3#comments" class="card-comments">
+              💬 89 comments
+            </a>
+            <span class="card-save">
+              <button class="save-btn" aria-label="Save">🔖</button>
+              15 min read
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="css,webdev" data-feed="latest" data-id="4">
+        <div class="card-header">
+          <div class="card-gradient cg-2"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <div class="avatar avatar-xs">🧑‍🎨</div>
+            <div>
+              <a href="#" class="card-author">Jordan Lee</a>
+              <time>Jan 13 (6 min read)</time>
+            </div>
+          </div>
+          <h2 class="card-title">
+            <a href="./article.html?id=4">CSS Container Queries Changed Everything — Here's How</a>
+          </h2>
+          <div class="card-tags">
+            <a href="./tags.html#css" class="tag">#css</a>
+            <a href="./tags.html#webdev" class="tag">#webdev</a>
+          </div>
+          <div class="card-footer">
+            <a href="./article.html?id=4" class="card-reactions">
+              <span>❤️🦄</span> 156 reactions
+            </a>
+            <a href="./article.html?id=4#comments" class="card-comments">
+              💬 21 comments
+            </a>
+            <span class="card-save">
+              <button class="save-btn" aria-label="Save">🔖</button>
+              6 min read
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="node,javascript" data-feed="relevant,latest" data-id="5">
+        <div class="card-body">
+          <div class="card-meta">
+            <div class="avatar avatar-xs">👨‍💼</div>
+            <div>
+              <a href="#" class="card-author">Chris Wu</a>
+              <time>Jan 13 (10 min read)</time>
+            </div>
+          </div>
+          <h2 class="card-title">
+            <a href="./article.html?id=5">Node.js Performance: 7 Tricks I Wish I Knew Earlier</a>
+          </h2>
+          <div class="card-tags">
+            <a href="./tags.html#node" class="tag">#node</a>
+            <a href="./tags.html#javascript" class="tag">#javascript</a>
+          </div>
+          <div class="card-footer">
+            <a href="./article.html?id=5" class="card-reactions">
+              <span>❤️🔥</span> 198 reactions
+            </a>
+            <a href="./article.html?id=5#comments" class="card-comments">
+              💬 27 comments
+            </a>
+            <span class="card-save">
+              <button class="save-btn" aria-label="Save">🔖</button>
+              10 min read
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="career,beginners" data-feed="top" data-id="6">
+        <div class="card-body">
+          <div class="card-meta">
+            <div class="avatar avatar-xs">👩‍🏫</div>
+            <div>
+              <a href="#" class="card-author">Emma Davis</a>
+              <time>Jan 12 (7 min read)</time>
+            </div>
+          </div>
+          <h2 class="card-title">
+            <a href="./article.html?id=6">From Bootcamp to Senior Dev: My 5-Year Journey</a>
+          </h2>
+          <div class="card-tags">
+            <a href="./tags.html#career" class="tag">#career</a>
+            <a href="./tags.html#beginners" class="tag">#beginners</a>
+          </div>
+          <div class="card-footer">
+            <a href="./article.html?id=6" class="card-reactions">
+              <span>❤️🦄🤯</span> 892 reactions
+            </a>
+            <a href="./article.html?id=6#comments" class="card-comments">
+              💬 134 comments
+            </a>
+            <span class="card-save">
+              <button class="save-btn" aria-label="Save">🔖</button>
+              7 min read
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="rust,webdev" data-feed="latest" data-id="7">
+        <div class="card-body">
+          <div class="card-meta">
+            <div class="avatar avatar-xs">🧑‍🚀</div>
+            <div>
+              <a href="#" class="card-author">Kai Nakamura</a>
+              <time>Jan 12 (20 min read)</time>
+            </div>
+          </div>
+          <h2 class="card-title">
+            <a href="./article.html?id=7">Why Rust is the Future of WebAssembly</a>
+          </h2>
+          <div class="card-tags">
+            <a href="./tags.html#rust" class="tag">#rust</a>
+            <a href="./tags.html#webdev" class="tag">#webdev</a>
+          </div>
+          <div class="card-footer">
+            <a href="./article.html?id=7" class="card-reactions">
+              <span>🦄🔥</span> 124 reactions
+            </a>
+            <a href="./article.html?id=7#comments" class="card-comments">
+              💬 19 comments
+            </a>
+            <span class="card-save">
+              <button class="save-btn" aria-label="Save">🔖</button>
+              20 min read
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="devops,cloud" data-feed="relevant" data-id="8">
+        <div class="card-header">
+          <div class="card-gradient cg-3"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <div class="avatar avatar-xs">👨‍🔧</div>
+            <div>
+              <a href="#" class="card-author">Liam O'Brien</a>
+              <time>Jan 11 (11 min read)</time>
+            </div>
+          </div>
+          <h2 class="card-title">
+            <a href="./article.html?id=8">Docker + Kubernetes: The Complete Developer's Guide (2024)</a>
+          </h2>
+          <div class="card-tags">
+            <a href="./tags.html#devops" class="tag">#devops</a>
+            <a href="./tags.html#cloud" class="tag">#cloud</a>
+          </div>
+          <div class="card-footer">
+            <a href="./article.html?id=8" class="card-reactions">
+              <span>❤️🦄</span> 276 reactions
+            </a>
+            <a href="./article.html?id=8#comments" class="card-comments">
+              💬 41 comments
+            </a>
+            <span class="card-save">
+              <button class="save-btn" aria-label="Save">🔖</button>
+              11 min read
+            </span>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="sidebar sidebar-right">
+      <div class="sidebar-card listings-card">
+        <h3>Listings</h3>
+        <ul class="listings">
+          <li>
+            <a href="#">
+              <span class="listing-title">Senior React Dev — Remote</span>
+              <span class="listing-cat">jobs</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="listing-title">Open Source Contrib Wanted</span>
+              <span class="listing-cat">collabs</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="listing-title">Free API for Side Projects</span>
+              <span class="listing-cat">products</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="listing-title">Code Review Buddy</span>
+              <span class="listing-cat">collabs</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="listing-title">Rust Mentorship Program</span>
+              <span class="listing-cat">education</span>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="see-all">See all listings →</a>
+      </div>
+
+      <div class="sidebar-card news-card">
+        <h3>#news</h3>
+        <ul class="news-list">
+          <li><a href="./article.html?id=1">React 19 Release Candidate announced</a></li>
+          <li><a href="./article.html?id=2">Bun 1.1 drops with huge improvements</a></li>
+          <li><a href="./article.html?id=3">GitHub Copilot now free for VS Code</a></li>
+          <li><a href="./article.html?id=4">CSS nesting ships in all browsers</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card discuss-card">
+        <h3>#discuss</h3>
+        <ul class="news-list">
+          <li><a href="./article.html?id=5">What's your unpopular tech opinion?</a></li>
+          <li><a href="./article.html?id=6">Best VS Code extensions in 2024?</a></li>
+          <li><a href="./article.html?id=7">Tabs vs Spaces: the final answer</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Trending Tags</h3>
+        <div class="trending-tags">
+          <a href="./tags.html#javascript" class="trending-tag">#javascript <span>12,453 posts</span></a>
+          <a href="./tags.html#react" class="trending-tag">#react <span>8,921 posts</span></a>
+          <a href="./tags.html#python" class="trending-tag">#python <span>7,334 posts</span></a>
+          <a href="./tags.html#css" class="trending-tag">#css <span>5,678 posts</span></a>
+          <a href="./tags.html#node" class="trending-tag">#node <span>4,210 posts</span></a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>DEV Community</strong> — A constructive and inclusive social network for software developers.</p>
+      <p>Built on Forem — the open source software that powers DEV and other inclusive communities.</p>
+      <nav class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./tags.html">Tags</a>
+        <a href="./new-post.html">Create Post</a>
+        <a href="#">FAQ</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Code of Conduct</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </nav>
+      <p class="footer-copy">&copy; 2024 DEV Community. Clone for educational purposes.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

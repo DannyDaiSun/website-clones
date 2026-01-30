@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products — WIBE Audio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">WIBE</a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link active">Products</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close">&times;</div>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-search-btn" id="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="shop.html" class="nav-cart" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search products...">
+                <button class="search-close" id="search-close">&times;</button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb"><a href="index.html">Home</a> / <span>Products</span></nav>
+            <h1 class="page-title">Our Products</h1>
+            <p class="page-desc">Discover our range of premium audio products — headphones, earbuds, and speakers designed for every moment.</p>
+        </div>
+    </section>
+
+    <!-- Headphones -->
+    <section class="product-section" id="headphones">
+        <div class="container">
+            <h2 class="category-title">Headphones</h2>
+            <div class="product-detail-grid">
+                <div class="detail-card" id="pro-max">
+                    <div class="detail-visual dv-1"></div>
+                    <div class="detail-content">
+                        <span class="detail-badge">Bestseller</span>
+                        <h3>WIBE Pro Max</h3>
+                        <p class="detail-subtitle">Over-Ear · Active Noise Cancelling</p>
+                        <p class="detail-desc">Our flagship headphone delivers uncompromising audio with adaptive ANC, 40-hour battery, and ultra-comfort memory foam cushions. Built for those who demand the best.</p>
+                        <div class="detail-specs">
+                            <div class="spec"><strong>Driver</strong><span>40mm Custom</span></div>
+                            <div class="spec"><strong>Battery</strong><span>40 hours</span></div>
+                            <div class="spec"><strong>ANC</strong><span>Adaptive</span></div>
+                            <div class="spec"><strong>Weight</strong><span>260g</span></div>
+                        </div>
+                        <div class="detail-actions">
+                            <span class="detail-price">$349</span>
+                            <button class="btn btn-primary add-to-cart" data-name="WIBE Pro Max" data-price="349">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-card reverse" id="studio">
+                    <div class="detail-visual dv-2"></div>
+                    <div class="detail-content">
+                        <span class="detail-badge badge-new">New</span>
+                        <h3>WIBE Studio</h3>
+                        <p class="detail-subtitle">Over-Ear · Professional Monitor</p>
+                        <p class="detail-desc">Flat-response reference headphones for mixing, mastering, and critical listening. The tool professionals trust for honest sound reproduction.</p>
+                        <div class="detail-specs">
+                            <div class="spec"><strong>Driver</strong><span>50mm Planar</span></div>
+                            <div class="spec"><strong>Impedance</strong><span>64Ω</span></div>
+                            <div class="spec"><strong>Response</strong><span>10Hz–50kHz</span></div>
+                            <div class="spec"><strong>Weight</strong><span>310g</span></div>
+                        </div>
+                        <div class="detail-actions">
+                            <span class="detail-price">$279</span>
+                            <button class="btn btn-primary add-to-cart" data-name="WIBE Studio" data-price="279">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-card" id="sport">
+                    <div class="detail-visual dv-3"></div>
+                    <div class="detail-content">
+                        <h3>WIBE Sport</h3>
+                        <p class="detail-subtitle">On-Ear · Sweat-Resistant</p>
+                        <p class="detail-desc">Designed for active lifestyles. IP55 rated, secure fit, powerful bass, and 30-hour battery. Your perfect workout companion.</p>
+                        <div class="detail-specs">
+                            <div class="spec"><strong>Driver</strong><span>35mm Dynamic</span></div>
+                            <div class="spec"><strong>Battery</strong><span>30 hours</span></div>
+                            <div class="spec"><strong>Rating</strong><span>IP55</span></div>
+                            <div class="spec"><strong>Weight</strong><span>195g</span></div>
+                        </div>
+                        <div class="detail-actions">
+                            <span class="detail-price">$199</span>
+                            <button class="btn btn-primary add-to-cart" data-name="WIBE Sport" data-price="199">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earbuds -->
+    <section class="product-section section-alt" id="earbuds">
+        <div class="container">
+            <h2 class="category-title">Earbuds</h2>
+            <div class="product-detail-grid">
+                <div class="detail-card" id="buds-pro">
+                    <div class="detail-visual dv-4"></div>
+                    <div class="detail-content">
+                        <span class="detail-badge">Popular</span>
+                        <h3>WIBE Buds Pro</h3>
+                        <p class="detail-subtitle">True Wireless · ANC</p>
+                        <p class="detail-desc">Premium true wireless earbuds with hybrid ANC, spatial audio, and up to 30 hours total battery. The complete package in a compact design.</p>
+                        <div class="detail-specs">
+                            <div class="spec"><strong>Driver</strong><span>11mm Custom</span></div>
+                            <div class="spec"><strong>Battery</strong><span>8hr + 22hr case</span></div>
+                            <div class="spec"><strong>ANC</strong><span>Hybrid</span></div>
+                            <div class="spec"><strong>Weight</strong><span>5.4g/bud</span></div>
+                        </div>
+                        <div class="detail-actions">
+                            <span class="detail-price">$249</span>
+                            <button class="btn btn-primary add-to-cart" data-name="WIBE Buds Pro" data-price="249">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-card reverse" id="buds-lite">
+                    <div class="detail-visual dv-5"></div>
+                    <div class="detail-content">
+                        <h3>WIBE Buds Lite</h3>
+                        <p class="detail-subtitle">True Wireless · Everyday</p>
+                        <p class="detail-desc">Great sound without the premium price. 24-hour total battery, comfortable fit, and IPX4 water resistance for everyday use.</p>
+                        <div class="detail-specs">
+                            <div class="spec"><strong>Driver</strong><span>10mm Dynamic</span></div>
+                            <div class="spec"><strong>Battery</strong><span>6hr + 18hr case</span></div>
+                            <div class="spec"><strong>Rating</strong><span>IPX4</span></div>
+                            <div class="spec"><strong>Weight</strong><span>4.8g/bud</span></div>
+                        </div>
+                        <div class="detail-actions">
+                            <span class="detail-price">$129</span>
+                            <button class="btn btn-primary add-to-cart" data-name="WIBE Buds Lite" data-price="129">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers -->
+    <section class="product-section" id="speakers">
+        <div class="container">
+            <h2 class="category-title">Speakers</h2>
+            <div class="product-detail-grid">
+                <div class="detail-card" id="boom-360">
+                    <div class="detail-visual dv-6"></div>
+                    <div class="detail-content">
+                        <span class="detail-badge badge-new">New</span>
+                        <h3>WIBE Boom 360</h3>
+                        <p class="detail-subtitle">Portable · 360° Sound</p>
+                        <p class="detail-desc">Powerful 360-degree audio in a rugged, waterproof package. Take incredible sound anywhere with 16 hours of battery life.</p>
+                        <div class="detail-specs">
+                            <div class="spec"><strong>Output</strong><span>30W</span></div>
+                            <div class="spec"><strong>Battery</strong><span>16 hours</span></div>
+                            <div class="spec"><strong>Rating</strong><span>IP67</span></div>
+                            <div class="spec"><strong>Weight</strong><span>680g</span></div>
+                        </div>
+                        <div class="detail-actions">
+                            <span class="detail-price">$199</span>
+                            <button class="btn btn-primary add-to-cart" data-name="WIBE Boom 360" data-price="199">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-card reverse" id="home">
+                    <div class="detail-visual dv-7"></div>
+                    <div class="detail-content">
+                        <h3>WIBE Home</h3>
+                        <p class="detail-subtitle">Multi-Room · Smart Speaker</p>
+                        <p class="detail-desc">Fill your home with rich, room-filling sound. Multi-room sync, voice assistant built-in, and automatic room calibration.</p>
+                        <div class="detail-specs">
+                            <div class="spec"><strong>Output</strong><span>60W</span></div>
+                            <div class="spec"><strong>Woofer</strong><span>5.25"</span></div>
+                            <div class="spec"><strong>Connectivity</strong><span>WiFi + BT 5.3</span></div>
+                            <div class="spec"><strong>Assistant</strong><span>Built-in</span></div>
+                        </div>
+                        <div class="detail-actions">
+                            <span class="detail-price">$299</span>
+                            <button class="btn btn-primary add-to-cart" data-name="WIBE Home" data-price="299">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories -->
+    <section class="product-section section-alt" id="accessories">
+        <div class="container">
+            <h2 class="category-title">Accessories</h2>
+            <div class="accessories-grid">
+                <div class="accessory-card">
+                    <div class="accessory-visual av-case"></div>
+                    <h4>Premium Carry Case</h4>
+                    <span class="accessory-price">$49</span>
+                    <button class="btn btn-sm add-to-cart" data-name="Premium Carry Case" data-price="49">Add to Cart</button>
+                </div>
+                <div class="accessory-card">
+                    <div class="accessory-visual av-cable"></div>
+                    <h4>Braided Audio Cable</h4>
+                    <span class="accessory-price">$29</span>
+                    <button class="btn btn-sm add-to-cart" data-name="Braided Audio Cable" data-price="29">Add to Cart</button>
+                </div>
+                <div class="accessory-card">
+                    <div class="accessory-visual av-pads"></div>
+                    <h4>Memory Foam Pads</h4>
+                    <span class="accessory-price">$39</span>
+                    <button class="btn btn-sm add-to-cart" data-name="Memory Foam Pads" data-price="39">Add to Cart</button>
+                </div>
+                <div class="accessory-card">
+                    <div class="accessory-visual av-stand"></div>
+                    <h4>Aluminum Stand</h4>
+                    <span class="accessory-price">$59</span>
+                    <button class="btn btn-sm add-to-cart" data-name="Aluminum Stand" data-price="59">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">WIBE</a>
+                <p>Premium audio for those who hear the difference.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+                    <a href="#" aria-label="TikTok">♪</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Products</h4>
+                <a href="products.html#headphones">Headphones</a>
+                <a href="products.html#earbuds">Earbuds</a>
+                <a href="products.html#speakers">Speakers</a>
+                <a href="products.html#accessories">Accessories</a>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="shop.html">All Products</a>
+                <a href="shop.html#deals">Deals</a>
+                <a href="shop.html#new">New Arrivals</a>
+                <a href="shop.html#bundles">Bundles</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="about.html#story">Our Story</a>
+                <a href="about.html#careers">Careers</a>
+                <a href="about.html#press">Press</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="about.html#faq">FAQ</a>
+                <a href="about.html#contact">Contact</a>
+                <a href="about.html#warranty">Warranty</a>
+                <a href="about.html#shipping">Shipping</a>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 WIBE Audio. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

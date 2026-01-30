@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tags - DEV Community</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="./index.html" class="logo" aria-label="DEV Home">
+        <svg viewBox="0 0 50 40" width="50" height="40" fill="currentColor">
+          <path d="M0 8.4C0 3.76 3.76 0 8.4 0h33.2C46.24 0 50 3.76 50 8.4v23.2c0 4.64-3.76 8.4-8.4 8.4H8.4C3.76 40 0 36.24 0 31.6V8.4zm13.2 3.6c-.66-.48-1.35-.72-2.08-.72H7.2v17.44h3.94c.73 0 1.42-.24 2.08-.72.65-.48.98-1.18.98-2.1V14.1c0-.92-.33-1.62-.98-2.1zm-2.24 13.04c0 .3-.1.54-.3.72-.2.18-.44.28-.74.28h-.94V13.96h.94c.3 0 .54.1.74.28.2.18.3.42.3.72v10.08zM24.3 28.72h-5.6V11.28h5.6v3.36h-2.48v3.36h2.48v3.36h-2.48v4.0h2.48v3.36zm12.5-14.08l-2.3 14.08h-3.76l-2.3-14.08V11.28h3.14v3.36l1.04 8.2 1.04-8.2v-3.36h3.14v3.36z"/>
+        </svg>
+      </a>
+      <div class="search-bar" id="searchBar">
+        <svg class="search-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+      </div>
+      <div class="top-bar-actions">
+        <a href="./new-post.html" class="btn btn-primary">Create Post</a>
+        <button class="icon-btn notif-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+        </button>
+        <button class="avatar-btn" id="avatarBtn" aria-label="Profile">
+          <div class="avatar avatar-sm">🧑‍💻</div>
+        </button>
+      </div>
+    </div>
+    <div class="search-dropdown" id="searchDropdown">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+    <div class="profile-dropdown" id="profileDropdown">
+      <div class="profile-header">
+        <div class="avatar">🧑‍💻</div>
+        <div><strong>dev_user</strong><p>@dev_user</p></div>
+      </div>
+      <ul>
+        <li><a href="./index.html">Dashboard</a></li>
+        <li><a href="./new-post.html">Create Post</a></li>
+        <li><a href="./tags.html">Tags</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-inner">
+      <a href="./index.html" class="mobile-nav-link">🏠 Home</a>
+      <a href="./tags.html" class="mobile-nav-link active">🏷️ Tags</a>
+      <a href="./article.html" class="mobile-nav-link">📖 Reading List</a>
+      <a href="./new-post.html" class="mobile-nav-link">✍️ Create Post</a>
+    </div>
+  </nav>
+
+  <main class="tags-page">
+    <div class="tags-header">
+      <h1>Top Tags</h1>
+      <div class="tags-search-wrap">
+        <input type="text" id="tagSearch" placeholder="Filter tags..." class="tags-search-input">
+      </div>
+    </div>
+
+    <div class="tags-grid" id="tagsGrid">
+      <div class="tag-card" data-tag="javascript" id="javascript">
+        <div class="tag-card-top tc-js">
+          <h2>#javascript</h2>
+        </div>
+        <p class="tag-card-desc">Once mass tagged, JavaScript now includes all front-end, back-end, and full-stack topics.</p>
+        <div class="tag-card-stats">
+          <span>📝 12,453 posts</span>
+          <span>👥 482K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="webdev" id="webdev">
+        <div class="tag-card-top tc-webdev">
+          <h2>#webdev</h2>
+        </div>
+        <p class="tag-card-desc">For web developers of all skill levels: HTML, CSS, JS, accessibility, performance, and more.</p>
+        <div class="tag-card-stats">
+          <span>📝 9,876 posts</span>
+          <span>👥 350K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="react" id="react">
+        <div class="tag-card-top tc-react">
+          <h2>#react</h2>
+        </div>
+        <p class="tag-card-desc">Official tag for React.js — the library for building user interfaces.</p>
+        <div class="tag-card-stats">
+          <span>📝 8,921 posts</span>
+          <span>👥 290K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="python" id="python">
+        <div class="tag-card-top tc-python">
+          <h2>#python</h2>
+        </div>
+        <p class="tag-card-desc">Import antigravity. Python for data science, ML, scripting, web apps, and everything.</p>
+        <div class="tag-card-stats">
+          <span>📝 7,334 posts</span>
+          <span>👥 260K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="beginners" id="beginners">
+        <div class="tag-card-top tc-beginners">
+          <h2>#beginners</h2>
+        </div>
+        <p class="tag-card-desc">A safe space for new developers. Ask questions, share your journey, find resources.</p>
+        <div class="tag-card-stats">
+          <span>📝 6,210 posts</span>
+          <span>👥 210K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="css" id="css">
+        <div class="tag-card-top tc-css">
+          <h2>#css</h2>
+        </div>
+        <p class="tag-card-desc">Cascading Style Sheets — layouts, animations, frameworks, and dark mode tricks.</p>
+        <div class="tag-card-stats">
+          <span>📝 5,678 posts</span>
+          <span>👥 190K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="node" id="node">
+        <div class="tag-card-top tc-node">
+          <h2>#node</h2>
+        </div>
+        <p class="tag-card-desc">Node.js — JavaScript on the server. Frameworks, packages, APIs, and performance.</p>
+        <div class="tag-card-stats">
+          <span>📝 4,210 posts</span>
+          <span>👥 160K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="typescript" id="typescript">
+        <div class="tag-card-top tc-ts">
+          <h2>#typescript</h2>
+        </div>
+        <p class="tag-card-desc">TypeScript is typed JavaScript. Discuss TS patterns, tips, and advanced types.</p>
+        <div class="tag-card-stats">
+          <span>📝 3,890 posts</span>
+          <span>👥 140K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="ai" id="ai">
+        <div class="tag-card-top tc-ai">
+          <h2>#ai</h2>
+        </div>
+        <p class="tag-card-desc">Artificial Intelligence, Machine Learning, LLMs, and the future of code.</p>
+        <div class="tag-card-stats">
+          <span>📝 3,456 posts</span>
+          <span>👥 120K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="devops" id="devops">
+        <div class="tag-card-top tc-devops">
+          <h2>#devops</h2>
+        </div>
+        <p class="tag-card-desc">CI/CD, Docker, Kubernetes, monitoring, cloud infrastructure, and automation.</p>
+        <div class="tag-card-stats">
+          <span>📝 2,987 posts</span>
+          <span>👥 100K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="rust" id="rust">
+        <div class="tag-card-top tc-rust">
+          <h2>#rust</h2>
+        </div>
+        <p class="tag-card-desc">Rust programming language — safe, fast, concurrent. Systems programming and WebAssembly.</p>
+        <div class="tag-card-stats">
+          <span>📝 2,150 posts</span>
+          <span>👥 85K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+
+      <div class="tag-card" data-tag="career" id="career">
+        <div class="tag-card-top tc-career">
+          <h2>#career</h2>
+        </div>
+        <p class="tag-card-desc">Career advice, interviews, mentorship, salary negotiation, and work-life balance.</p>
+        <div class="tag-card-stats">
+          <span>📝 1,890 posts</span>
+          <span>👥 75K followers</span>
+        </div>
+        <div class="tag-card-actions">
+          <button class="btn btn-outline tag-follow-btn">Follow</button>
+          <a href="./index.html" class="btn btn-ghost">View Posts</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>DEV Community</strong> — A constructive and inclusive social network for software developers.</p>
+      <nav class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./tags.html">Tags</a>
+        <a href="./new-post.html">Create Post</a>
+        <a href="#">FAQ</a>
+        <a href="#">About</a>
+      </nav>
+      <p class="footer-copy">&copy; 2024 DEV Community. Clone for educational purposes.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

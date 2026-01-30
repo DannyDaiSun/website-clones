@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Post - DEV Community</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="editor-page">
+  <!-- Editor Top Bar -->
+  <header class="editor-bar">
+    <div class="editor-bar-inner">
+      <a href="./index.html" class="logo" aria-label="DEV Home">
+        <svg viewBox="0 0 50 40" width="50" height="40" fill="currentColor">
+          <path d="M0 8.4C0 3.76 3.76 0 8.4 0h33.2C46.24 0 50 3.76 50 8.4v23.2c0 4.64-3.76 8.4-8.4 8.4H8.4C3.76 40 0 36.24 0 31.6V8.4zm13.2 3.6c-.66-.48-1.35-.72-2.08-.72H7.2v17.44h3.94c.73 0 1.42-.24 2.08-.72.65-.48.98-1.18.98-2.1V14.1c0-.92-.33-1.62-.98-2.1zm-2.24 13.04c0 .3-.1.54-.3.72-.2.18-.44.28-.74.28h-.94V13.96h.94c.3 0 .54.1.74.28.2.18.3.42.3.72v10.08zM24.3 28.72h-5.6V11.28h5.6v3.36h-2.48v3.36h2.48v3.36h-2.48v4.0h2.48v3.36zm12.5-14.08l-2.3 14.08h-3.76l-2.3-14.08V11.28h3.14v3.36l1.04 8.2 1.04-8.2v-3.36h3.14v3.36z"/>
+        </svg>
+      </a>
+      <span class="editor-label">Create Post</span>
+      <div class="editor-bar-actions">
+        <button class="btn btn-ghost" id="previewToggle">Preview</button>
+        <a href="./index.html" class="btn btn-ghost">✕ Close</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="editor-layout">
+    <div class="editor-main">
+      <!-- Cover Image -->
+      <div class="cover-upload" id="coverUpload">
+        <button class="btn btn-outline" id="addCoverBtn">Add a cover image</button>
+        <div class="cover-preview" id="coverPreview" style="display:none">
+          <div class="cover-gradient"></div>
+          <button class="btn btn-ghost cover-remove" id="coverRemove">Remove</button>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <div class="editor-title-wrap">
+        <textarea id="postTitle" class="editor-title" placeholder="New post title here..." rows="1" maxlength="200"></textarea>
+      </div>
+
+      <!-- Tags -->
+      <div class="editor-tags-wrap">
+        <div class="tags-input" id="tagsInput">
+          <div class="tag-chips" id="tagChips"></div>
+          <input type="text" id="tagInput" placeholder="Add up to 4 tags..." maxlength="30">
+        </div>
+        <div class="tag-suggestions" id="tagSuggestions">
+          <button data-tag="javascript">#javascript</button>
+          <button data-tag="webdev">#webdev</button>
+          <button data-tag="react">#react</button>
+          <button data-tag="python">#python</button>
+          <button data-tag="css">#css</button>
+          <button data-tag="node">#node</button>
+          <button data-tag="typescript">#typescript</button>
+          <button data-tag="beginners">#beginners</button>
+          <button data-tag="ai">#ai</button>
+          <button data-tag="devops">#devops</button>
+          <button data-tag="career">#career</button>
+          <button data-tag="rust">#rust</button>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="editor-toolbar">
+        <button class="toolbar-btn" data-action="bold" title="Bold"><strong>B</strong></button>
+        <button class="toolbar-btn" data-action="italic" title="Italic"><em>I</em></button>
+        <button class="toolbar-btn" data-action="link" title="Link">🔗</button>
+        <button class="toolbar-btn" data-action="ul" title="Unordered List">• List</button>
+        <button class="toolbar-btn" data-action="ol" title="Ordered List">1. List</button>
+        <button class="toolbar-btn" data-action="heading" title="Heading">H</button>
+        <button class="toolbar-btn" data-action="code" title="Code Block">&lt;/&gt;</button>
+        <button class="toolbar-btn" data-action="quote" title="Block Quote">❝</button>
+        <button class="toolbar-btn" data-action="image" title="Image">🖼️</button>
+        <button class="toolbar-btn" data-action="hr" title="Horizontal Rule">—</button>
+      </div>
+
+      <!-- Editor / Preview -->
+      <div class="editor-content-wrap">
+        <textarea id="postBody" class="editor-body" placeholder="Write your post content here...
+
+## Use Markdown
+
+You can use **bold**, *italic*, [links](url), and more.
+
+```
+code blocks work too
+```
+
+Happy writing! 🎉"></textarea>
+        <div class="editor-preview" id="editorPreview" style="display:none">
+          <div class="preview-content" id="previewContent">
+            <p class="preview-placeholder">Nothing to preview yet. Start writing!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Help -->
+    <aside class="editor-sidebar">
+      <div class="editor-help-card">
+        <h3>📝 Editor Basics</h3>
+        <ul>
+          <li>Use Markdown for formatting</li>
+          <li><code># Heading</code> for titles</li>
+          <li><code>**bold**</code> for <strong>bold</strong></li>
+          <li><code>*italic*</code> for <em>italic</em></li>
+          <li><code>[text](url)</code> for links</li>
+          <li><code>```code```</code> for code blocks</li>
+          <li><code>![alt](url)</code> for images</li>
+        </ul>
+      </div>
+      <div class="editor-help-card">
+        <h3>💡 Publishing Tips</h3>
+        <ul>
+          <li>Use a clear, descriptive title</li>
+          <li>Add 2-4 relevant tags</li>
+          <li>Include a cover image for engagement</li>
+          <li>Break content into sections with headings</li>
+          <li>Add code examples when possible</li>
+          <li>End with a question to boost discussion</li>
+        </ul>
+      </div>
+      <div class="editor-help-card">
+        <h3>🏷️ Popular Tags</h3>
+        <div class="help-tags">
+          <a href="./tags.html#javascript" class="tag">#javascript</a>
+          <a href="./tags.html#webdev" class="tag">#webdev</a>
+          <a href="./tags.html#react" class="tag">#react</a>
+          <a href="./tags.html#python" class="tag">#python</a>
+          <a href="./tags.html#css" class="tag">#css</a>
+          <a href="./tags.html#beginners" class="tag">#beginners</a>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Publish Bar -->
+  <footer class="publish-bar">
+    <div class="publish-bar-inner">
+      <button class="btn btn-primary btn-lg" id="publishBtn">Publish</button>
+      <button class="btn btn-outline" id="saveDraftBtn">Save Draft</button>
+      <div class="publish-options">
+        <label class="publish-option">
+          <input type="checkbox" id="seriesCheck"> Part of a series?
+        </label>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Publish Success Modal -->
+  <div class="modal-overlay" id="publishModal" style="display:none">
+    <div class="modal">
+      <div class="modal-icon">🎉</div>
+      <h2>Post Published!</h2>
+      <p>Your post is now live on DEV Community.</p>
+      <div class="modal-actions">
+        <a href="./article.html?id=1" class="btn btn-primary">View Post</a>
+        <a href="./index.html" class="btn btn-outline">Back to Feed</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone - Apple</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-iphone">
+  <!-- Shared Nav — injected by components.js -->
+  <nav class="global-nav" id="globalNav" data-active="iPhone"></nav>
+
+  <!-- Sub-nav (page-specific) -->
+  <nav class="sub-nav">
+    <div class="sub-nav-wrapper">
+      <h2 class="sub-nav-title">iPhone</h2>
+      <ul class="sub-nav-links">
+        <li><a href="#iphone15pro" class="active">iPhone 15 Pro</a></li>
+        <li><a href="#iphone15">iPhone 15</a></li>
+        <li><a href="#iphone14">iPhone 14</a></li>
+        <li><a href="#iphoneSE">iPhone SE</a></li>
+        <li><a href="#compare">Compare</a></li>
+        <li><a href="./store.html">Buy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- iPhone 15 Pro Hero -->
+    <section class="product-hero" id="iphone15pro">
+      <h2 class="hero-eyebrow">iPhone 15 Pro</h2>
+      <h1 class="product-hero-headline">Titanium. So strong. So light. So Pro.</h1>
+      <p class="product-hero-price">From $999 or $41.62/mo. for 24 mo.*</p>
+      <div class="hero-cta">
+        <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        <a href="#specs-15pro" class="btn-link btn-blue">Learn more ›</a>
+      </div>
+      <div class="product-hero-visual">
+        <div class="iphone-showcase">
+          <div class="iphone-color" data-color="natural" style="--phone-bg: linear-gradient(145deg, #d2ccc4, #9a918a)">
+            <div class="iphone-frame">
+              <div class="iphone-notch"></div>
+              <div class="iphone-screen-inner"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Color Picker -->
+        <div class="color-picker" id="colorPicker15Pro">
+          <button class="color-dot active" data-color="Natural Titanium" style="background: #9a918a" aria-label="Natural Titanium"></button>
+          <button class="color-dot" data-color="Blue Titanium" style="background: #394e6a" aria-label="Blue Titanium"></button>
+          <button class="color-dot" data-color="White Titanium" style="background: #e3ddd7" aria-label="White Titanium"></button>
+          <button class="color-dot" data-color="Black Titanium" style="background: #3c3b37" aria-label="Black Titanium"></button>
+        </div>
+        <p class="color-label" id="colorLabel15Pro">Natural Titanium</p>
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="features-grid" id="specs-15pro">
+      <h2 class="section-title">Get the highlights.</h2>
+      <div class="features-cards">
+        <div class="feature-card feature-chip">
+          <div class="feature-icon chip-icon">
+            <span class="chip-label">A17 Pro</span>
+          </div>
+          <h3>A17 Pro chip</h3>
+          <p>A monster win for gaming. A new class of GPU delivers mobile gaming never seen before.</p>
+        </div>
+        <div class="feature-card feature-camera">
+          <div class="feature-icon camera-icon">
+            <div class="camera-lens"><div class="camera-ring"></div></div>
+            <div class="camera-lens small"><div class="camera-ring"></div></div>
+            <div class="camera-lens small"><div class="camera-ring"></div></div>
+          </div>
+          <h3>48MP Main Camera</h3>
+          <p>A 48MP main camera with next-generation portraits. Ultra Wide. Telephoto.</p>
+        </div>
+        <div class="feature-card feature-action">
+          <div class="feature-icon action-icon">
+            <div class="action-btn-visual"></div>
+          </div>
+          <h3>Action Button</h3>
+          <p>A new customizable Action button. Quick access to your favorite feature.</p>
+        </div>
+        <div class="feature-card feature-usbc">
+          <div class="feature-icon usbc-icon">
+            <div class="usbc-port"></div>
+          </div>
+          <h3>USB‑C</h3>
+          <p>USB 3 speeds. Up to 20x faster transfers than Lightning.</p>
+        </div>
+        <div class="feature-card feature-battery">
+          <div class="feature-icon battery-icon">
+            <div class="battery-shape">
+              <div class="battery-fill"></div>
+            </div>
+          </div>
+          <h3>All-day battery</h3>
+          <p>Up to 29 hours of video playback on iPhone 15 Pro Max.</p>
+        </div>
+        <div class="feature-card feature-safety">
+          <div class="feature-icon safety-icon">🆘</div>
+          <h3>Safety</h3>
+          <p>Emergency SOS via satellite, Crash Detection, and Roadside Assistance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- iPhone 15 -->
+    <section class="product-section product-section-light" id="iphone15">
+      <h2 class="hero-eyebrow">iPhone 15</h2>
+      <h1 class="section-headline">New camera. New design. Newphoria.</h1>
+      <p class="product-hero-price">From $799 or $33.29/mo. for 24 mo.*</p>
+      <div class="hero-cta">
+        <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        <a href="#" class="btn-link btn-blue">Learn more ›</a>
+      </div>
+      <div class="iphone15-colors">
+        <div class="color-circle" style="--cc: #d4e2d2" title="Green"></div>
+        <div class="color-circle" style="--cc: #f3e2b5" title="Yellow"></div>
+        <div class="color-circle" style="--cc: #ebbfcf" title="Pink"></div>
+        <div class="color-circle" style="--cc: #c8d6e8" title="Blue"></div>
+        <div class="color-circle" style="--cc: #2c2c2c" title="Black"></div>
+      </div>
+    </section>
+
+    <!-- iPhone 14 -->
+    <section class="product-section product-section-dark" id="iphone14">
+      <h2 class="hero-eyebrow">iPhone 14</h2>
+      <h1 class="section-headline section-headline-light">As stunning as ever.</h1>
+      <p class="product-hero-price" style="color:#aaa">From $599 or $24.95/mo. for 24 mo.*</p>
+      <div class="hero-cta">
+        <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        <a href="#" class="btn-link btn-text-light">Learn more ›</a>
+      </div>
+    </section>
+
+    <!-- iPhone SE -->
+    <section class="product-section product-section-light" id="iphoneSE">
+      <h2 class="hero-eyebrow">iPhone SE</h2>
+      <h1 class="section-headline">Love the power. Love the price.</h1>
+      <p class="product-hero-price">From $429 or $17.87/mo. for 24 mo.*</p>
+      <div class="hero-cta">
+        <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        <a href="#" class="btn-link btn-blue">Learn more ›</a>
+      </div>
+    </section>
+
+    <!-- Compare -->
+    <section class="compare-section" id="compare">
+      <h2 class="section-title">Which iPhone is right for you?</h2>
+      <div class="compare-grid">
+        <div class="compare-card">
+          <div class="compare-visual cv-pro">
+            <div class="compare-phone-icon">📱</div>
+          </div>
+          <h3>iPhone 15 Pro</h3>
+          <p class="compare-tagline">The ultimate iPhone.</p>
+          <p class="compare-price">From $999</p>
+          <ul class="compare-specs">
+            <li>6.1″ or 6.7″ display</li>
+            <li>A17 Pro chip</li>
+            <li>Pro camera system</li>
+            <li>Action button</li>
+            <li>Titanium design</li>
+          </ul>
+          <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        </div>
+        <div class="compare-card">
+          <div class="compare-visual cv-15">
+            <div class="compare-phone-icon">📱</div>
+          </div>
+          <h3>iPhone 15</h3>
+          <p class="compare-tagline">A total powerhouse.</p>
+          <p class="compare-price">From $799</p>
+          <ul class="compare-specs">
+            <li>6.1″ or 6.7″ display</li>
+            <li>A16 Bionic chip</li>
+            <li>Advanced dual-camera</li>
+            <li>Dynamic Island</li>
+            <li>Aluminum design</li>
+          </ul>
+          <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        </div>
+        <div class="compare-card">
+          <div class="compare-visual cv-14">
+            <div class="compare-phone-icon">📱</div>
+          </div>
+          <h3>iPhone 14</h3>
+          <p class="compare-tagline">Still a great choice.</p>
+          <p class="compare-price">From $599</p>
+          <ul class="compare-specs">
+            <li>6.1″ display</li>
+            <li>A15 Bionic chip</li>
+            <li>Dual-camera system</li>
+            <li>Notch</li>
+            <li>Aluminum design</li>
+          </ul>
+          <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        </div>
+        <div class="compare-card">
+          <div class="compare-visual cv-se">
+            <div class="compare-phone-icon">📱</div>
+          </div>
+          <h3>iPhone SE</h3>
+          <p class="compare-tagline">Serious power, small price.</p>
+          <p class="compare-price">From $429</p>
+          <ul class="compare-specs">
+            <li>4.7″ display</li>
+            <li>A15 Bionic chip</li>
+            <li>Single camera</li>
+            <li>Home button</li>
+            <li>Aluminum design</li>
+          </ul>
+          <a href="./store.html" class="btn-pill btn-blue-fill">Buy</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer — injected by components.js -->
+  <footer class="site-footer" data-legal="* Monthly pricing requires Apple Card Monthly Installments. &lt;a href=&quot;#&quot;&gt;See terms&lt;/a&gt;"></footer>
+
+  <script src="components.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

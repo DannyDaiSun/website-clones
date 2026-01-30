@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions — SpaceX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-body">
+    <!-- Navigation -->
+    <header class="header header-solid" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo" aria-label="SpaceX Home">
+                <svg class="logo-svg" viewBox="0 0 400 50" width="180" height="24" fill="currentColor">
+                    <text x="0" y="40" font-family="Arial,sans-serif" font-weight="bold" font-size="46" letter-spacing="8">SPACE</text>
+                    <text x="258" y="40" font-family="Arial,sans-serif" font-weight="bold" font-size="46" letter-spacing="2" font-style="italic">X</text>
+                </svg>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="missions.html" class="nav-link active">Missions</a></li>
+                    <li><a href="starship.html" class="nav-link">Starship</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="index.html#launches" class="nav-link">Launches</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close">&times;</div>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-search-btn" id="search-toggle" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <a href="about.html#careers" class="btn btn-outline btn-sm nav-cta">Join Us</a>
+                <div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div>
+            </div>
+        </nav>
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search SpaceX...">
+                <button class="search-close" id="search-close">&times;</button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <!-- Page Hero -->
+        <section class="page-hero missions-hero">
+            <div class="container">
+                <h1 class="page-title">Missions</h1>
+                <p class="page-desc">SpaceX has completed over 400 missions, delivering crew and cargo to orbit and beyond.</p>
+            </div>
+        </section>
+
+        <!-- Mission Filters -->
+        <section class="missions-filter-section">
+            <div class="container">
+                <div class="mission-tabs">
+                    <button class="mission-tab active" data-filter="all">All Missions</button>
+                    <button class="mission-tab" data-filter="upcoming">Upcoming</button>
+                    <button class="mission-tab" data-filter="crew">Crew</button>
+                    <button class="mission-tab" data-filter="starlink">Starlink</button>
+                    <button class="mission-tab" data-filter="cargo">Cargo</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Missions -->
+        <section class="missions-section" id="upcoming">
+            <div class="container">
+                <h2 class="section-title">Upcoming Launches</h2>
+                <div class="mission-timeline">
+                    <div class="timeline-item" data-type="starlink">
+                        <div class="timeline-date">
+                            <span class="tl-month">FEB</span>
+                            <span class="tl-day">04</span>
+                            <span class="tl-year">2026</span>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-content">
+                            <h3>Starlink Group 10-1</h3>
+                            <p class="tl-vehicle">Falcon 9 Block 5</p>
+                            <p class="tl-site">Launch Complex 40, Cape Canaveral</p>
+                            <span class="tl-badge upcoming-badge">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-type="crew">
+                        <div class="timeline-date">
+                            <span class="tl-month">FEB</span>
+                            <span class="tl-day">15</span>
+                            <span class="tl-year">2026</span>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-content">
+                            <h3>Axiom Space Mission 5</h3>
+                            <p class="tl-vehicle">Falcon 9 + Crew Dragon</p>
+                            <p class="tl-site">Launch Complex 39A, Kennedy Space Center</p>
+                            <span class="tl-badge upcoming-badge">Upcoming</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-type="cargo">
+                        <div class="timeline-date">
+                            <span class="tl-month">MAR</span>
+                            <span class="tl-day">01</span>
+                            <span class="tl-year">2026</span>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-content">
+                            <h3>Starship Flight Test 8</h3>
+                            <p class="tl-vehicle">Starship + Super Heavy</p>
+                            <p class="tl-site">Starbase, Boca Chica, Texas</p>
+                            <span class="tl-badge upcoming-badge">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Missions -->
+        <section class="missions-section section-dark" id="recent">
+            <div class="container">
+                <h2 class="section-title">Recent Missions</h2>
+                <div class="mission-timeline">
+                    <div class="timeline-item" data-type="starlink" id="starlink-g9">
+                        <div class="timeline-date">
+                            <span class="tl-month">JAN</span>
+                            <span class="tl-day">28</span>
+                            <span class="tl-year">2026</span>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-content">
+                            <h3>Starlink Group 9-12</h3>
+                            <p class="tl-vehicle">Falcon 9 Block 5</p>
+                            <p class="tl-site">SLC-40, Cape Canaveral Space Force Station</p>
+                            <p class="tl-detail">Deployed 23 Starlink v2 Mini satellites to low Earth orbit. Booster B1081 completed its 14th flight and landing.</p>
+                            <span class="tl-badge success-badge">Success</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-type="crew" id="crew-12">
+                        <div class="timeline-date">
+                            <span class="tl-month">JAN</span>
+                            <span class="tl-day">20</span>
+                            <span class="tl-year">2026</span>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-content">
+                            <h3>Crew-12 ISS Mission</h3>
+                            <p class="tl-vehicle">Falcon 9 + Crew Dragon Endurance</p>
+                            <p class="tl-site">LC-39A, Kennedy Space Center</p>
+                            <p class="tl-detail">Transported 4 astronauts to the ISS for a 6-month expedition. Crew: Commander Williams, Pilot Harada, MS Okafor, MS Lindgren.</p>
+                            <span class="tl-badge success-badge">Success</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-type="cargo" id="starship-7">
+                        <div class="timeline-date">
+                            <span class="tl-month">JAN</span>
+                            <span class="tl-day">12</span>
+                            <span class="tl-year">2026</span>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-content">
+                            <h3>Starship Flight Test 7</h3>
+                            <p class="tl-vehicle">Starship + Super Heavy</p>
+                            <p class="tl-site">Starbase, Boca Chica, Texas</p>
+                            <p class="tl-detail">Full orbital flight profile achieved. Super Heavy booster caught by Mechazilla tower. Starship completed controlled re-entry and precision water landing.</p>
+                            <span class="tl-badge success-badge">Success</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-type="starlink">
+                        <div class="timeline-date">
+                            <span class="tl-month">JAN</span>
+                            <span class="tl-day">05</span>
+                            <span class="tl-year">2026</span>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-content">
+                            <h3>Starlink Group 9-11</h3>
+                            <p class="tl-vehicle">Falcon 9 Block 5</p>
+                            <p class="tl-site">SLC-4E, Vandenberg Space Force Base</p>
+                            <span class="tl-badge success-badge">Success</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-type="cargo">
+                        <div class="timeline-date">
+                            <span class="tl-month">DEC</span>
+                            <span class="tl-day">28</span>
+                            <span class="tl-year">2025</span>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-content">
+                            <h3>CRS-31 ISS Resupply</h3>
+                            <p class="tl-vehicle">Falcon 9 + Cargo Dragon</p>
+                            <p class="tl-site">LC-39A, Kennedy Space Center</p>
+                            <span class="tl-badge success-badge">Success</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vehicles -->
+        <section class="vehicles-section" id="vehicles">
+            <div class="container">
+                <h2 class="section-title">Our Vehicles</h2>
+                <div class="vehicles-grid">
+                    <a href="starship.html" class="vehicle-card">
+                        <div class="vehicle-visual vv-starship"></div>
+                        <div class="vehicle-info">
+                            <h3>Starship</h3>
+                            <p>The most powerful launch system ever built. Designed for missions to the Moon, Mars, and beyond.</p>
+                            <span class="vehicle-stat">Payload to LEO: 150+ t</span>
+                        </div>
+                    </a>
+                    <div class="vehicle-card" id="falcon9">
+                        <div class="vehicle-visual vv-falcon9"></div>
+                        <div class="vehicle-info">
+                            <h3>Falcon 9</h3>
+                            <p>The world's first orbital class reusable rocket. Reliable, proven, and flight-tested.</p>
+                            <span class="vehicle-stat">Payload to LEO: 22.8 t</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-card" id="dragon">
+                        <div class="vehicle-visual vv-dragon"></div>
+                        <div class="vehicle-info">
+                            <h3>Dragon</h3>
+                            <p>The only spacecraft currently flying that can return significant cargo to Earth.</p>
+                            <span class="vehicle-stat">Crew capacity: 7</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-card" id="falcon-heavy">
+                        <div class="vehicle-visual vv-heavy"></div>
+                        <div class="vehicle-info">
+                            <h3>Falcon Heavy</h3>
+                            <p>The world's most powerful operational rocket by a factor of two.</p>
+                            <span class="vehicle-stat">Payload to LEO: 63.8 t</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">SPACE<em>X</em></a>
+                <p class="footer-tagline">Making life multiplanetary.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Vehicles</h4>
+                <a href="starship.html">Starship</a>
+                <a href="missions.html#falcon9">Falcon 9</a>
+                <a href="missions.html#dragon">Dragon</a>
+                <a href="missions.html#falcon-heavy">Falcon Heavy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Missions</h4>
+                <a href="missions.html">All Missions</a>
+                <a href="missions.html#upcoming">Upcoming</a>
+                <a href="missions.html#recent">Recent</a>
+                <a href="about.html#starlink">Starlink</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About</a>
+                <a href="about.html#careers">Careers</a>
+                <a href="about.html#updates">Updates</a>
+                <a href="about.html#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Space Exploration Technologies Corp.</p>
+            <div class="footer-legal"><a href="#">Privacy</a><a href="#">Suppliers</a></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

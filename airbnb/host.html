@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host Your Home — Airbnb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="host-page">
+    <header class="header header-compact" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo"><svg width="102" height="32" viewBox="0 0 102 32" fill="currentColor"><path d="M29 1.4C21.4 1.4 16 7.8 16 14.6c0 4.8 2.6 8.8 6.4 11L19 31.2c-.2.4.2.8.6.8h18.8c.4 0 .8-.4.6-.8l-3.4-5.6c3.8-2.2 6.4-6.2 6.4-11C42 7.8 36.6 1.4 29 1.4zm0 23.2c-5.2 0-9.4-4.2-9.4-9.4S23.8 5.8 29 5.8s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4z"/><text x="46" y="24" font-family="Arial,sans-serif" font-weight="bold" font-size="22">airbnb</text></svg></a>
+            <div class="nav-right">
+                <a href="index.html" class="nav-link hide-mobile">Back to Airbnb</a>
+                <button class="nav-user-btn" id="user-menu-toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><div class="user-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></div></button>
+                <div class="user-dropdown" id="user-dropdown"><a href="#" class="dropdown-item"><strong>Sign up</strong></a><a href="#" class="dropdown-item">Log in</a><div class="dropdown-divider"></div><a href="index.html" class="dropdown-item">Explore homes</a></div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Host Hero -->
+        <section class="host-hero">
+            <div class="host-hero-bg"></div>
+            <div class="container host-hero-content">
+                <h1>Airbnb it.<br>You could earn</h1>
+                <div class="earnings-calculator">
+                    <div class="earnings-amount" id="earnings-amount">$1,260</div>
+                    <p>per month</p>
+                    <div class="earnings-slider">
+                        <label>Nights per month: <strong id="nights-val">7</strong></label>
+                        <input type="range" id="nights-slider" min="1" max="30" value="7" class="slider">
+                    </div>
+                    <a href="#" class="btn btn-airbnb">Get started</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works -->
+        <section class="host-section">
+            <div class="container">
+                <h2>How hosting works</h2>
+                <div class="how-grid">
+                    <div class="how-card"><div class="how-num">1</div><h3>List your space</h3><p>Share details about your space and set your price. It's free to create a listing.</p></div>
+                    <div class="how-card"><div class="how-num">2</div><h3>Welcome guests</h3><p>Accept bookings that work for you. Set your schedule, rules, and availability.</p></div>
+                    <div class="how-card"><div class="how-num">3</div><h3>Get paid</h3><p>Get paid securely through Airbnb, typically 24 hours after guest check-in.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AirCover -->
+        <section class="host-section section-alt">
+            <div class="container aircover-section">
+                <div class="aircover-text">
+                    <h2>air<span class="aircover-accent">cover</span> for Hosts</h2>
+                    <p>Top-to-bottom protection, included every time you host on Airbnb. Always included, always free.</p>
+                    <div class="aircover-features">
+                        <div class="ac-feature"><strong>$3M</strong><span>damage protection</span></div>
+                        <div class="ac-feature"><strong>$1M</strong><span>liability insurance</span></div>
+                        <div class="ac-feature"><strong>14</strong><span>categories covered</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="host-section">
+            <div class="container">
+                <h2>Hear from other hosts</h2>
+                <div class="host-testimonials">
+                    <div class="host-test-card">
+                        <p>"Hosting on Airbnb has allowed me to pay off my mortgage years early. The platform makes it incredibly easy to manage everything."</p>
+                        <div class="host-test-author"><div class="host-test-avatar hta-1"></div><div><strong>Rachel, London</strong><span>Hosting since 2019</span></div></div>
+                    </div>
+                    <div class="host-test-card">
+                        <p>"I love meeting people from all over the world. Airbnb gives me the flexibility to host when I want and block dates when I need my space."</p>
+                        <div class="host-test-author"><div class="host-test-avatar hta-2"></div><div><strong>David, Barcelona</strong><span>Hosting since 2021</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="host-section section-alt">
+            <div class="container">
+                <h2>Your questions, answered</h2>
+                <div class="faq-list" id="faq-list">
+                    <div class="faq-item"><button class="faq-q">Is my space right for Airbnb?<span class="faq-toggle">+</span></button><div class="faq-a"><p>Whether you have a spare room, an entire home, or a unique space — if it's a safe, comfortable place to stay, it can work on Airbnb.</p></div></div>
+                    <div class="faq-item"><button class="faq-q">How much does it cost to host?<span class="faq-toggle">+</span></button><div class="faq-a"><p>It's free to create a listing. Airbnb typically charges a 3% service fee per booking, which is deducted from your payout.</p></div></div>
+                    <div class="faq-item"><button class="faq-q">How am I protected when hosting?<span class="faq-toggle">+</span></button><div class="faq-a"><p>AirCover for Hosts provides $3M damage protection, $1M liability insurance, and coverage for pet damage, deep cleaning, and more.</p></div></div>
+                    <div class="faq-item"><button class="faq-q">Can I set my own price?<span class="faq-toggle">+</span></button><div class="faq-a"><p>Yes! You have full control over your pricing. Airbnb also offers Smart Pricing tools that automatically adjust based on demand.</p></div></div>
+                    <div class="faq-item"><button class="faq-q">How do I get paid?<span class="faq-toggle">+</span></button><div class="faq-a"><p>Payments are released 24 hours after guest check-in via your preferred method — bank transfer, PayPal, or other local options.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="host-final-cta">
+            <div class="container host-final-content">
+                <h2>Ready to Airbnb it?</h2>
+                <a href="#" class="btn btn-airbnb btn-lg">Get started</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col"><h4>Support</h4><a href="#">Help Center</a><a href="#">AirCover</a><a href="#">Cancellation</a></div>
+            <div class="footer-col"><h4>Hosting</h4><a href="host.html">Your home</a><a href="#">Resources</a><a href="experiences.html">Experiences</a></div>
+            <div class="footer-col"><h4>Airbnb</h4><a href="#">Newsroom</a><a href="#">Careers</a><a href="#">Gift cards</a></div>
+        </div>
+        <div class="footer-bottom container"><p>© 2026 Airbnb, Inc.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
