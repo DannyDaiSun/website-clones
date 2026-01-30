@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail – Razer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span class="promo-text">🎮 Free shipping on orders over $79. <a href="mice.html">Shop Now</a></span>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="header-logo" aria-label="Razer Home">
+        <svg class="logo-svg" viewBox="0 0 130 40" width="100" height="30">
+          <path d="M10 5 L25 20 L10 35 L15 35 L30 20 L15 5Z" fill="#44d62c"/>
+          <path d="M0 5 L15 20 L0 35 L5 35 L20 20 L5 5Z" fill="#44d62c" opacity="0.7"/>
+          <text x="38" y="28" fill="#44d62c" font-family="Arial,sans-serif" font-weight="900" font-size="22" letter-spacing="3">RAZER</text>
+        </svg>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="mice.html" class="nav-link">Mice</a>
+        <a href="keyboards.html" class="nav-link">Keyboards</a>
+        <a href="mice.html" class="nav-link">Headsets</a>
+        <a href="keyboards.html" class="nav-link">Laptops</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-toggle" id="searchToggle" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+        <a href="mice.html" class="cart-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="mice.html" class="mobile-nav-link">Mice</a>
+      <a href="keyboards.html" class="mobile-nav-link">Keyboards</a>
+    </div>
+  </div>
+
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search Razer products..." autocomplete="off">
+        <button class="search-close" id="searchClose" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <nav class="breadcrumb" id="breadcrumb">
+        <a href="index.html">Home</a> <span>/</span> <a href="mice.html">Mice</a> <span>/</span> <span id="breadcrumbProduct">Product</span>
+      </nav>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+      <div class="container">
+        <div class="pd-layout">
+          <div class="pd-gallery">
+            <div class="pd-main-image" id="pdMainImage">
+              <div class="pd-product-visual">
+                <div class="pi-shape mouse-shape pd-shape"></div>
+              </div>
+            </div>
+            <div class="pd-color-picker" id="pdColorPicker">
+              <button class="color-swatch active" data-color="black" style="background:#111" aria-label="Black"></button>
+              <button class="color-swatch" data-color="white" style="background:#eee" aria-label="White"></button>
+              <button class="color-swatch" data-color="green" style="background:#44d62c" aria-label="Green"></button>
+            </div>
+          </div>
+          <div class="pd-info">
+            <p class="pd-badge">NEW</p>
+            <h1 class="pd-title" id="pdTitle">Razer Viper V3 Pro</h1>
+            <p class="pd-subtitle" id="pdSubtitle">Ultra-lightweight wireless esports mouse</p>
+            <div class="pd-rating">★★★★★ <span>(2,847 reviews)</span></div>
+            <div class="pd-price" id="pdPrice">$159.99</div>
+
+            <!-- Spec Tabs -->
+            <div class="pd-spec-tabs" id="pdSpecTabs">
+              <button class="spec-tab active" data-spectab="overview">Overview</button>
+              <button class="spec-tab" data-spectab="specs">Specs</button>
+              <button class="spec-tab" data-spectab="reviews">Reviews</button>
+            </div>
+
+            <div class="spec-panel active" id="spectab-overview">
+              <div class="pd-features">
+                <div class="pd-feature">
+                  <span class="feat-icon">⚡</span>
+                  <div>
+                    <strong>4000Hz HyperPolling</strong>
+                    <p>Ultra-fast wireless with sub-millisecond response</p>
+                  </div>
+                </div>
+                <div class="pd-feature">
+                  <span class="feat-icon">🪶</span>
+                  <div>
+                    <strong>49g Ultra-Lightweight</strong>
+                    <p>One of the lightest esports mice ever made</p>
+                  </div>
+                </div>
+                <div class="pd-feature">
+                  <span class="feat-icon">🎯</span>
+                  <div>
+                    <strong>Focus Pro 35K Sensor</strong>
+                    <p>Best-in-class precision with AI-powered tracking</p>
+                  </div>
+                </div>
+                <div class="pd-feature">
+                  <span class="feat-icon">🔋</span>
+                  <div>
+                    <strong>95 Hour Battery</strong>
+                    <p>Play for days on a single charge</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="spec-panel" id="spectab-specs">
+              <table class="spec-table">
+                <tr><td>Weight</td><td id="specWeight">49g</td></tr>
+                <tr><td>Sensor</td><td>Razer Focus Pro 35K</td></tr>
+                <tr><td>Max DPI</td><td>35,000</td></tr>
+                <tr><td>Polling Rate</td><td>Up to 4000Hz</td></tr>
+                <tr><td>Switches</td><td>Razer Optical Gen-3</td></tr>
+                <tr><td>Battery</td><td>Up to 95 hours</td></tr>
+                <tr><td>Connectivity</td><td>HyperSpeed Wireless / USB-C</td></tr>
+                <tr><td>Buttons</td><td>5 programmable</td></tr>
+              </table>
+            </div>
+
+            <div class="spec-panel" id="spectab-reviews">
+              <div class="review-summary">
+                <div class="review-score">4.9</div>
+                <div class="review-stars">★★★★★</div>
+                <p>Based on 2,847 reviews</p>
+              </div>
+              <div class="review-item">
+                <div class="review-header">
+                  <strong>ProGamer_2024</strong>
+                  <span>★★★★★</span>
+                </div>
+                <p>"Absolute game-changer. 49g feels like nothing. My aim improved noticeably within the first week."</p>
+              </div>
+              <div class="review-item">
+                <div class="review-header">
+                  <strong>FPSfreak</strong>
+                  <span>★★★★★</span>
+                </div>
+                <p>"The 4000Hz polling rate is insane. I can feel the difference from my old mouse. Highly recommend for competitive play."</p>
+              </div>
+              <div class="review-item">
+                <div class="review-header">
+                  <strong>CasualCarl</strong>
+                  <span>★★★★☆</span>
+                </div>
+                <p>"Great mouse but expensive. Shape takes getting used to if you're coming from ergonomic mice. Battery is amazing though."</p>
+              </div>
+            </div>
+
+            <div class="pd-actions">
+              <button class="btn btn-primary btn-lg btn-add-cart" id="pdAddCart" data-name="Viper V3 Pro" data-price="159.99">Add to Cart — $159.99</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+      <div class="container">
+        <h2 class="section-title">YOU MAY ALSO LIKE</h2>
+        <div class="related-grid">
+          <a href="product.html?cat=mice&id=deathadder" class="related-card">
+            <div class="related-img"><div class="pi-shape mouse-shape da-shape"></div></div>
+            <h3>DeathAdder V3</h3>
+            <p>$89.99</p>
+          </a>
+          <a href="product.html?cat=mice&id=basilisk" class="related-card">
+            <div class="related-img"><div class="pi-shape mouse-shape bas-shape"></div></div>
+            <h3>Basilisk V3</h3>
+            <p>$69.99</p>
+          </a>
+          <a href="product.html?cat=keyboards&id=huntsman" class="related-card">
+            <div class="related-img"><div class="pi-shape kb-shape"></div></div>
+            <h3>Huntsman V3 Pro</h3>
+            <p>$249.99</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">
+            <svg viewBox="0 0 130 40" width="80" height="24">
+              <path d="M10 5 L25 20 L10 35 L15 35 L30 20 L15 5Z" fill="#44d62c"/>
+              <path d="M0 5 L15 20 L0 35 L5 35 L20 20 L5 5Z" fill="#44d62c" opacity="0.7"/>
+              <text x="38" y="28" fill="#44d62c" font-family="Arial,sans-serif" font-weight="900" font-size="22" letter-spacing="3">RAZER</text>
+            </svg>
+          </a>
+          <p class="footer-tagline">For Gamers. By Gamers.™</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="mice.html">Mice</a>
+          <a href="keyboards.html">Keyboards</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="index.html">Contact Us</a>
+          <a href="index.html">FAQs</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Razer Inc. (Clone)</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-notification" id="cartNotification">
+    <span class="cart-notif-icon">✅</span>
+    <span class="cart-notif-text" id="cartNotifText">Added to cart!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

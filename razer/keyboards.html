@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Keyboards – Razer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span class="promo-text">🎮 Free shipping on orders over $79. <a href="keyboards.html">Shop Now</a></span>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="header-logo" aria-label="Razer Home">
+        <svg class="logo-svg" viewBox="0 0 130 40" width="100" height="30">
+          <path d="M10 5 L25 20 L10 35 L15 35 L30 20 L15 5Z" fill="#44d62c"/>
+          <path d="M0 5 L15 20 L0 35 L5 35 L20 20 L5 5Z" fill="#44d62c" opacity="0.7"/>
+          <text x="38" y="28" fill="#44d62c" font-family="Arial,sans-serif" font-weight="900" font-size="22" letter-spacing="3">RAZER</text>
+        </svg>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="mice.html" class="nav-link">Mice</a>
+        <a href="keyboards.html" class="nav-link active">Keyboards</a>
+        <a href="mice.html" class="nav-link">Headsets</a>
+        <a href="keyboards.html" class="nav-link">Laptops</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-toggle" id="searchToggle" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+        <a href="keyboards.html" class="cart-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="mice.html" class="mobile-nav-link">Mice</a>
+      <a href="keyboards.html" class="mobile-nav-link active">Keyboards</a>
+    </div>
+  </div>
+
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <div class="search-header">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search Razer products..." autocomplete="off">
+        <button class="search-close" id="searchClose" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero page-hero-kb">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span>Keyboards</span>
+        </nav>
+        <h1 class="page-hero-title">GAMING KEYBOARDS</h1>
+        <p class="page-hero-sub">Optical, mechanical, and analog switches. Built for speed, precision, and style.</p>
+      </div>
+    </section>
+
+    <section class="filter-section">
+      <div class="container">
+        <div class="filter-bar" id="filterBar">
+          <button class="filter-btn active" data-filter="all">All Keyboards</button>
+          <button class="filter-btn" data-filter="optical">Optical</button>
+          <button class="filter-btn" data-filter="mechanical">Mechanical</button>
+          <button class="filter-btn" data-filter="tkl">TKL / 60%</button>
+          <button class="filter-btn" data-filter="fullsize">Full Size</button>
+        </div>
+        <div class="sort-control">
+          <label for="sortSelect">Sort by:</label>
+          <select id="sortSelect" class="sort-select">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-grid-section">
+      <div class="container">
+        <div class="product-grid" id="productGrid">
+          <div class="product-card" data-filter="optical,fullsize" data-price="249.99" data-rating="5">
+            <div class="product-badge">NEW</div>
+            <div class="product-img pi-hunts"><div class="pi-shape kb-shape"></div></div>
+            <div class="product-info">
+              <h3><a href="product.html?cat=keyboards&id=huntsman">Razer Huntsman V3 Pro</a></h3>
+              <p class="product-tagline">Analog optical switches</p>
+              <div class="product-specs">
+                <span>Optical</span> <span>Full-size</span> <span>RGB</span>
+              </div>
+              <div class="product-rating">★★★★★ <span>(1,892)</span></div>
+              <div class="product-price">$249.99</div>
+              <button class="btn btn-add-cart" data-name="Huntsman V3 Pro" data-price="249.99">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-filter="mechanical,fullsize" data-price="169.99" data-rating="5">
+            <div class="product-img pi-bw"><div class="pi-shape kb-shape bw-shape"></div></div>
+            <div class="product-info">
+              <h3><a href="product.html?cat=keyboards&id=blackwidow">Razer BlackWidow V4</a></h3>
+              <p class="product-tagline">Mechanical green switches</p>
+              <div class="product-specs">
+                <span>Mechanical</span> <span>Full-size</span> <span>RGB</span>
+              </div>
+              <div class="product-rating">★★★★★ <span>(4,567)</span></div>
+              <div class="product-price">$169.99</div>
+              <button class="btn btn-add-cart" data-name="BlackWidow V4" data-price="169.99">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-filter="optical,tkl" data-price="179.99" data-rating="5">
+            <div class="product-img pi-huntstk"><div class="pi-shape kb-shape tkl-shape"></div></div>
+            <div class="product-info">
+              <h3><a href="product.html?cat=keyboards&id=huntsman">Razer Huntsman V3 Pro TKL</a></h3>
+              <p class="product-tagline">Tenkeyless analog optical</p>
+              <div class="product-specs">
+                <span>Optical</span> <span>TKL</span> <span>RGB</span>
+              </div>
+              <div class="product-rating">★★★★★ <span>(1,340)</span></div>
+              <div class="product-price">$179.99</div>
+              <button class="btn btn-add-cart" data-name="Huntsman V3 Pro TKL" data-price="179.99">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-filter="mechanical,tkl" data-price="99.99" data-rating="4">
+            <div class="product-img pi-ornata"><div class="pi-shape kb-shape ornata-shape"></div></div>
+            <div class="product-info">
+              <h3><a href="product.html?cat=keyboards&id=blackwidow">Razer Ornata V3 TKL</a></h3>
+              <p class="product-tagline">Mecha-membrane hybrid</p>
+              <div class="product-specs">
+                <span>Hybrid</span> <span>TKL</span> <span>RGB</span>
+              </div>
+              <div class="product-rating">★★★★☆ <span>(2,890)</span></div>
+              <div class="product-price">$99.99</div>
+              <button class="btn btn-add-cart" data-name="Ornata V3 TKL" data-price="99.99">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-filter="mechanical,tkl" data-price="149.99" data-rating="4">
+            <div class="product-img pi-bwtkl"><div class="pi-shape kb-shape bwtkl-shape"></div></div>
+            <div class="product-info">
+              <h3><a href="product.html?cat=keyboards&id=blackwidow">Razer BlackWidow V4 75%</a></h3>
+              <p class="product-tagline">Compact mechanical gaming</p>
+              <div class="product-specs">
+                <span>Mechanical</span> <span>75%</span> <span>RGB</span>
+              </div>
+              <div class="product-rating">★★★★☆ <span>(987)</span></div>
+              <div class="product-price">$149.99</div>
+              <button class="btn btn-add-cart" data-name="BlackWidow V4 75%" data-price="149.99">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-filter="optical,tkl" data-price="59.99" data-rating="4">
+            <div class="product-img pi-mini60"><div class="pi-shape kb-shape mini-shape"></div></div>
+            <div class="product-info">
+              <h3><a href="product.html?cat=keyboards&id=huntsman">Razer Huntsman Mini</a></h3>
+              <p class="product-tagline">60% compact optical</p>
+              <div class="product-specs">
+                <span>Optical</span> <span>60%</span> <span>RGB</span>
+              </div>
+              <div class="product-rating">★★★★☆ <span>(3,456)</span></div>
+              <div class="product-price">$59.99</div>
+              <button class="btn btn-add-cart" data-name="Huntsman Mini" data-price="59.99">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Switch Comparison -->
+    <section class="switch-comparison">
+      <div class="container">
+        <h2 class="section-title">COMPARE SWITCH TYPES</h2>
+        <div class="switch-grid">
+          <div class="switch-card">
+            <div class="switch-visual optical-sw"></div>
+            <h3>Razer™ Optical</h3>
+            <p>Light-based actuation for instant response. No debounce delay.</p>
+            <ul class="switch-specs">
+              <li>Actuation: 1.0mm</li>
+              <li>Force: 40g</li>
+              <li>Lifespan: 100M clicks</li>
+            </ul>
+          </div>
+          <div class="switch-card">
+            <div class="switch-visual mech-sw"></div>
+            <h3>Razer™ Green</h3>
+            <p>Tactile and clicky. Satisfying feedback for precise typing.</p>
+            <ul class="switch-specs">
+              <li>Actuation: 1.9mm</li>
+              <li>Force: 50g</li>
+              <li>Lifespan: 80M clicks</li>
+            </ul>
+          </div>
+          <div class="switch-card">
+            <div class="switch-visual analog-sw"></div>
+            <h3>Razer™ Analog</h3>
+            <p>Variable actuation like a gamepad trigger. Full analog control.</p>
+            <ul class="switch-specs">
+              <li>Actuation: 0.1-3.6mm</li>
+              <li>Force: 45g</li>
+              <li>Lifespan: 100M clicks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">
+            <svg viewBox="0 0 130 40" width="80" height="24">
+              <path d="M10 5 L25 20 L10 35 L15 35 L30 20 L15 5Z" fill="#44d62c"/>
+              <path d="M0 5 L15 20 L0 35 L5 35 L20 20 L5 5Z" fill="#44d62c" opacity="0.7"/>
+              <text x="38" y="28" fill="#44d62c" font-family="Arial,sans-serif" font-weight="900" font-size="22" letter-spacing="3">RAZER</text>
+            </svg>
+          </a>
+          <p class="footer-tagline">For Gamers. By Gamers.™</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="mice.html">Mice</a>
+          <a href="keyboards.html">Keyboards</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="index.html">Contact Us</a>
+          <a href="index.html">FAQs</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Razer Inc. (Clone)</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-notification" id="cartNotification">
+    <span class="cart-notif-icon">✅</span>
+    <span class="cart-notif-text" id="cartNotifText">Added to cart!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
