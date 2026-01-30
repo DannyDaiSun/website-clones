@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation – Vercel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+        <a href="index.html" class="logo" aria-label="Vercel Home">
+          <svg width="76" height="18" viewBox="0 0 76 18" fill="none"><path d="M14.5 0L29 18H0L14.5 0Z" fill="currentColor"/><text x="35" y="15" fill="currentColor" font-family="Inter,-apple-system,sans-serif" font-size="15" font-weight="700" letter-spacing="-0.3">Vercel</text></svg>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="docs.html" class="nav-link active">Docs</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="changelog.html" class="nav-link">Changelog</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="search-trigger" id="searchTrigger" role="button" tabindex="0" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span class="search-text">Search docs...</span>
+        </div>
+        <a href="pricing.html" class="nav-btn btn-white">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay">
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="docs.html" class="mobile-link active">Docs</a>
+      <a href="pricing.html" class="mobile-link">Pricing</a>
+      <a href="changelog.html" class="mobile-link">Changelog</a>
+    </nav>
+  </div>
+
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-inner">
+      <div class="search-bar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search documentation..." autocomplete="off">
+        <button class="search-close-btn" id="searchCloseBtn">Esc</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <div class="docs-layout">
+    <!-- Sidebar -->
+    <aside class="docs-sidebar" id="docsSidebar">
+      <div class="sidebar-section">
+        <h4>Getting Started</h4>
+        <a href="docs.html" class="sidebar-link active" data-doc="intro">Introduction</a>
+        <a href="docs.html" class="sidebar-link" data-doc="quickstart">Quick Start</a>
+        <a href="docs.html" class="sidebar-link" data-doc="deploy">Deployments</a>
+      </div>
+      <div class="sidebar-section">
+        <h4>Framework Guides</h4>
+        <a href="docs.html" class="sidebar-link" data-doc="nextjs">Next.js</a>
+        <a href="docs.html" class="sidebar-link" data-doc="react">React</a>
+        <a href="docs.html" class="sidebar-link" data-doc="vue">Vue</a>
+        <a href="docs.html" class="sidebar-link" data-doc="svelte">Svelte</a>
+      </div>
+      <div class="sidebar-section">
+        <h4>Platform</h4>
+        <a href="docs.html" class="sidebar-link" data-doc="edge">Edge Network</a>
+        <a href="docs.html" class="sidebar-link" data-doc="functions">Serverless Functions</a>
+        <a href="docs.html" class="sidebar-link" data-doc="env">Environment Variables</a>
+        <a href="docs.html" class="sidebar-link" data-doc="domains">Custom Domains</a>
+      </div>
+      <div class="sidebar-section">
+        <h4>More</h4>
+        <a href="docs.html" class="sidebar-link" data-doc="cli">Vercel CLI</a>
+        <a href="docs.html" class="sidebar-link" data-doc="api">REST API</a>
+        <a href="docs.html" class="sidebar-link" data-doc="limits">Limits & Quotas</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="docs-main">
+      <article class="doc-content" id="docContent">
+        <nav class="doc-breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <a href="docs.html">Docs</a> <span>/</span> <span>Introduction</span>
+        </nav>
+
+        <h1 id="docTitle">Introduction</h1>
+        <p class="doc-lead">Vercel is the platform for frontend developers, providing the speed and reliability innovators need to create at the moment of inspiration.</p>
+
+        <div class="doc-callout">
+          <span class="callout-icon">💡</span>
+          <div>
+            <strong>New to Vercel?</strong>
+            <p>Start with the <a href="docs.html">Quick Start guide</a> to deploy your first project in under 60 seconds.</p>
+          </div>
+        </div>
+
+        <h2>What is Vercel?</h2>
+        <p>Vercel is a cloud platform that enables developers to host websites and web services that deploy instantly, scale automatically, and require no supervision. It's the best place to deploy any frontend application.</p>
+
+        <h2>Key Features</h2>
+        <div class="doc-features-grid">
+          <div class="doc-feature">
+            <h3>⚡ Instant Deploys</h3>
+            <p>Push to Git and your changes go live in seconds. Every commit creates a unique preview URL.</p>
+          </div>
+          <div class="doc-feature">
+            <h3>🌐 Global CDN</h3>
+            <p>Content served from 100+ edge locations worldwide. Your users get sub-50ms responses.</p>
+          </div>
+          <div class="doc-feature">
+            <h3>🔧 Zero Config</h3>
+            <p>Automatic framework detection. No webpack, no build configs. Just push and deploy.</p>
+          </div>
+          <div class="doc-feature">
+            <h3>🔄 Preview Deployments</h3>
+            <p>Every PR gets its own URL. Share with stakeholders, run E2E tests, and merge with confidence.</p>
+          </div>
+        </div>
+
+        <h2>Quick Start</h2>
+        <div class="code-block">
+          <div class="code-header">
+            <span>Terminal</span>
+            <button class="copy-btn" data-code="npm i -g vercel && vercel">Copy</button>
+          </div>
+          <pre><code><span class="prompt">$</span> npm i -g vercel
+<span class="prompt">$</span> vercel
+<span class="dim">🔗 Deployed → https://my-project.vercel.app</span></code></pre>
+        </div>
+
+        <h2>Supported Frameworks</h2>
+        <p>Vercel supports 35+ frameworks out of the box, including:</p>
+        <ul class="doc-list">
+          <li>▲ <strong>Next.js</strong> — The React framework, built by Vercel</li>
+          <li>⚛️ <strong>React</strong> — Create React App, Vite, and more</li>
+          <li>💚 <strong>Vue / Nuxt</strong> — Vue.js ecosystem</li>
+          <li>🟠 <strong>Svelte / SvelteKit</strong> — Cybernetically enhanced web apps</li>
+          <li>🚀 <strong>Astro</strong> — The all-in-one web framework</li>
+          <li>💎 <strong>Remix</strong> — Full stack web framework</li>
+        </ul>
+
+        <h2>Next Steps</h2>
+        <div class="doc-next-links">
+          <a href="docs.html" class="doc-next-card">
+            <h3>📖 Quick Start →</h3>
+            <p>Deploy your first project in 60 seconds</p>
+          </a>
+          <a href="docs.html" class="doc-next-card">
+            <h3>🔧 Framework Guides →</h3>
+            <p>Setup guides for each framework</p>
+          </a>
+          <a href="docs.html" class="doc-next-card">
+            <h3>⚡ Serverless Functions →</h3>
+            <p>Add backend logic to your app</p>
+          </a>
+        </div>
+      </article>
+
+      <!-- TOC -->
+      <aside class="docs-toc">
+        <h4>On this page</h4>
+        <a href="#docTitle" class="toc-link active">Introduction</a>
+        <a href="#docTitle" class="toc-link">What is Vercel?</a>
+        <a href="#docTitle" class="toc-link">Key Features</a>
+        <a href="#docTitle" class="toc-link">Quick Start</a>
+        <a href="#docTitle" class="toc-link">Supported Frameworks</a>
+        <a href="#docTitle" class="toc-link">Next Steps</a>
+      </aside>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <svg width="76" height="18" viewBox="0 0 76 18" fill="none"><path d="M14.5 0L29 18H0L14.5 0Z" fill="currentColor"/><text x="35" y="15" fill="currentColor" font-family="Inter,-apple-system,sans-serif" font-size="15" font-weight="700" letter-spacing="-0.3">Vercel</text></svg>
+          </a>
+        </div>
+        <div class="footer-col"><h4>Products</h4><a href="docs.html">Previews</a><a href="docs.html">AI</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="docs.html">Docs</a><a href="changelog.html">Changelog</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="pricing.html">Pricing</a><a href="index.html">About</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2024 Vercel, Inc. (Clone)</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

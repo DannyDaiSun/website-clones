@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing – Vercel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+        <a href="index.html" class="logo" aria-label="Vercel Home">
+          <svg width="76" height="18" viewBox="0 0 76 18" fill="none"><path d="M14.5 0L29 18H0L14.5 0Z" fill="currentColor"/><text x="35" y="15" fill="currentColor" font-family="Inter,-apple-system,sans-serif" font-size="15" font-weight="700" letter-spacing="-0.3">Vercel</text></svg>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="docs.html" class="nav-link">Docs</a>
+          <a href="pricing.html" class="nav-link active">Pricing</a>
+          <a href="changelog.html" class="nav-link">Changelog</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="search-trigger" id="searchTrigger" role="button" tabindex="0" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span class="search-text">Search...</span>
+        </div>
+        <a href="pricing.html" class="nav-btn btn-white">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay">
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="docs.html" class="mobile-link">Docs</a>
+      <a href="pricing.html" class="mobile-link active">Pricing</a>
+      <a href="changelog.html" class="mobile-link">Changelog</a>
+    </nav>
+  </div>
+
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-inner">
+      <div class="search-bar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search..." autocomplete="off">
+        <button class="search-close-btn" id="searchCloseBtn">Esc</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <main>
+    <section class="pricing-hero">
+      <div class="container">
+        <h1 class="pricing-title">Pricing for every stage of growth</h1>
+        <p class="pricing-sub">Start free. Scale as you grow. No credit card required.</p>
+      </div>
+    </section>
+
+    <section class="pricing-cards-section">
+      <div class="container">
+        <div class="pricing-grid">
+          <!-- Hobby -->
+          <div class="pricing-card">
+            <div class="pc-header">
+              <h3>Hobby</h3>
+              <p class="pc-desc">For personal projects and experiments</p>
+              <div class="pc-price"><span class="price-big">$0</span><span class="price-period">/month</span></div>
+            </div>
+            <a href="docs.html" class="btn btn-outline btn-block">Start Free</a>
+            <ul class="pc-features">
+              <li>✅ Unlimited deployments</li>
+              <li>✅ HTTPS & custom domains</li>
+              <li>✅ Serverless functions</li>
+              <li>✅ 100GB bandwidth</li>
+              <li>✅ Community support</li>
+              <li>❌ Team collaboration</li>
+              <li>❌ Password protection</li>
+            </ul>
+          </div>
+
+          <!-- Pro -->
+          <div class="pricing-card featured">
+            <div class="popular-badge">Most Popular</div>
+            <div class="pc-header">
+              <h3>Pro</h3>
+              <p class="pc-desc">For professional developers and small teams</p>
+              <div class="pc-price"><span class="price-big">$20</span><span class="price-period">/month per member</span></div>
+            </div>
+            <a href="docs.html" class="btn btn-white btn-block">Start Trial</a>
+            <ul class="pc-features">
+              <li>✅ Everything in Hobby</li>
+              <li>✅ Team collaboration</li>
+              <li>✅ 1TB bandwidth</li>
+              <li>✅ Preview deployments</li>
+              <li>✅ Password protection</li>
+              <li>✅ Analytics</li>
+              <li>✅ Email support</li>
+            </ul>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="pricing-card">
+            <div class="pc-header">
+              <h3>Enterprise</h3>
+              <p class="pc-desc">For organizations with advanced security needs</p>
+              <div class="pc-price"><span class="price-big">Custom</span></div>
+            </div>
+            <a href="index.html" class="btn btn-outline btn-block">Contact Sales</a>
+            <ul class="pc-features">
+              <li>✅ Everything in Pro</li>
+              <li>✅ SLA guarantee</li>
+              <li>✅ SSO / SAML</li>
+              <li>✅ Audit logs</li>
+              <li>✅ Advanced DDoS protection</li>
+              <li>✅ Custom billing</li>
+              <li>✅ Dedicated support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Comparison -->
+    <section class="comparison-section">
+      <div class="container">
+        <h2 class="section-title">Compare Plans</h2>
+        <div class="comparison-table-wrap">
+          <table class="comparison-table" id="comparisonTable">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Hobby</th>
+                <th>Pro</th>
+                <th>Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Deployments</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><td>Bandwidth</td><td>100 GB</td><td>1 TB</td><td>Custom</td></tr>
+              <tr><td>Serverless Functions</td><td>12/deploy</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><td>Build Time</td><td>6,000 min</td><td>24,000 min</td><td>Custom</td></tr>
+              <tr><td>Team Members</td><td>1</td><td>Unlimited</td><td>Unlimited</td></tr>
+              <tr><td>Analytics</td><td>—</td><td>✅</td><td>✅</td></tr>
+              <tr><td>Password Protection</td><td>—</td><td>✅</td><td>✅</td></tr>
+              <tr><td>SSO / SAML</td><td>—</td><td>—</td><td>✅</td></tr>
+              <tr><td>SLA</td><td>—</td><td>—</td><td>99.99%</td></tr>
+              <tr><td>Support</td><td>Community</td><td>Email</td><td>Dedicated</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false"><span>Can I use Vercel for free?</span><span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>Yes! The Hobby plan is completely free and includes unlimited deployments, HTTPS, custom domains, and serverless functions. It's perfect for personal projects and learning.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false"><span>What happens if I exceed my bandwidth?</span><span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>On the Hobby plan, your site will be rate-limited. On Pro, you'll be charged $40/100GB for additional bandwidth. Enterprise plans have custom bandwidth agreements.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false"><span>Can I upgrade or downgrade anytime?</span><span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>Absolutely. You can upgrade, downgrade, or cancel at any time. Upgrades are prorated, and downgrades take effect at the next billing cycle.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false"><span>Do you offer a free trial for Pro?</span><span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>Yes, Pro comes with a 14-day free trial. No credit card required. You'll have full access to all Pro features during the trial.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false"><span>What frameworks does Vercel support?</span><span class="faq-icon">+</span></button>
+            <div class="faq-a"><p>Vercel supports 35+ frameworks including Next.js, React, Vue, Nuxt, Svelte, Astro, Remix, Gatsby, Angular, and many more. Zero-config deployment for all supported frameworks.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Ready to deploy?</h2>
+        <p class="cta-sub">Start for free. No credit card needed.</p>
+        <div class="cta-actions">
+          <a href="docs.html" class="btn btn-white btn-lg">Start Deploying →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><svg width="76" height="18" viewBox="0 0 76 18" fill="none"><path d="M14.5 0L29 18H0L14.5 0Z" fill="currentColor"/><text x="35" y="15" fill="currentColor" font-family="Inter,-apple-system,sans-serif" font-size="15" font-weight="700" letter-spacing="-0.3">Vercel</text></svg></a>
+        </div>
+        <div class="footer-col"><h4>Products</h4><a href="docs.html">Previews</a><a href="docs.html">AI</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="docs.html">Docs</a><a href="changelog.html">Changelog</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="pricing.html">Pricing</a><a href="index.html">About</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2024 Vercel, Inc. (Clone)</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

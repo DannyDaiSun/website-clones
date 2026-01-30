@@ -1,330 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vercel: Build and deploy the best Web experiences</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vercel: Build and deploy the best web experiences</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-left">
-                <a href="#" class="nav-logo" aria-label="Vercel Home">
-                    <svg class="logo-triangle" width="76" height="18" viewBox="0 0 76 18" fill="currentColor">
-                        <path d="M37.59 0L75.18 18H0L37.59 0Z"/>
-                    </svg>
-                </a>
-                <div class="nav-links">
-                    <a href="#" class="nav-link">Showcase</a>
-                    <a href="#" class="nav-link">Docs</a>
-                    <a href="#" class="nav-link">Blog</a>
-                    <a href="#" class="nav-link">Templates</a>
-                    <a href="#" class="nav-link">Enterprise</a>
-                    <a href="#" class="nav-link">Changelog</a>
-                    <a href="#" class="nav-link">Pricing</a>
-                </div>
+  <!-- Nav -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html" class="logo" aria-label="Vercel Home">
+          <svg width="76" height="18" viewBox="0 0 76 18" fill="none">
+            <path d="M14.5 0L29 18H0L14.5 0Z" fill="currentColor"/>
+            <text x="35" y="15" fill="currentColor" font-family="Inter,-apple-system,sans-serif" font-size="15" font-weight="700" letter-spacing="-0.3">Vercel</text>
+          </svg>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <div class="nav-dropdown">
+            <button class="nav-link has-dropdown" data-dropdown="products">Products <span class="caret">▾</span></button>
+            <div class="dropdown-panel" id="dd-products">
+              <a href="docs.html" class="dd-item"><span class="dd-icon">▲</span><div><strong>Previews</strong><p>Every push, a new preview</p></div></a>
+              <a href="docs.html" class="dd-item"><span class="dd-icon">🌐</span><div><strong>Infrastructure</strong><p>Global Edge Network</p></div></a>
+              <a href="docs.html" class="dd-item"><span class="dd-icon">⚡</span><div><strong>AI</strong><p>v0 and AI SDK</p></div></a>
+              <a href="docs.html" class="dd-item"><span class="dd-icon">📊</span><div><strong>Observability</strong><p>Runtime logs & analytics</p></div></a>
+              <a href="docs.html" class="dd-item"><span class="dd-icon">🔒</span><div><strong>Security</strong><p>DDoS, WAF, Firewall</p></div></a>
             </div>
-            <div class="nav-right">
-                <a href="#" class="nav-link nav-link-dim">Contact</a>
-                <a href="#" class="nav-link nav-link-dim">Log In</a>
-                <a href="#" class="btn btn-white">Sign Up</a>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-link has-dropdown" data-dropdown="resources">Resources <span class="caret">▾</span></button>
+            <div class="dropdown-panel" id="dd-resources">
+              <a href="docs.html" class="dd-item"><span class="dd-icon">📚</span><div><strong>Docs</strong><p>Guides & references</p></div></a>
+              <a href="changelog.html" class="dd-item"><span class="dd-icon">📝</span><div><strong>Changelog</strong><p>Latest updates</p></div></a>
+              <a href="docs.html" class="dd-item"><span class="dd-icon">🎓</span><div><strong>Templates</strong><p>Ready-to-deploy starters</p></div></a>
+              <a href="docs.html" class="dd-item"><span class="dd-icon">💬</span><div><strong>Community</strong><p>GitHub discussions</p></div></a>
             </div>
-            <button class="nav-mobile-toggle" aria-label="Menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-            </button>
+          </div>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="docs.html" class="nav-link">Docs</a>
+          <a href="changelog.html" class="nav-link">Changelog</a>
         </nav>
-    </header>
+      </div>
+      <div class="header-right">
+        <div class="search-trigger" id="searchTrigger" role="button" tabindex="0" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span class="search-text">Search...</span>
+          <kbd>⌘K</kbd>
+        </div>
+        <a href="pricing.html" class="nav-btn btn-ghost">Log In</a>
+        <a href="pricing.html" class="nav-btn btn-white">Sign Up</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
+  <!-- Mobile Nav -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-link active">Home</a>
+      <a href="docs.html" class="mobile-link">Docs</a>
+      <a href="pricing.html" class="mobile-link">Pricing</a>
+      <a href="changelog.html" class="mobile-link">Changelog</a>
+      <div class="mobile-divider"></div>
+      <a href="pricing.html" class="nav-btn btn-white mobile-cta">Sign Up</a>
+    </nav>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-inner">
+      <div class="search-bar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search documentation..." autocomplete="off">
+        <button class="search-close-btn" id="searchCloseBtn">Esc</button>
+      </div>
+      <div class="search-results" id="searchResults">
+        <div class="search-group">
+          <p class="search-group-label">Quick Links</p>
+          <a href="docs.html" class="search-result">📚 Documentation</a>
+          <a href="pricing.html" class="search-result">💰 Pricing Plans</a>
+          <a href="changelog.html" class="search-result">📝 Changelog</a>
+          <a href="docs.html" class="search-result">🚀 Getting Started Guide</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-glow"></div>
-        <div class="hero-container">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                <span>Introducing Vercel AI SDK 5.0</span>
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4l4 4-4 4"/></svg>
-            </div>
-            <h1 class="hero-title">
-                <span class="hero-line">Your complete</span>
-                <span class="hero-line gradient-text">platform for the web</span>
-            </h1>
-            <p class="hero-subtitle">Vercel provides the developer tools and cloud infrastructure to build, scale, and secure a faster, more personalized web.</p>
-            <div class="hero-actions">
-                <a href="#" class="btn btn-white btn-lg">
-                    <svg class="triangle-sm" width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0L16 16H0L8 0Z"/></svg>
-                    Start Deploying
-                </a>
-                <a href="#" class="btn btn-ghost btn-lg">Get a Demo</a>
-            </div>
+      <div class="container">
+        <div class="hero-badge">
+          <a href="changelog.html">Introducing Vercel AI SDK 4.0 →</a>
         </div>
+        <h1 class="hero-title">Your complete platform<br>for the web.</h1>
+        <p class="hero-sub">Vercel provides the developer tools and cloud infrastructure<br>to build, scale, and secure a faster, more personalized web.</p>
+        <div class="hero-actions">
+          <a href="docs.html" class="btn btn-white btn-lg">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M10 0L20 18H0L10 0Z" fill="#000"/></svg>
+            Start Deploying
+          </a>
+          <a href="docs.html" class="btn btn-outline btn-lg">Get a Demo</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Develop Section -->
-    <section class="section section-develop">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Develop</span>
-                <h2 class="section-title">Start with the developer</h2>
-                <p class="section-desc">Developers love Next.js, the open source React framework Vercel built together with Google and Facebook. Next.js powers the biggest websites like Hulu, Nike, and Notion.</p>
-            </div>
-            <div class="code-window">
-                <div class="code-titlebar">
-                    <div class="code-dots">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                    </div>
-                    <span class="code-filename">page.tsx</span>
-                </div>
-                <div class="code-body">
-                    <div class="code-line"><span class="code-keyword">export default</span> <span class="code-fn">function</span> <span class="code-name">Home</span>() {</div>
-                    <div class="code-line indent"><span class="code-keyword">return</span> (</div>
-                    <div class="code-line indent2">&lt;<span class="code-tag">main</span> <span class="code-attr">className</span>=<span class="code-string">"flex min-h-screen"</span>&gt;</div>
-                    <div class="code-line indent3">&lt;<span class="code-tag">h1</span>&gt;Hello, Vercel&lt;/<span class="code-tag">h1</span>&gt;</div>
-                    <div class="code-line indent2">&lt;/<span class="code-tag">main</span>&gt;</div>
-                    <div class="code-line indent">)</div>
-                    <div class="code-line">}</div>
-                </div>
-            </div>
+    <!-- Logos -->
+    <section class="logos-section">
+      <div class="container">
+        <p class="logos-label">Trusted by the best frontend teams</p>
+        <div class="logos-row">
+          <span class="logo-item">▲ Vercel</span>
+          <span class="logo-item">◆ Stripe</span>
+          <span class="logo-item">■ Square</span>
+          <span class="logo-item">● Meta</span>
+          <span class="logo-item">◼ GitHub</span>
+          <span class="logo-item">▶ YouTube</span>
+          <span class="logo-item">★ Shopify</span>
         </div>
+      </div>
     </section>
 
-    <!-- Preview Section -->
-    <section class="section section-preview">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Preview</span>
-                <h2 class="section-title">Accelerate with your team</h2>
-                <p class="section-desc">Every push automatically generates a shareable preview URL. Review changes, leave feedback, and ship faster — no meetings required.</p>
-            </div>
-            <div class="preview-grid">
-                <div class="preview-card">
-                    <div class="preview-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                    </div>
-                    <h3 class="preview-card-title">Automatic Previews</h3>
-                    <p class="preview-card-desc">Every pull request gets its own live preview environment to share and test before merging.</p>
-                </div>
-                <div class="preview-card">
-                    <div class="preview-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                    </div>
-                    <h3 class="preview-card-title">Collaborative Reviews</h3>
-                    <p class="preview-card-desc">Leave comments directly on the preview. No more screenshots in Slack threads.</p>
-                </div>
-                <div class="preview-card">
-                    <div class="preview-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3 class="preview-card-title">Conformance</h3>
-                    <p class="preview-card-desc">Built-in checks for performance, security, and best practices on every deployment.</p>
-                </div>
-            </div>
+    <!-- Features Grid -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Develop with your favorite tools</h2>
+          <p class="section-sub">Launch globally, instantly — on the platform made for frontend developers.</p>
         </div>
+        <div class="features-grid">
+          <a href="docs.html" class="feature-card fc-large">
+            <div class="fc-visual fc-v-next">
+              <div class="next-logo">
+                <span class="next-n">N</span>
+                <span class="next-text">Next.js</span>
+              </div>
+            </div>
+            <div class="fc-content">
+              <h3>Next.js by Vercel</h3>
+              <p>The React framework for production. Built by the team behind Vercel.</p>
+              <span class="fc-link">Learn more →</span>
+            </div>
+          </a>
+          <a href="docs.html" class="feature-card">
+            <div class="fc-icon">🔺</div>
+            <h3>Previews</h3>
+            <p>Every push creates a live preview deployment. Share and iterate faster.</p>
+            <span class="fc-link">Learn more →</span>
+          </a>
+          <a href="docs.html" class="feature-card">
+            <div class="fc-icon">🌐</div>
+            <h3>Edge Network</h3>
+            <p>Deploy to a global edge network. Your site, milliseconds from every user.</p>
+            <span class="fc-link">Learn more →</span>
+          </a>
+          <a href="docs.html" class="feature-card">
+            <div class="fc-icon">⚡</div>
+            <h3>Serverless Functions</h3>
+            <p>Write backend logic as serverless functions. Scale automatically.</p>
+            <span class="fc-link">Learn more →</span>
+          </a>
+          <a href="docs.html" class="feature-card">
+            <div class="fc-icon">🤖</div>
+            <h3>Vercel AI</h3>
+            <p>Build AI applications with the AI SDK. Stream responses from any model.</p>
+            <span class="fc-link">Learn more →</span>
+          </a>
+          <a href="docs.html" class="feature-card">
+            <div class="fc-icon">📊</div>
+            <h3>Analytics</h3>
+            <p>Real user metrics — Web Vitals, page views, and custom events.</p>
+            <span class="fc-link">Learn more →</span>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Ship Section -->
-    <section class="section section-ship">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Ship</span>
-                <h2 class="section-title">Delight every visitor</h2>
-                <p class="section-desc">Vercel's infrastructure is built to serve content at the edge, ensuring your site is fast for every visitor, everywhere.</p>
-            </div>
-            <div class="infra-grid">
-                <div class="infra-card infra-edge">
-                    <div class="infra-card-content">
-                        <h3>Edge Network</h3>
-                        <p>Content served from the closest location to your visitors. Fast by default.</p>
-                    </div>
-                    <div class="globe-visual">
-                        <div class="globe-ring"></div>
-                        <div class="globe-ring ring-2"></div>
-                        <div class="globe-dot dot-1"></div>
-                        <div class="globe-dot dot-2"></div>
-                        <div class="globe-dot dot-3"></div>
-                        <div class="globe-dot dot-4"></div>
-                        <div class="globe-dot dot-5"></div>
-                    </div>
-                </div>
-                <div class="infra-card infra-analytics">
-                    <div class="infra-card-content">
-                        <h3>Web Analytics</h3>
-                        <p>Privacy-friendly, real-time analytics with zero configuration.</p>
-                    </div>
-                    <div class="analytics-visual">
-                        <div class="bar-chart">
-                            <div class="bar" style="--h:40%"></div>
-                            <div class="bar" style="--h:65%"></div>
-                            <div class="bar" style="--h:45%"></div>
-                            <div class="bar" style="--h:80%"></div>
-                            <div class="bar" style="--h:55%"></div>
-                            <div class="bar" style="--h:90%"></div>
-                            <div class="bar" style="--h:70%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="infra-card infra-speed">
-                    <div class="infra-card-content">
-                        <h3>Speed Insights</h3>
-                        <p>Track real user Core Web Vitals for every deployment you ship.</p>
-                    </div>
-                    <div class="speed-visual">
-                        <div class="speed-meter">
-                            <div class="speed-arc"></div>
-                            <div class="speed-value">98</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="infra-card infra-firewall">
-                    <div class="infra-card-content">
-                        <h3>Firewall</h3>
-                        <p>Protect your site from attacks with automatic DDoS mitigation and custom rules.</p>
-                    </div>
-                    <div class="firewall-visual">
-                        <div class="shield">
-                            <div class="shield-check">✓</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Deploy Section -->
+    <section class="deploy-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Ship faster with instant deploys</h2>
+          <p class="section-sub">Push to Git. We handle the rest.</p>
         </div>
+        <div class="deploy-demo">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">Terminal</span>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+              <div class="term-line"><span class="prompt">$</span> <span class="cmd">npx create-next-app@latest my-app</span></div>
+              <div class="term-line dim">✓ Creating project...</div>
+              <div class="term-line dim">✓ Installing dependencies...</div>
+              <div class="term-line"><span class="prompt">$</span> <span class="cmd">cd my-app && vercel</span></div>
+              <div class="term-line success">🔗 Deployed to my-app.vercel.app</div>
+              <div class="term-line"><span class="prompt">$</span> <span class="cursor">▊</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="deploy-steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <h3>Connect</h3>
+            <p>Import from GitHub, GitLab, or Bitbucket in seconds.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <h3>Build</h3>
+            <p>Automatic builds with zero-config framework detection.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <h3>Deploy</h3>
+            <p>Ship globally to the edge in under 10 seconds.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Frameworks Section -->
-    <section class="section section-frameworks">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Works with your framework</h2>
-                <p class="section-desc">Deploy with zero configuration. Support for 35+ frameworks including Next.js, Nuxt, SvelteKit, Astro, and more.</p>
-            </div>
-            <div class="framework-grid">
-                <div class="framework-card">
-                    <div class="fw-icon fw-next">N</div>
-                    <span>Next.js</span>
-                </div>
-                <div class="framework-card">
-                    <div class="fw-icon fw-react">R</div>
-                    <span>React</span>
-                </div>
-                <div class="framework-card">
-                    <div class="fw-icon fw-svelte">S</div>
-                    <span>Svelte</span>
-                </div>
-                <div class="framework-card">
-                    <div class="fw-icon fw-nuxt">N</div>
-                    <span>Nuxt</span>
-                </div>
-                <div class="framework-card">
-                    <div class="fw-icon fw-astro">A</div>
-                    <span>Astro</span>
-                </div>
-                <div class="framework-card">
-                    <div class="fw-icon fw-remix">R</div>
-                    <span>Remix</span>
-                </div>
-                <div class="framework-card">
-                    <div class="fw-icon fw-vue">V</div>
-                    <span>Vue</span>
-                </div>
-                <div class="framework-card">
-                    <div class="fw-icon fw-gatsby">G</div>
-                    <span>Gatsby</span>
-                </div>
-            </div>
+    <!-- Framework Support -->
+    <section class="frameworks">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Works with your framework</h2>
+          <p class="section-sub">Zero-config deploys for 35+ frameworks.</p>
         </div>
+        <div class="fw-grid" id="fwGrid">
+          <div class="fw-card">
+            <div class="fw-icon">▲</div>
+            <span>Next.js</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">⚛️</div>
+            <span>React</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">💚</div>
+            <span>Vue</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">🅰️</div>
+            <span>Angular</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">🟠</div>
+            <span>Svelte</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">🚀</div>
+            <span>Astro</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">🔥</div>
+            <span>Nuxt</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">💎</div>
+            <span>Remix</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">🟣</div>
+            <span>Gatsby</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">📦</div>
+            <span>Vite</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">🔶</div>
+            <span>Hugo</span>
+          </div>
+          <div class="fw-card">
+            <div class="fw-icon">💠</div>
+            <span>Eleventy</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Customers Section -->
-    <section class="section section-customers">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Trusted by the best frontend teams</h2>
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Loved by developers worldwide</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p class="tq">"Vercel makes deployment so easy it feels like cheating. Push to main, and it's live."</p>
+            <div class="ta">
+              <div class="ta-avatar">GR</div>
+              <div><strong>Guillermo Rauch</strong><p>CEO, Vercel</p></div>
             </div>
-            <div class="customer-grid">
-                <div class="customer-logo"><span>Washington Post</span></div>
-                <div class="customer-logo"><span>Under Armour</span></div>
-                <div class="customer-logo"><span>Nintendo</span></div>
-                <div class="customer-logo"><span>HashiCorp</span></div>
-                <div class="customer-logo"><span>Notion</span></div>
-                <div class="customer-logo"><span>Loom</span></div>
-                <div class="customer-logo"><span>Sonos</span></div>
-                <div class="customer-logo"><span>Zapier</span></div>
+          </div>
+          <div class="testimonial-card">
+            <p class="tq">"We moved to Vercel and our Core Web Vitals improved by 40%. The edge network is incredible."</p>
+            <div class="ta">
+              <div class="ta-avatar">LS</div>
+              <div><strong>Lee Robinson</strong><p>VP of DX, Vercel</p></div>
             </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="tq">"Vercel's preview deployments changed how our team collaborates. Every PR is a live URL."</p>
+            <div class="ta">
+              <div class="ta-avatar">SD</div>
+              <div><strong>Sarah Drasner</strong><p>Engineering Director</p></div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section section-cta">
-        <div class="container cta-container">
-            <div class="cta-glow"></div>
-            <h2 class="cta-title">
-                <span class="cta-line">Ready to deploy?</span>
-                <span class="cta-line gradient-text">Start building today.</span>
-            </h2>
-            <div class="cta-actions">
-                <a href="#" class="btn btn-white btn-lg">
-                    <svg class="triangle-sm" width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0L16 16H0L8 0Z"/></svg>
-                    Start Deploying
-                </a>
-                <a href="#" class="btn btn-ghost btn-lg">Contact Sales</a>
-            </div>
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-triangle">▲</div>
+        <h2 class="cta-title">Start building today.</h2>
+        <p class="cta-sub">Deploy your first project in seconds. No credit card required.</p>
+        <div class="cta-actions">
+          <a href="docs.html" class="btn btn-white btn-lg">Start Deploying →</a>
+          <a href="pricing.html" class="btn btn-outline btn-lg">View Plans</a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="nav-logo footer-logo" aria-label="Vercel Home">
-                    <svg class="logo-triangle" width="76" height="18" viewBox="0 0 76 18" fill="currentColor">
-                        <path d="M37.59 0L75.18 18H0L37.59 0Z"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="footer-col">
-                <h4 class="footer-heading">Product</h4>
-                <a href="#">Previews</a>
-                <a href="#">AI</a>
-                <a href="#">Edge Functions</a>
-                <a href="#">Analytics</a>
-                <a href="#">Next.js</a>
-                <a href="#">Turbo</a>
-                <a href="#">Enterprise</a>
-                <a href="#">Changelog</a>
-            </div>
-            <div class="footer-col">
-                <h4 class="footer-heading">Resources</h4>
-                <a href="#">Documentation</a>
-                <a href="#">Experts</a>
-                <a href="#">Guides</a>
-                <a href="#">Customers</a>
-                <a href="#">Help</a>
-                <a href="#">Integrations</a>
-                <a href="#">Templates</a>
-            </div>
-            <div class="footer-col">
-                <h4 class="footer-heading">Company</h4>
-                <a href="#">About</a>
-                <a href="#">Blog</a>
-                <a href="#">Careers</a>
-                <a href="#">Contact</a>
-                <a href="#">Partners</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Legal</a>
-            </div>
-            <div class="footer-col">
-                <h4 class="footer-heading">Social</h4>
-                <a href="#">GitHub</a>
-                <a href="#">X (Twitter)</a>
-                <a href="#">YouTube</a>
-            </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <svg width="76" height="18" viewBox="0 0 76 18" fill="none">
+              <path d="M14.5 0L29 18H0L14.5 0Z" fill="currentColor"/>
+              <text x="35" y="15" fill="currentColor" font-family="Inter,-apple-system,sans-serif" font-size="15" font-weight="700" letter-spacing="-0.3">Vercel</text>
+            </svg>
+          </a>
+          <p class="footer-tagline">Build and deploy the best web experiences.</p>
         </div>
-        <div class="container footer-bottom">
-            <p>© 2026 Vercel, Inc.</p>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <a href="docs.html">Previews</a>
+          <a href="docs.html">Infrastructure</a>
+          <a href="docs.html">AI</a>
+          <a href="docs.html">Analytics</a>
         </div>
-    </footer>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="docs.html">Documentation</a>
+          <a href="docs.html">Guides</a>
+          <a href="docs.html">Templates</a>
+          <a href="changelog.html">Changelog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="pricing.html">Pricing</a>
+          <a href="index.html">About</a>
+          <a href="index.html">Blog</a>
+          <a href="index.html">Careers</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Vercel, Inc. (Clone)</p>
+        <div class="footer-social">
+          <a href="index.html">𝕏</a>
+          <a href="index.html">GitHub</a>
+          <a href="index.html">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
