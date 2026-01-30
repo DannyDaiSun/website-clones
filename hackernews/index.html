@@ -1,426 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker News</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker News</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header / Navigation -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-left">
-                <a href="#" class="logo-link">
-                    <span class="logo-box">Y</span>
-                </a>
-                <a href="#" class="site-name"><b>Hacker News</b></a>
-                <span class="nav-links">
-                    <a href="#">new</a> |
-                    <a href="#">past</a> |
-                    <a href="#">comments</a> |
-                    <a href="#">ask</a> |
-                    <a href="#">show</a> |
-                    <a href="#">jobs</a> |
-                    <a href="#">submit</a>
-                </span>
-            </div>
-            <div class="nav-right">
-                <a href="#">login</a>
-            </div>
+  <header class="hn-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html" class="hn-logo" aria-label="Hacker News home">
+          <span class="logo-box">Y</span>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html" class="nav-link active">top</a>
+          <a href="index.html?sort=new" class="nav-link">new</a>
+          <a href="index.html?sort=best" class="nav-link">best</a>
+          <a href="index.html?sort=ask" class="nav-link">ask</a>
+          <a href="index.html?sort=show" class="nav-link">show</a>
+          <a href="index.html?sort=jobs" class="nav-link">jobs</a>
+          <a href="submit.html" class="nav-link">submit</a>
         </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <table class="item-list" cellpadding="0" cellspacing="0">
-            <tbody>
-                <!-- Story 1 -->
-                <tr class="athing" data-id="1">
-                    <td class="rank" align="right" valign="top">1.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">Show HN: I built a real-time collaborative code editor in Rust</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">github.com/rustcollab</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">482 points</span> by <a href="#" class="hnuser">rustdev42</a>
-                        <span class="age"><a href="#">3 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">217 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 2 -->
-                <tr class="athing" data-id="2">
-                    <td class="rank" align="right" valign="top">2.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">The hidden cost of microservices nobody talks about</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">blog.pragmaticeng.com</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">351 points</span> by <a href="#" class="hnuser">pragmatic_dev</a>
-                        <span class="age"><a href="#">5 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">189 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 3 -->
-                <tr class="athing" data-id="3">
-                    <td class="rank" align="right" valign="top">3.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">NASA confirms water ice deposits at Moon's south pole</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">nasa.gov</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">623 points</span> by <a href="#" class="hnuser">spacefan</a>
-                        <span class="age"><a href="#">2 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">304 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 4 -->
-                <tr class="athing" data-id="4">
-                    <td class="rank" align="right" valign="top">4.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">SQLite is the most deployed software in the world (2024)</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">sqlite.org</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">278 points</span> by <a href="#" class="hnuser">dbexpert</a>
-                        <span class="age"><a href="#">6 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">142 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 5 -->
-                <tr class="athing" data-id="5">
-                    <td class="rank" align="right" valign="top">5.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">Why I stopped using AI code assistants</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">antirez.com</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">517 points</span> by <a href="#" class="hnuser">antirez</a>
-                        <span class="age"><a href="#">4 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">423 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 6 -->
-                <tr class="athing" data-id="6">
-                    <td class="rank" align="right" valign="top">6.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">A new approach to memory-safe C++ without rewriting everything</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">herbsutter.com</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">195 points</span> by <a href="#" class="hnuser">cppmod</a>
-                        <span class="age"><a href="#">7 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">156 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 7 -->
-                <tr class="athing" data-id="7">
-                    <td class="rank" align="right" valign="top">7.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">Open-source alternative to Figma built with WebGL</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">penpot.app</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">334 points</span> by <a href="#" class="hnuser">designhacker</a>
-                        <span class="age"><a href="#">1 hour ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">98 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 8 -->
-                <tr class="athing" data-id="8">
-                    <td class="rank" align="right" valign="top">8.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">Ask HN: What's the best technical book you read in 2025?</a>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">401 points</span> by <a href="#" class="hnuser">bookworm_dev</a>
-                        <span class="age"><a href="#">8 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">567 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 9 -->
-                <tr class="athing" data-id="9">
-                    <td class="rank" align="right" valign="top">9.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">How we reduced our AWS bill by 80% with a single architecture change</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">engineering.stripe.com</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">289 points</span> by <a href="#" class="hnuser">cloudopt</a>
-                        <span class="age"><a href="#">9 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">201 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 10 -->
-                <tr class="athing" data-id="10">
-                    <td class="rank" align="right" valign="top">10.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">The man who saved the world by doing nothing (2023)</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">bbc.com</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">167 points</span> by <a href="#" class="hnuser">historybuff</a>
-                        <span class="age"><a href="#">10 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">73 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 11 -->
-                <tr class="athing" data-id="11">
-                    <td class="rank" align="right" valign="top">11.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">Linux 6.14 introduces real-time kernel support by default</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">lwn.net</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">245 points</span> by <a href="#" class="hnuser">kernelhacker</a>
-                        <span class="age"><a href="#">6 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">118 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 12 -->
-                <tr class="athing" data-id="12">
-                    <td class="rank" align="right" valign="top">12.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">Writing a GPU ray tracer from scratch in a weekend</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">joshwcomeau.com</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">198 points</span> by <a href="#" class="hnuser">graphicsdev</a>
-                        <span class="age"><a href="#">11 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">85 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 13 -->
-                <tr class="athing" data-id="13">
-                    <td class="rank" align="right" valign="top">13.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">Show HN: Natively compiled Python is finally fast</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">codon-lang.org</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">312 points</span> by <a href="#" class="hnuser">pythonista</a>
-                        <span class="age"><a href="#">3 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">176 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 14 -->
-                <tr class="athing" data-id="14">
-                    <td class="rank" align="right" valign="top">14.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">The surprisingly complex world of USB-C cables</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">arstechnica.com</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">134 points</span> by <a href="#" class="hnuser">hwgeek</a>
-                        <span class="age"><a href="#">12 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">91 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-
-                <!-- Story 15 -->
-                <tr class="athing" data-id="15">
-                    <td class="rank" align="right" valign="top">15.</td>
-                    <td class="vote" valign="top">
-                        <a href="#" class="votearrow" title="upvote">&#9650;</a>
-                    </td>
-                    <td class="title-cell">
-                        <span class="titleline">
-                            <a href="#">I reverse-engineered the Spotify recommendation algorithm</a>
-                            <span class="sitebit"> (<a href="#"><span class="sitestr">medium.com/@musicml</span></a>)</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr class="subtext-row">
-                    <td colspan="2"></td>
-                    <td class="subtext">
-                        <span class="score">456 points</span> by <a href="#" class="hnuser">musicml</a>
-                        <span class="age"><a href="#">5 hours ago</a></span> |
-                        <a href="#">hide</a> |
-                        <a href="#">234 comments</a>
-                    </td>
-                </tr>
-                <tr class="spacer"><td colspan="3"></td></tr>
-            </tbody>
-        </table>
-
-        <!-- More Link -->
-        <div class="more-link">
-            <a href="#">More</a>
+      </div>
+      <div class="header-right">
+        <div class="search-wrapper">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search stories..." aria-label="Search stories">
+          <button class="search-btn" id="searchBtn" aria-label="Search">🔍</button>
         </div>
-    </main>
+        <a href="user.html?id=dang" class="nav-link login-link">login</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-line"></div>
-        <div class="footer-content">
-            <nav class="footer-nav">
-                <a href="#">Guidelines</a> |
-                <a href="#">FAQ</a> |
-                <a href="#">Lists</a> |
-                <a href="#">API</a> |
-                <a href="#">Security</a> |
-                <a href="#">Legal</a> |
-                <a href="#">Apply to YC</a> |
-                <a href="#">Contact</a>
-            </nav>
-            <form class="search-form" action="#">
-                <label for="search">Search:</label>
-                <input type="text" id="search" name="q" class="search-input">
-            </form>
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link active">top</a>
+      <a href="index.html?sort=new" class="mobile-nav-link">new</a>
+      <a href="index.html?sort=best" class="mobile-nav-link">best</a>
+      <a href="index.html?sort=ask" class="mobile-nav-link">ask</a>
+      <a href="index.html?sort=show" class="mobile-nav-link">show</a>
+      <a href="index.html?sort=jobs" class="mobile-nav-link">jobs</a>
+      <a href="submit.html" class="mobile-nav-link">submit</a>
+    </nav>
+  </div>
+
+  <!-- Search results overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-overlay-header">
+      <h2>Search Results</h2>
+      <button class="search-close" id="searchClose" aria-label="Close search">✕</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <main class="hn-main">
+    <!-- Sort tabs -->
+    <div class="sort-tabs" id="sortTabs">
+      <button class="sort-tab active" data-sort="top">🔥 Top</button>
+      <button class="sort-tab" data-sort="new">🆕 New</button>
+      <button class="sort-tab" data-sort="best">⭐ Best</button>
+      <button class="sort-tab" data-sort="ask">💬 Ask HN</button>
+      <button class="sort-tab" data-sort="show">🚀 Show HN</button>
+      <button class="sort-tab" data-sort="jobs">💼 Jobs</button>
+    </div>
+
+    <!-- Story list -->
+    <ol class="story-list" id="storyList">
+      <li class="story-item" data-id="1" data-category="top">
+        <div class="story-rank">1.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="1">▲</button>
         </div>
-    </footer>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=1" class="story-link">Rust is the most loved programming language for the 8th year in a row</a>
+            <span class="story-domain">(blog.rust-lang.org)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="1">421 points</span> by
+            <a href="user.html?id=rustfan" class="story-user">rustfan</a>
+            <span class="story-time">3 hours ago</span> |
+            <a href="item.html?id=1" class="story-comments">287 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="2" data-category="top">
+        <div class="story-rank">2.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="2">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=2" class="story-link">Show HN: I built a search engine that respects your privacy</a>
+            <span class="story-domain">(privatesearch.io)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="2">338 points</span> by
+            <a href="user.html?id=searchdev" class="story-user">searchdev</a>
+            <span class="story-time">5 hours ago</span> |
+            <a href="item.html?id=2" class="story-comments">195 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="3" data-category="top,best">
+        <div class="story-rank">3.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="3">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=3" class="story-link">Why SQLite does not use Git (2018)</a>
+            <span class="story-domain">(sqlite.org)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="3">502 points</span> by
+            <a href="user.html?id=drh" class="story-user">drh</a>
+            <span class="story-time">7 hours ago</span> |
+            <a href="item.html?id=3" class="story-comments">341 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="4" data-category="new">
+        <div class="story-rank">4.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="4">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=4" class="story-link">Linux 6.8 Released with Intel Xe driver improvements</a>
+            <span class="story-domain">(kernel.org)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="4">89 points</span> by
+            <a href="user.html?id=linuxfan" class="story-user">linuxfan</a>
+            <span class="story-time">1 hour ago</span> |
+            <a href="item.html?id=4" class="story-comments">42 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="5" data-category="new,show">
+        <div class="story-rank">5.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="5">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=5" class="story-link">Show HN: Open-source alternative to Figma built with WebGL</a>
+            <span class="story-domain">(github.com/openfigma)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="5">156 points</span> by
+            <a href="user.html?id=designhacker" class="story-user">designhacker</a>
+            <span class="story-time">2 hours ago</span> |
+            <a href="item.html?id=5" class="story-comments">73 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="6" data-category="top,best">
+        <div class="story-rank">6.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="6">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=6" class="story-link">The Great Convergence: AI, neuroscience and the future of mind</a>
+            <span class="story-domain">(nature.com)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="6">267 points</span> by
+            <a href="user.html?id=neurosci" class="story-user">neurosci</a>
+            <span class="story-time">4 hours ago</span> |
+            <a href="item.html?id=6" class="story-comments">189 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="7" data-category="ask">
+        <div class="story-rank">7.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="7">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=7" class="story-link">Ask HN: What's the best way to learn systems programming in 2024?</a>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="7">173 points</span> by
+            <a href="user.html?id=newgrad" class="story-user">newgrad</a>
+            <span class="story-time">6 hours ago</span> |
+            <a href="item.html?id=7" class="story-comments">254 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="8" data-category="top">
+        <div class="story-rank">8.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="8">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=8" class="story-link">Apple Vision Pro teardown reveals remarkable engineering</a>
+            <span class="story-domain">(ifixit.com)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="8">398 points</span> by
+            <a href="user.html?id=ifixit" class="story-user">ifixit</a>
+            <span class="story-time">8 hours ago</span> |
+            <a href="item.html?id=8" class="story-comments">312 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="9" data-category="new">
+        <div class="story-rank">9.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="9">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=9" class="story-link">PostgreSQL 17 beta introduces incremental backup support</a>
+            <span class="story-domain">(postgresql.org)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="9">67 points</span> by
+            <a href="user.html?id=pgfan" class="story-user">pgfan</a>
+            <span class="story-time">30 minutes ago</span> |
+            <a href="item.html?id=9" class="story-comments">18 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="10" data-category="top,best">
+        <div class="story-rank">10.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="10">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=10" class="story-link">A programmer's introduction to mathematics (2018)</a>
+            <span class="story-domain">(jeremykun.com)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="10">445 points</span> by
+            <a href="user.html?id=j2kun" class="story-user">j2kun</a>
+            <span class="story-time">10 hours ago</span> |
+            <a href="item.html?id=10" class="story-comments">198 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="11" data-category="ask">
+        <div class="story-rank">11.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="11">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=11" class="story-link">Ask HN: Who is hiring? (January 2024)</a>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="11">512 points</span> by
+            <a href="user.html?id=whoishiring" class="story-user">whoishiring</a>
+            <span class="story-time">1 day ago</span> |
+            <a href="item.html?id=11" class="story-comments">823 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="12" data-category="show">
+        <div class="story-rank">12.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="12">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=12" class="story-link">Show HN: Terminal-based Markdown editor with live preview</a>
+            <span class="story-domain">(github.com/termd)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="12">211 points</span> by
+            <a href="user.html?id=termdev" class="story-user">termdev</a>
+            <span class="story-time">9 hours ago</span> |
+            <a href="item.html?id=12" class="story-comments">87 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="13" data-category="jobs">
+        <div class="story-rank">13.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="13">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=13" class="story-link">Stripe is hiring backend engineers (Remote US/EU)</a>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="13">— </span>
+            <span class="story-time">2 hours ago</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="14" data-category="top">
+        <div class="story-rank">14.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="14">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=14" class="story-link">How I reduced my Docker image size by 98%</a>
+            <span class="story-domain">(blog.example.com)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="14">189 points</span> by
+            <a href="user.html?id=dockerpro" class="story-user">dockerpro</a>
+            <span class="story-time">5 hours ago</span> |
+            <a href="item.html?id=14" class="story-comments">134 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="15" data-category="new">
+        <div class="story-rank">15.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="15">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=15" class="story-link">WebAssembly is finally ready for production</a>
+            <span class="story-domain">(webassembly.org)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="15">34 points</span> by
+            <a href="user.html?id=wasmfan" class="story-user">wasmfan</a>
+            <span class="story-time">45 minutes ago</span> |
+            <a href="item.html?id=15" class="story-comments">12 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="16" data-category="jobs">
+        <div class="story-rank">16.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="16">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=16" class="story-link">YC-backed startup hiring founding engineer (SF, $180-250k)</a>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="16">— </span>
+            <span class="story-time">4 hours ago</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="17" data-category="top,show">
+        <div class="story-rank">17.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="17">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=17" class="story-link">Show HN: I reverse-engineered the Spotify algorithm</a>
+            <span class="story-domain">(spotifyalgo.com)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="17">301 points</span> by
+            <a href="user.html?id=musicdev" class="story-user">musicdev</a>
+            <span class="story-time">6 hours ago</span> |
+            <a href="item.html?id=17" class="story-comments">178 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="18" data-category="ask">
+        <div class="story-rank">18.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="18">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=18" class="story-link">Ask HN: What's your favorite under-the-radar dev tool?</a>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="18">234 points</span> by
+            <a href="user.html?id=toolhunter" class="story-user">toolhunter</a>
+            <span class="story-time">12 hours ago</span> |
+            <a href="item.html?id=18" class="story-comments">467 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="19" data-category="top,best">
+        <div class="story-rank">19.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="19">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=19" class="story-link">The unreasonable effectiveness of plain text</a>
+            <span class="story-domain">(plaintext.dev)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="19">378 points</span> by
+            <a href="user.html?id=textfiles" class="story-user">textfiles</a>
+            <span class="story-time">14 hours ago</span> |
+            <a href="item.html?id=19" class="story-comments">256 comments</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="story-item" data-id="20" data-category="new,show">
+        <div class="story-rank">20.</div>
+        <div class="story-vote">
+          <button class="upvote-btn" aria-label="Upvote" data-id="20">▲</button>
+        </div>
+        <div class="story-content">
+          <div class="story-title">
+            <a href="item.html?id=20" class="story-link">Show HN: SQLite-based full-text search for static sites</a>
+            <span class="story-domain">(github.com/sqlitesearch)</span>
+          </div>
+          <div class="story-meta">
+            <span class="story-score" data-id="20">45 points</span> by
+            <a href="user.html?id=sqlitedev" class="story-user">sqlitedev</a>
+            <span class="story-time">1 hour ago</span> |
+            <a href="item.html?id=20" class="story-comments">23 comments</a>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="more-link">
+      <a href="index.html?p=2" class="more-btn">More</a>
+    </div>
+  </main>
+
+  <footer class="hn-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Guidelines</a> |
+        <a href="index.html">FAQ</a> |
+        <a href="index.html">Lists</a> |
+        <a href="index.html">API</a> |
+        <a href="index.html">Security</a> |
+        <a href="index.html">Legal</a> |
+        <a href="index.html">Apply to YC</a> |
+        <a href="index.html">Contact</a>
+      </div>
+      <div class="footer-search">
+        <label for="footerSearch">Search:</label>
+        <input type="text" id="footerSearch" class="footer-search-input" placeholder="Search Hacker News...">
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

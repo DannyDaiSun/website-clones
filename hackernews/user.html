@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile | Hacker News</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hn-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html" class="hn-logo" aria-label="Hacker News home">
+          <span class="logo-box">Y</span>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html" class="nav-link">top</a>
+          <a href="index.html?sort=new" class="nav-link">new</a>
+          <a href="index.html?sort=best" class="nav-link">best</a>
+          <a href="index.html?sort=ask" class="nav-link">ask</a>
+          <a href="index.html?sort=show" class="nav-link">show</a>
+          <a href="index.html?sort=jobs" class="nav-link">jobs</a>
+          <a href="submit.html" class="nav-link">submit</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="search-wrapper">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search stories..." aria-label="Search stories">
+          <button class="search-btn" id="searchBtn" aria-label="Search">🔍</button>
+        </div>
+        <a href="user.html?id=dang" class="nav-link login-link">login</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">top</a>
+      <a href="index.html?sort=new" class="mobile-nav-link">new</a>
+      <a href="index.html?sort=best" class="mobile-nav-link">best</a>
+      <a href="index.html?sort=ask" class="mobile-nav-link">ask</a>
+      <a href="index.html?sort=show" class="mobile-nav-link">show</a>
+      <a href="index.html?sort=jobs" class="mobile-nav-link">jobs</a>
+      <a href="submit.html" class="mobile-nav-link">submit</a>
+    </nav>
+  </div>
+
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-overlay-header">
+      <h2>Search Results</h2>
+      <button class="search-close" id="searchClose" aria-label="Close search">✕</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <main class="hn-main user-page">
+    <section class="user-profile" id="userProfile">
+      <h1 class="user-title">User: <span id="userName">rustfan</span></h1>
+
+      <div class="profile-card">
+        <div class="profile-avatar" id="profileAvatar">
+          <svg viewBox="0 0 80 80" width="80" height="80">
+            <rect width="80" height="80" rx="8" fill="#ff6600"/>
+            <text x="40" y="52" text-anchor="middle" fill="white" font-size="36" font-weight="bold" font-family="monospace">R</text>
+          </svg>
+        </div>
+        <table class="profile-table">
+          <tr>
+            <td class="profile-label">user:</td>
+            <td class="profile-value" id="profileUser">rustfan</td>
+          </tr>
+          <tr>
+            <td class="profile-label">created:</td>
+            <td class="profile-value" id="profileCreated">March 15, 2019</td>
+          </tr>
+          <tr>
+            <td class="profile-label">karma:</td>
+            <td class="profile-value" id="profileKarma">14,872</td>
+          </tr>
+          <tr>
+            <td class="profile-label">about:</td>
+            <td class="profile-value" id="profileAbout">Systems programmer. Rust evangelist. Building safe, fast, concurrent software. Previously at Mozilla, now at a startup working on WebAssembly tooling.</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- User activity tabs -->
+      <div class="user-tabs" id="userTabs">
+        <button class="user-tab active" data-tab="submissions">📄 Submissions</button>
+        <button class="user-tab" data-tab="comments">💬 Comments</button>
+        <button class="user-tab" data-tab="favorites">⭐ Favorites</button>
+      </div>
+
+      <!-- Submissions tab -->
+      <div class="tab-content active" id="tab-submissions">
+        <ol class="story-list user-stories">
+          <li class="story-item">
+            <div class="story-vote">
+              <button class="upvote-btn upvoted" aria-label="Upvote">▲</button>
+            </div>
+            <div class="story-content">
+              <div class="story-title">
+                <a href="item.html?id=1" class="story-link">Rust is the most loved programming language for the 8th year in a row</a>
+                <span class="story-domain">(blog.rust-lang.org)</span>
+              </div>
+              <div class="story-meta">
+                <span class="story-score">421 points</span>
+                <span class="story-time">3 hours ago</span> |
+                <a href="item.html?id=1" class="story-comments">287 comments</a>
+              </div>
+            </div>
+          </li>
+          <li class="story-item">
+            <div class="story-vote">
+              <button class="upvote-btn" aria-label="Upvote">▲</button>
+            </div>
+            <div class="story-content">
+              <div class="story-title">
+                <a href="item.html?id=3" class="story-link">Async Rust is actually getting good in 2024</a>
+                <span class="story-domain">(tokio.rs)</span>
+              </div>
+              <div class="story-meta">
+                <span class="story-score">189 points</span>
+                <span class="story-time">2 days ago</span> |
+                <a href="item.html?id=3" class="story-comments">95 comments</a>
+              </div>
+            </div>
+          </li>
+          <li class="story-item">
+            <div class="story-vote">
+              <button class="upvote-btn" aria-label="Upvote">▲</button>
+            </div>
+            <div class="story-content">
+              <div class="story-title">
+                <a href="item.html?id=5" class="story-link">Building a database from scratch in Rust</a>
+                <span class="story-domain">(rustdb.dev)</span>
+              </div>
+              <div class="story-meta">
+                <span class="story-score">312 points</span>
+                <span class="story-time">1 week ago</span> |
+                <a href="item.html?id=5" class="story-comments">156 comments</a>
+              </div>
+            </div>
+          </li>
+          <li class="story-item">
+            <div class="story-vote">
+              <button class="upvote-btn" aria-label="Upvote">▲</button>
+            </div>
+            <div class="story-content">
+              <div class="story-title">
+                <a href="item.html?id=7" class="story-link">Show HN: Rust-based CLI tool for managing Kubernetes clusters</a>
+                <span class="story-domain">(github.com/kubetool)</span>
+              </div>
+              <div class="story-meta">
+                <span class="story-score">78 points</span>
+                <span class="story-time">2 weeks ago</span> |
+                <a href="item.html?id=7" class="story-comments">34 comments</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Comments tab -->
+      <div class="tab-content" id="tab-comments">
+        <div class="user-comments-list">
+          <div class="user-comment-item">
+            <div class="user-comment-meta">
+              on: <a href="item.html?id=10" class="story-link">A programmer's introduction to mathematics</a>
+              <span class="comment-time">2 hours ago</span>
+            </div>
+            <div class="user-comment-body">
+              <p>This is one of the best resources for programmers wanting to deepen their math skills. I worked through the exercises last year and it transformed how I think about algorithms.</p>
+            </div>
+          </div>
+          <div class="user-comment-item">
+            <div class="user-comment-meta">
+              on: <a href="item.html?id=14" class="story-link">How I reduced my Docker image size by 98%</a>
+              <span class="comment-time">5 hours ago</span>
+            </div>
+            <div class="user-comment-body">
+              <p>Multi-stage builds with a Rust binary and scratch base image can get you down to single-digit MB images. The key is static linking with musl.</p>
+            </div>
+          </div>
+          <div class="user-comment-item">
+            <div class="user-comment-meta">
+              on: <a href="item.html?id=6" class="story-link">The Great Convergence: AI, neuroscience and the future of mind</a>
+              <span class="comment-time">1 day ago</span>
+            </div>
+            <div class="user-comment-body">
+              <p>Fascinating article. The comparison between neural network architectures and biological neural circuits is becoming increasingly relevant as we discover more about how the brain actually processes information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Favorites tab -->
+      <div class="tab-content" id="tab-favorites">
+        <ol class="story-list user-stories">
+          <li class="story-item">
+            <div class="story-vote">
+              <button class="upvote-btn upvoted" aria-label="Upvote">▲</button>
+            </div>
+            <div class="story-content">
+              <div class="story-title">
+                <a href="item.html?id=3" class="story-link">Why SQLite does not use Git (2018)</a>
+                <span class="story-domain">(sqlite.org)</span>
+              </div>
+              <div class="story-meta">
+                <span class="story-score">502 points</span>
+                <span class="story-time">7 hours ago</span> |
+                <a href="item.html?id=3" class="story-comments">341 comments</a>
+              </div>
+            </div>
+          </li>
+          <li class="story-item">
+            <div class="story-vote">
+              <button class="upvote-btn upvoted" aria-label="Upvote">▲</button>
+            </div>
+            <div class="story-content">
+              <div class="story-title">
+                <a href="item.html?id=19" class="story-link">The unreasonable effectiveness of plain text</a>
+                <span class="story-domain">(plaintext.dev)</span>
+              </div>
+              <div class="story-meta">
+                <span class="story-score">378 points</span>
+                <span class="story-time">14 hours ago</span> |
+                <a href="item.html?id=19" class="story-comments">256 comments</a>
+              </div>
+            </div>
+          </li>
+          <li class="story-item">
+            <div class="story-vote">
+              <button class="upvote-btn upvoted" aria-label="Upvote">▲</button>
+            </div>
+            <div class="story-content">
+              <div class="story-title">
+                <a href="item.html?id=10" class="story-link">A programmer's introduction to mathematics (2018)</a>
+                <span class="story-domain">(jeremykun.com)</span>
+              </div>
+              <div class="story-meta">
+                <span class="story-score">445 points</span>
+                <span class="story-time">10 hours ago</span> |
+                <a href="item.html?id=10" class="story-comments">198 comments</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hn-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Guidelines</a> |
+        <a href="index.html">FAQ</a> |
+        <a href="index.html">Lists</a> |
+        <a href="index.html">API</a> |
+        <a href="index.html">Security</a> |
+        <a href="index.html">Legal</a> |
+        <a href="index.html">Apply to YC</a> |
+        <a href="index.html">Contact</a>
+      </div>
+      <div class="footer-search">
+        <label for="footerSearch">Search:</label>
+        <input type="text" id="footerSearch" class="footer-search-input" placeholder="Search Hacker News...">
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

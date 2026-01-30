@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker News - Story</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hn-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html" class="hn-logo" aria-label="Hacker News home">
+          <span class="logo-box">Y</span>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html" class="nav-link">top</a>
+          <a href="index.html?sort=new" class="nav-link">new</a>
+          <a href="index.html?sort=best" class="nav-link">best</a>
+          <a href="index.html?sort=ask" class="nav-link">ask</a>
+          <a href="index.html?sort=show" class="nav-link">show</a>
+          <a href="index.html?sort=jobs" class="nav-link">jobs</a>
+          <a href="submit.html" class="nav-link">submit</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="search-wrapper">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search stories..." aria-label="Search stories">
+          <button class="search-btn" id="searchBtn" aria-label="Search">🔍</button>
+        </div>
+        <a href="user.html?id=dang" class="nav-link login-link">login</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">top</a>
+      <a href="index.html?sort=new" class="mobile-nav-link">new</a>
+      <a href="index.html?sort=best" class="mobile-nav-link">best</a>
+      <a href="index.html?sort=ask" class="mobile-nav-link">ask</a>
+      <a href="index.html?sort=show" class="mobile-nav-link">show</a>
+      <a href="index.html?sort=jobs" class="mobile-nav-link">jobs</a>
+      <a href="submit.html" class="mobile-nav-link">submit</a>
+    </nav>
+  </div>
+
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-overlay-header">
+      <h2>Search Results</h2>
+      <button class="search-close" id="searchClose" aria-label="Close search">✕</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <main class="hn-main item-page">
+    <!-- Story header -->
+    <article class="item-detail" id="itemDetail">
+      <div class="item-header">
+        <div class="story-vote">
+          <button class="upvote-btn upvoted" aria-label="Upvote" data-id="story">▲</button>
+        </div>
+        <div class="item-title-area">
+          <h1 class="item-title" id="itemTitle">Rust is the most loved programming language for the 8th year in a row</h1>
+          <span class="story-domain" id="itemDomain">(blog.rust-lang.org)</span>
+        </div>
+      </div>
+      <div class="item-meta">
+        <span class="story-score" id="itemScore">421 points</span> by
+        <a href="user.html?id=rustfan" class="story-user" id="itemAuthor">rustfan</a>
+        <span class="story-time" id="itemTime">3 hours ago</span> |
+        <a href="#comments" class="story-comments" id="itemCommentCount">287 comments</a>
+      </div>
+
+      <!-- Item text body (for Ask HN / Show HN) -->
+      <div class="item-body" id="itemBody">
+        <p>The Stack Overflow Developer Survey 2024 results are in. Rust continues its remarkable streak as the most loved programming language, with 87% of developers expressing a desire to continue using it. This marks the 8th consecutive year Rust has held this position.</p>
+        <p>Key findings from the survey include: memory safety concerns driving adoption, growing use in production systems, and the emergence of Rust in web development through WebAssembly.</p>
+      </div>
+    </article>
+
+    <!-- Comment form -->
+    <section class="comment-form-section" id="comments">
+      <h2 class="sr-only">Add a comment</h2>
+      <form class="comment-form" id="commentForm">
+        <textarea class="comment-textarea" id="commentText" rows="6" placeholder="Write your comment..."></textarea>
+        <button type="submit" class="comment-submit-btn">add comment</button>
+      </form>
+    </section>
+
+    <!-- Comment thread -->
+    <section class="comments-section">
+      <div class="comment-thread" id="commentThread">
+        <!-- Comment 1 -->
+        <div class="comment" data-id="c1" data-depth="0">
+          <div class="comment-header">
+            <button class="upvote-btn comment-upvote" data-id="c1" aria-label="Upvote comment">▲</button>
+            <a href="user.html?id=systemsprog" class="comment-author">systemsprog</a>
+            <span class="comment-time">2 hours ago</span>
+            <button class="comment-toggle" aria-label="Toggle comment" data-id="c1">[–]</button>
+          </div>
+          <div class="comment-body" id="comment-body-c1">
+            <p>I've been writing Rust professionally for 3 years now. The learning curve is real — it took me about 6 months before I felt productive. But once you get past the borrow checker struggles, it's genuinely one of the most enjoyable languages to work with.</p>
+            <p>The type system catches so many bugs at compile time that I rarely have production issues related to memory safety. That alone is worth the investment.</p>
+            <div class="comment-actions">
+              <button class="reply-btn" data-parent="c1">reply</button>
+              <button class="flag-btn">flag</button>
+            </div>
+          </div>
+
+          <!-- Nested reply -->
+          <div class="comment" data-id="c1-1" data-depth="1">
+            <div class="comment-header">
+              <button class="upvote-btn comment-upvote" data-id="c1-1" aria-label="Upvote comment">▲</button>
+              <a href="user.html?id=gofan" class="comment-author">gofan</a>
+              <span class="comment-time">1 hour ago</span>
+              <button class="comment-toggle" aria-label="Toggle comment" data-id="c1-1">[–]</button>
+            </div>
+            <div class="comment-body" id="comment-body-c1-1">
+              <p>Counter-point: Go achieves similar safety with a much lower learning curve. The Rust borrow checker is a brilliant innovation, but for most backend services, Go's garbage collector and simple concurrency model is perfectly adequate.</p>
+              <p>I use Rust for systems-level work and Go for services. Both are excellent tools.</p>
+              <div class="comment-actions">
+                <button class="reply-btn" data-parent="c1-1">reply</button>
+                <button class="flag-btn">flag</button>
+              </div>
+            </div>
+
+            <!-- Deeper nested reply -->
+            <div class="comment" data-id="c1-1-1" data-depth="2">
+              <div class="comment-header">
+                <button class="upvote-btn comment-upvote" data-id="c1-1-1" aria-label="Upvote comment">▲</button>
+                <a href="user.html?id=systemsprog" class="comment-author">systemsprog</a>
+                <span class="comment-time">45 minutes ago</span>
+                <button class="comment-toggle" aria-label="Toggle comment" data-id="c1-1-1">[–]</button>
+              </div>
+              <div class="comment-body" id="comment-body-c1-1-1">
+                <p>Absolutely agree — different tools for different jobs. I wouldn't use Rust for a CRUD API either. Where Rust shines is when you need predictable latency, zero-cost abstractions, and guaranteed memory safety without a GC.</p>
+                <div class="comment-actions">
+                  <button class="reply-btn" data-parent="c1-1-1">reply</button>
+                  <button class="flag-btn">flag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment 2 -->
+        <div class="comment" data-id="c2" data-depth="0">
+          <div class="comment-header">
+            <button class="upvote-btn comment-upvote" data-id="c2" aria-label="Upvote comment">▲</button>
+            <a href="user.html?id=webdev99" class="comment-author">webdev99</a>
+            <span class="comment-time">2 hours ago</span>
+            <button class="comment-toggle" aria-label="Toggle comment" data-id="c2">[–]</button>
+          </div>
+          <div class="comment-body" id="comment-body-c2">
+            <p>"Most loved" is a metric that measures satisfaction among existing users, not overall popularity. Python, JavaScript, and TypeScript still dominate in terms of actual usage.</p>
+            <p>That said, Rust's growth trajectory is impressive. The number of Rust job postings has tripled in the last two years.</p>
+            <div class="comment-actions">
+              <button class="reply-btn" data-parent="c2">reply</button>
+              <button class="flag-btn">flag</button>
+            </div>
+          </div>
+
+          <div class="comment" data-id="c2-1" data-depth="1">
+            <div class="comment-header">
+              <button class="upvote-btn comment-upvote" data-id="c2-1" aria-label="Upvote comment">▲</button>
+              <a href="user.html?id=datanerd" class="comment-author">datanerd</a>
+              <span class="comment-time">1 hour ago</span>
+              <button class="comment-toggle" aria-label="Toggle comment" data-id="c2-1">[–]</button>
+            </div>
+            <div class="comment-body" id="comment-body-c2-1">
+              <p>This is an important distinction. The survey methodology has always been a bit questionable — it's a self-selected sample of Stack Overflow users, which skews toward certain demographics.</p>
+              <div class="comment-actions">
+                <button class="reply-btn" data-parent="c2-1">reply</button>
+                <button class="flag-btn">flag</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment 3 -->
+        <div class="comment" data-id="c3" data-depth="0">
+          <div class="comment-header">
+            <button class="upvote-btn comment-upvote" data-id="c3" aria-label="Upvote comment">▲</button>
+            <a href="user.html?id=embedded_eng" class="comment-author">embedded_eng</a>
+            <span class="comment-time">3 hours ago</span>
+            <button class="comment-toggle" aria-label="Toggle comment" data-id="c3">[–]</button>
+          </div>
+          <div class="comment-body" id="comment-body-c3">
+            <p>We migrated our embedded firmware from C to Rust last year. The initial port took longer than expected, but since then we've had zero memory-related bugs in production. Previously, those were roughly 40% of our bug reports.</p>
+            <p>The tooling (cargo, clippy, rustfmt) is also miles ahead of anything in the C/C++ ecosystem. Having a proper package manager and build system out of the box is transformative.</p>
+            <div class="comment-actions">
+              <button class="reply-btn" data-parent="c3">reply</button>
+              <button class="flag-btn">flag</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment 4 -->
+        <div class="comment" data-id="c4" data-depth="0">
+          <div class="comment-header">
+            <button class="upvote-btn comment-upvote" data-id="c4" aria-label="Upvote comment">▲</button>
+            <a href="user.html?id=skeptic42" class="comment-author">skeptic42</a>
+            <span class="comment-time">1 hour ago</span>
+            <button class="comment-toggle" aria-label="Toggle comment" data-id="c4">[–]</button>
+          </div>
+          <div class="comment-body" id="comment-body-c4">
+            <p>Every year, the same headline. "Most loved" means people who already use it enjoy it. It says nothing about whether it's the right choice for most projects.</p>
+            <p>I'd love to see a "most productive" survey instead. My guess is Python and TypeScript would dominate.</p>
+            <div class="comment-actions">
+              <button class="reply-btn" data-parent="c4">reply</button>
+              <button class="flag-btn">flag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hn-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Guidelines</a> |
+        <a href="index.html">FAQ</a> |
+        <a href="index.html">Lists</a> |
+        <a href="index.html">API</a> |
+        <a href="index.html">Security</a> |
+        <a href="index.html">Legal</a> |
+        <a href="index.html">Apply to YC</a> |
+        <a href="index.html">Contact</a>
+      </div>
+      <div class="footer-search">
+        <label for="footerSearch">Search:</label>
+        <input type="text" id="footerSearch" class="footer-search-input" placeholder="Search Hacker News...">
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

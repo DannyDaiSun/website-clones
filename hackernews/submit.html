@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit | Hacker News</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hn-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html" class="hn-logo" aria-label="Hacker News home">
+          <span class="logo-box">Y</span>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html" class="nav-link">top</a>
+          <a href="index.html?sort=new" class="nav-link">new</a>
+          <a href="index.html?sort=best" class="nav-link">best</a>
+          <a href="index.html?sort=ask" class="nav-link">ask</a>
+          <a href="index.html?sort=show" class="nav-link">show</a>
+          <a href="index.html?sort=jobs" class="nav-link">jobs</a>
+          <a href="submit.html" class="nav-link active">submit</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="search-wrapper">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search stories..." aria-label="Search stories">
+          <button class="search-btn" id="searchBtn" aria-label="Search">🔍</button>
+        </div>
+        <a href="user.html?id=dang" class="nav-link login-link">login</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">top</a>
+      <a href="index.html?sort=new" class="mobile-nav-link">new</a>
+      <a href="index.html?sort=best" class="mobile-nav-link">best</a>
+      <a href="index.html?sort=ask" class="mobile-nav-link">ask</a>
+      <a href="index.html?sort=show" class="mobile-nav-link">show</a>
+      <a href="index.html?sort=jobs" class="mobile-nav-link">jobs</a>
+      <a href="submit.html" class="mobile-nav-link active">submit</a>
+    </nav>
+  </div>
+
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-overlay-header">
+      <h2>Search Results</h2>
+      <button class="search-close" id="searchClose" aria-label="Close search">✕</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <main class="hn-main submit-page">
+    <section class="submit-section">
+      <h1 class="submit-title">Submit</h1>
+      <form class="submit-form" id="submitForm">
+        <div class="form-group">
+          <label for="submitTitle" class="form-label">title</label>
+          <input type="text" id="submitTitle" class="form-input" required placeholder="Enter a descriptive title">
+        </div>
+        <div class="form-group">
+          <label for="submitUrl" class="form-label">url</label>
+          <input type="url" id="submitUrl" class="form-input" placeholder="https://example.com/article">
+        </div>
+        <div class="form-divider">
+          <span class="divider-text">or</span>
+        </div>
+        <div class="form-group">
+          <label for="submitText" class="form-label">text</label>
+          <textarea id="submitText" class="form-textarea" rows="8" placeholder="Write your post text here (for Ask HN, Show HN, etc.)"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">submit</button>
+        </div>
+        <div class="form-help">
+          <p>Leave url blank to submit a question for discussion. If there is no url, text will appear at the top of the thread. If there is a url, text is optional.</p>
+          <p>To submit an "Ask HN" or "Show HN", start your title with "Ask HN:" or "Show HN:"</p>
+        </div>
+      </form>
+
+      <!-- Submit success modal -->
+      <div class="modal-overlay" id="submitModal">
+        <div class="modal-content">
+          <div class="modal-icon">✓</div>
+          <h2 class="modal-title">Story Submitted!</h2>
+          <p class="modal-text">Your story has been submitted to Hacker News. It will appear on the "new" page.</p>
+          <div class="modal-preview" id="modalPreview">
+            <div class="story-item preview-item">
+              <div class="story-rank">●</div>
+              <div class="story-vote">
+                <button class="upvote-btn upvoted" aria-label="Upvoted">▲</button>
+              </div>
+              <div class="story-content">
+                <div class="story-title">
+                  <span class="story-link" id="previewTitle">Your Story Title</span>
+                  <span class="story-domain" id="previewDomain"></span>
+                </div>
+                <div class="story-meta">
+                  <span class="story-score">1 point</span> by
+                  <a href="user.html?id=you" class="story-user">you</a>
+                  <span class="story-time">just now</span> |
+                  <span class="story-comments">0 comments</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <a href="index.html?sort=new" class="modal-btn">View on New Page</a>
+            <button class="modal-btn modal-btn-secondary" id="modalClose">Close</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent submissions sidebar -->
+    <aside class="submit-sidebar">
+      <h2 class="sidebar-title">📝 Submission Guidelines</h2>
+      <div class="guidelines-list">
+        <div class="guideline-item">
+          <h3>What to Submit</h3>
+          <p>On-Topic: Anything that good hackers would find interesting. That includes more than hacking and startups. If you had to reduce it to a sentence, the answer might be: anything that gratifies one's intellectual curiosity.</p>
+        </div>
+        <div class="guideline-item">
+          <h3>Off-Topic</h3>
+          <p>Most stories about politics, or crime, or sports. Videos of pratfalls or disasters. If they'd cover it on TV news, it's probably off-topic.</p>
+        </div>
+        <div class="guideline-item">
+          <h3>Title</h3>
+          <p>Please use the original title, unless it is misleading or linkbait; don't editorialize.</p>
+        </div>
+        <div class="guideline-item">
+          <h3>Duplicates</h3>
+          <p>Please don't submit a story that's already on the front page, or was there recently. Search before posting.</p>
+        </div>
+      </div>
+
+      <h2 class="sidebar-title">🔥 Recent Submissions</h2>
+      <ul class="recent-submissions">
+        <li><a href="item.html?id=15">WebAssembly is finally ready for production</a></li>
+        <li><a href="item.html?id=9">PostgreSQL 17 beta introduces incremental backup</a></li>
+        <li><a href="item.html?id=4">Linux 6.8 Released with Intel Xe improvements</a></li>
+        <li><a href="item.html?id=20">SQLite-based full-text search for static sites</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="hn-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Guidelines</a> |
+        <a href="index.html">FAQ</a> |
+        <a href="index.html">Lists</a> |
+        <a href="index.html">API</a> |
+        <a href="index.html">Security</a> |
+        <a href="index.html">Legal</a> |
+        <a href="index.html">Apply to YC</a> |
+        <a href="index.html">Contact</a>
+      </div>
+      <div class="footer-search">
+        <label for="footerSearch">Search:</label>
+        <input type="text" id="footerSearch" class="footer-search-input" placeholder="Search Hacker News...">
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
