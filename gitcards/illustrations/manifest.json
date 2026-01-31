@@ -2,74 +2,74 @@
   "generated": [
     {
       "repo": "QwenLM/Qwen3-ASR",
-      "filename": "QwenLM_Qwen3-ASR.jpg",
-      "model": "pollinations",
-      "generatedAt": "2026-01-31T09:04:34Z",
-      "sizeBytes": 93409
+      "filename": "QwenLM_Qwen3-ASR.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-01-31T13:39:12.199Z",
+      "sizeBytes": 3538472
     },
     {
       "repo": "Robbyant/lingbot-world",
-      "filename": "Robbyant_lingbot-world.jpg",
-      "model": "pollinations",
-      "generatedAt": "2026-01-31T09:04:34Z",
-      "sizeBytes": 86770
+      "filename": "Robbyant_lingbot-world.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-01-31T13:36:52.861Z",
+      "sizeBytes": 3357544
     },
     {
       "repo": "VoltAgent/awesome-openclaw-skills",
-      "filename": "VoltAgent_awesome-openclaw-skills.jpg",
-      "model": "pollinations",
-      "generatedAt": "2026-01-31T09:04:34Z",
-      "sizeBytes": 85570
+      "filename": "VoltAgent_awesome-openclaw-skills.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-01-31T13:28:30.992Z",
+      "sizeBytes": 3449160
     },
     {
       "repo": "antfu/skills",
-      "filename": "antfu_skills.jpg",
-      "model": "pollinations",
-      "generatedAt": "2026-01-31T09:04:34Z",
-      "sizeBytes": 85635
+      "filename": "antfu_skills.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-01-31T13:32:52.206Z",
+      "sizeBytes": 3397859
     },
     {
       "repo": "cloudflare/moltworker",
-      "filename": "cloudflare_moltworker.jpg",
-      "model": "pollinations",
-      "generatedAt": "2026-01-31T09:04:34Z",
-      "sizeBytes": 82722
+      "filename": "cloudflare_moltworker.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-01-31T13:30:47.699Z",
+      "sizeBytes": 3605722
     },
     {
       "repo": "deepseek-ai/DeepSeek-OCR-2",
-      "filename": "deepseek-ai_DeepSeek-OCR-2.jpg",
-      "model": "pollinations",
-      "generatedAt": "2026-01-31T09:04:34Z",
-      "sizeBytes": 81722
+      "filename": "deepseek-ai_DeepSeek-OCR-2.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-01-31T13:33:53.824Z",
+      "sizeBytes": 3469900
     },
     {
       "repo": "forrestchang/andrej-karpathy-skills",
-      "filename": "forrestchang_andrej-karpathy-skills.jpg",
-      "model": "pollinations",
-      "generatedAt": "2026-01-31T09:04:34Z",
-      "sizeBytes": 72050
+      "filename": "forrestchang_andrej-karpathy-skills.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-01-31T13:31:42.463Z",
+      "sizeBytes": 3524492
     },
     {
       "repo": "lukilabs/beautiful-mermaid",
-      "filename": "lukilabs_beautiful-mermaid.jpg",
-      "model": "pollinations",
-      "generatedAt": "2026-01-31T09:04:34Z",
-      "sizeBytes": 82195
+      "filename": "lukilabs_beautiful-mermaid.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-01-31T13:29:40.951Z",
+      "sizeBytes": 3590269
     },
     {
       "repo": "m1heng/clawdbot-feishu",
-      "filename": "m1heng_clawdbot-feishu.jpg",
-      "model": "pollinations",
-      "generatedAt": "2026-01-31T09:04:34Z",
-      "sizeBytes": 78984
+      "filename": "m1heng_clawdbot-feishu.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-01-31T13:34:50.053Z",
+      "sizeBytes": 3369937
     },
     {
       "repo": "mindfold-ai/Trellis",
-      "filename": "mindfold-ai_Trellis.jpg",
-      "model": "pollinations",
-      "generatedAt": "2026-01-31T09:04:34Z",
-      "sizeBytes": 75588
+      "filename": "mindfold-ai_Trellis.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-01-31T13:35:49.149Z",
+      "sizeBytes": 3257688
     }
   ],
-  "lastRun": "2026-01-31T09:04:34Z"
+  "lastRun": "2026-01-31T13:39:12.200Z"
 }
