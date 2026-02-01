@@ -15,13 +15,6 @@
       "sizeBytes": 3357544
     },
     {
-      "repo": "VoltAgent/awesome-openclaw-skills",
-      "filename": "VoltAgent_awesome-openclaw-skills.png",
-      "model": "gpt-image-1",
-      "generatedAt": "2026-01-31T13:28:30.992Z",
-      "sizeBytes": 3449160
-    },
-    {
       "repo": "antfu/skills",
       "filename": "antfu_skills.png",
       "model": "gpt-image-1",
@@ -57,19 +50,26 @@
       "sizeBytes": 3590269
     },
     {
-      "repo": "m1heng/clawdbot-feishu",
-      "filename": "m1heng_clawdbot-feishu.png",
-      "model": "gpt-image-1",
-      "generatedAt": "2026-01-31T13:34:50.053Z",
-      "sizeBytes": 3369937
-    },
-    {
       "repo": "mindfold-ai/Trellis",
       "filename": "mindfold-ai_Trellis.png",
       "model": "gpt-image-1",
       "generatedAt": "2026-01-31T13:35:49.149Z",
       "sizeBytes": 3257688
+    },
+    {
+      "repo": "DingTalk-Real-AI/dingtalk-moltbot-connector",
+      "filename": "DingTalk-Real-AI_dingtalk-moltbot-connector.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-02-01T05:35:20.868Z",
+      "sizeBytes": 3444674
+    },
+    {
+      "repo": "jmuncor/tokentap",
+      "filename": "jmuncor_tokentap.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-02-01T05:36:19.861Z",
+      "sizeBytes": 3180887
     }
   ],
-  "lastRun": "2026-01-31T13:39:12.200Z"
+  "lastRun": "2026-02-01T05:36:19.881Z"
 }
