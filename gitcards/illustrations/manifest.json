@@ -50,26 +50,26 @@
       "sizeBytes": 3590269
     },
     {
-      "repo": "DingTalk-Real-AI/dingtalk-moltbot-connector",
-      "filename": "DingTalk-Real-AI_dingtalk-moltbot-connector.png",
+      "repo": "gavrielc/nanoclaw",
+      "filename": "gavrielc_nanoclaw.png",
       "model": "gpt-image-1",
-      "generatedAt": "2026-02-01T05:35:20.868Z",
-      "sizeBytes": 3444674
+      "generatedAt": "2026-02-02T17:02:26.283Z",
+      "sizeBytes": 3324270
     },
     {
-      "repo": "miaoxworld/OpenClawInstaller",
-      "filename": "miaoxworld_OpenClawInstaller.png",
+      "repo": "HKUDS/nanobot",
+      "filename": "HKUDS_nanobot.png",
       "model": "gpt-image-1",
-      "generatedAt": "2026-02-02T05:36:56.482Z",
-      "sizeBytes": 3316377
+      "generatedAt": "2026-02-02T17:03:37.082Z",
+      "sizeBytes": 3472544
     },
     {
-      "repo": "zarazhangrui/frontend-slides",
-      "filename": "zarazhangrui_frontend-slides.png",
+      "repo": "Leey21/awesome-ai-research-writing",
+      "filename": "Leey21_awesome-ai-research-writing.png",
       "model": "gpt-image-1",
-      "generatedAt": "2026-02-02T05:38:10.626Z",
-      "sizeBytes": 3449069
+      "generatedAt": "2026-02-02T17:04:54.628Z",
+      "sizeBytes": 3543952
     }
   ],
-  "lastRun": "2026-02-02T05:38:10.640Z"
+  "lastRun": "2026-02-02T17:04:57.638Z"
 }
