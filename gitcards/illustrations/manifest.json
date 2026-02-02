@@ -50,13 +50,6 @@
       "sizeBytes": 3590269
     },
     {
-      "repo": "mindfold-ai/Trellis",
-      "filename": "mindfold-ai_Trellis.png",
-      "model": "gpt-image-1",
-      "generatedAt": "2026-01-31T13:35:49.149Z",
-      "sizeBytes": 3257688
-    },
-    {
       "repo": "DingTalk-Real-AI/dingtalk-moltbot-connector",
       "filename": "DingTalk-Real-AI_dingtalk-moltbot-connector.png",
       "model": "gpt-image-1",
@@ -64,12 +57,19 @@
       "sizeBytes": 3444674
     },
     {
-      "repo": "jmuncor/tokentap",
-      "filename": "jmuncor_tokentap.png",
+      "repo": "miaoxworld/OpenClawInstaller",
+      "filename": "miaoxworld_OpenClawInstaller.png",
       "model": "gpt-image-1",
-      "generatedAt": "2026-02-01T05:36:19.861Z",
-      "sizeBytes": 3180887
+      "generatedAt": "2026-02-02T05:36:56.482Z",
+      "sizeBytes": 3316377
+    },
+    {
+      "repo": "zarazhangrui/frontend-slides",
+      "filename": "zarazhangrui_frontend-slides.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-02-02T05:38:10.626Z",
+      "sizeBytes": 3449069
     }
   ],
-  "lastRun": "2026-02-01T05:36:19.881Z"
+  "lastRun": "2026-02-02T05:38:10.640Z"
 }
