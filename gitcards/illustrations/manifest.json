@@ -1,48 +1,6 @@
 {
   "generated": [
     {
-      "repo": "QwenLM/Qwen3-ASR",
-      "filename": "QwenLM_Qwen3-ASR.png",
-      "model": "gpt-image-1",
-      "generatedAt": "2026-01-31T13:39:12.199Z",
-      "sizeBytes": 3538472
-    },
-    {
-      "repo": "Robbyant/lingbot-world",
-      "filename": "Robbyant_lingbot-world.png",
-      "model": "gpt-image-1",
-      "generatedAt": "2026-01-31T13:36:52.861Z",
-      "sizeBytes": 3357544
-    },
-    {
-      "repo": "antfu/skills",
-      "filename": "antfu_skills.png",
-      "model": "gpt-image-1",
-      "generatedAt": "2026-01-31T13:32:52.206Z",
-      "sizeBytes": 3397859
-    },
-    {
-      "repo": "cloudflare/moltworker",
-      "filename": "cloudflare_moltworker.png",
-      "model": "gpt-image-1",
-      "generatedAt": "2026-01-31T13:30:47.699Z",
-      "sizeBytes": 3605722
-    },
-    {
-      "repo": "deepseek-ai/DeepSeek-OCR-2",
-      "filename": "deepseek-ai_DeepSeek-OCR-2.png",
-      "model": "gpt-image-1",
-      "generatedAt": "2026-01-31T13:33:53.824Z",
-      "sizeBytes": 3469900
-    },
-    {
-      "repo": "forrestchang/andrej-karpathy-skills",
-      "filename": "forrestchang_andrej-karpathy-skills.png",
-      "model": "gpt-image-1",
-      "generatedAt": "2026-01-31T13:31:42.463Z",
-      "sizeBytes": 3524492
-    },
-    {
       "repo": "lukilabs/beautiful-mermaid",
       "filename": "lukilabs_beautiful-mermaid.png",
       "model": "gpt-image-1",
@@ -50,26 +8,137 @@
       "sizeBytes": 3590269
     },
     {
+      "repo": "deepseek-ai/DeepSeek-V3",
+      "filename": "deepseek-ai_DeepSeek-V3.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-02-04T09:45:11.000Z",
+      "sizeBytes": 2506660,
+      "features": [
+        "On top of the efficient architecture of DeepSeek",
+        "We investigate a Multi",
+        "At an economical cost of only 2.664M H800 GPU hours, we complete the pre"
+      ],
+      "validated": true
+    },
+    {
+      "repo": "QwenLM/Qwen3-ASR",
+      "filename": "QwenLM_Qwen3-ASR.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-02-04T09:51:10.000Z",
+      "sizeBytes": 2420319,
+      "features": [
+        "2026.1.29: \ud83c\udf89\ud83c\udf89\ud83c\udf89 We have released the Qwen3-ASR series (0.6B/1.7B) an...",
+        "Launch Local Web UI Demo",
+        "Deployment with vLLM",
+        "Fine Tuning"
+      ],
+      "validated": true
+    },
+    {
+      "repo": "antfu/skills",
+      "filename": "antfu_skills.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-02-04T09:52:46.000Z",
+      "sizeBytes": 2486382,
+      "features": [],
+      "validated": true
+    },
+    {
+      "repo": "cloudflare/moltworker",
+      "filename": "cloudflare_moltworker.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-02-04T09:54:24.000Z",
+      "sizeBytes": 2536792,
+      "features": [
+        "Workers Paid plan ($5 USD/month) \u2014 required for Cloudflare Sandbox ...",
+        "Anthropic API key \u2014 for Claude access,",
+        "Cloudflare Access (authentication)",
+        "Browser Rendering (for browser navigation)"
+      ],
+      "validated": true
+    },
+    {
+      "repo": "deepseek-ai/DeepSeek-OCR-2",
+      "filename": "deepseek-ai_DeepSeek-OCR-2.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-02-04T09:56:05.000Z",
+      "sizeBytes": 2445940,
+      "features": [
+        "vLLM Inference",
+        "Transformers Inference",
+        "download the vllm-0.8.5 whl",
+        "Transformers"
+      ],
+      "validated": true
+    },
+    {
+      "repo": "forrestchang/andrej-karpathy-skills",
+      "filename": "forrestchang_andrej-karpathy-skills.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-02-04T09:57:03.000Z",
+      "sizeBytes": 2389345,
+      "features": [
+        "No features beyond what was asked",
+        "No abstractions for single-use code",
+        "No \"flexibility\" or \"configurability\" that wasn't requested",
+        "No error handling for impossible scenarios"
+      ],
+      "validated": true
+    },
+    {
       "repo": "gavrielc/nanoclaw",
       "filename": "gavrielc_nanoclaw.png",
       "model": "gpt-image-1",
-      "generatedAt": "2026-02-02T17:02:26.283Z",
-      "sizeBytes": 3324270
+      "generatedAt": "2026-02-04T10:01:37.000Z",
+      "sizeBytes": 2436625,
+      "features": [
+        "\"Change the trigger word to @Bob\"",
+        "\"Remember in the future to make responses shorter and more direct\"",
+        "\"Add a custom greeting when I say good morning\"",
+        "\"Store conversation summaries weekly\""
+      ],
+      "validated": true
     },
     {
       "repo": "HKUDS/nanobot",
       "filename": "HKUDS_nanobot.png",
       "model": "gpt-image-1",
-      "generatedAt": "2026-02-02T17:03:37.082Z",
-      "sizeBytes": 3472544
+      "generatedAt": "2026-02-04T10:04:27.000Z",
+      "sizeBytes": 2509022,
+      "features": [
+        "Open Telegram, search @BotFather",
+        "Send /newbot, follow prompts",
+        "Copy the token"
+      ],
+      "validated": true
     },
     {
       "repo": "Leey21/awesome-ai-research-writing",
       "filename": "Leey21_awesome-ai-research-writing.png",
       "model": "gpt-image-1",
-      "generatedAt": "2026-02-02T17:04:54.628Z",
-      "sizeBytes": 3543952
+      "generatedAt": "2026-02-04T10:06:19.000Z",
+      "sizeBytes": 2586562,
+      "features": [
+        "\u8bba\u6587\u6574\u4f53\u4ee5 Reviewer \u89c6\u89d2\u8fdb\u884c\u5ba1\u89c6",
+        "\u4f7f\u7528\u573a\u666f\u4e0e\u793a\u4f8b Prompt",
+        "Node.js 20.6+\uff08\u542b npm\uff09"
+      ],
+      "validated": true
+    },
+    {
+      "repo": "Robbyant/lingbot-world",
+      "filename": "Robbyant_lingbot-world.png",
+      "model": "gpt-image-1",
+      "generatedAt": "2026-02-04T10:07:12.000Z",
+      "sizeBytes": 2635211,
+      "features": [
+        "Jan 29, 2026: \ud83c\udf89 We release the technical report,",
+        "It maintains high fidelity and robust dynamics in a broad spectrum ...",
+        "It supports real-time interactivity,",
+        "Input image"
+      ],
+      "validated": true
     }
   ],
-  "lastRun": "2026-02-02T17:04:57.638Z"
+  "lastRun": "2026-02-04T10:07:12.000Z"
 }
