@@ -53,7 +53,7 @@
   // ---- Fetch manifest ----
   async function loadManifest() {
     try {
-      const resp = await fetch('../illustrations/manifest.json');
+      const resp = await fetch('./illustrations/manifest.json');
       const data = await resp.json();
       allCards = (data.generated || []).filter(c => c.filename && c.repo);
       return allCards;
@@ -177,7 +177,7 @@
 
       el.innerHTML = `
         <div class="card-image-wrapper">
-          <img src="../illustrations/${card.filename}" alt="${card.repo}" loading="lazy">
+          <img src="./illustrations/${card.filename}" alt="${card.repo}" loading="lazy">
           <div class="card-overlay">
             <span class="card-author">${author}</span>
             <span class="card-name">${name}</span>
